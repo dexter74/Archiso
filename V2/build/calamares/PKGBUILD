@@ -16,7 +16,6 @@ makedepends=( 'ack' 'appstream-qt' 'autoconf' 'automake' 'binutils' 'bison' 'boo
 license=('GPL3')
 source=("https://github.com/calamares/calamares/releases/download/v$pkgver/$pkgname-$pkgver.tar.gz")
 sha256sums=('7591b9b60738bdba7b9de2b8da5462ab21006db06a006f0dd21ac5b832711dd2')
-CPU=$(lscpu  | grep "Processeur(s)" | cut -c 42-44)
 #####################################################################################################################################################
 
 #####################################################################################################################################################
@@ -46,5 +45,5 @@ build(){
 #####################################################################################################################################################
 package(){
 	cd $pkgname-$pkgver/build;
-	make -j $CPU  DESTDIR="$pkgdir/" install
+	make j$(nproc) DESTDIR="$pkgdir/" install
 }
