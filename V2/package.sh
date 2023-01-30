@@ -56,3 +56,10 @@ else
   echo "# [N]  PURGE_WORK   [OK]   #";
 fi
 ####################################################################
+
+if [[ "$GENERATION_ARCHISO" = [yY] ]]; then
+  GENERATION_ARCHISO;
+  echo "# [Y]  GENERATION ARCHISO   [OK]   #";
+else
+  echo "# [N]  GENERATION ARCHISO   [OK]   #";
+fi
