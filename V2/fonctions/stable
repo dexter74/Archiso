@@ -42,22 +42,16 @@ rm -rf $DIR/work
 #################################
 GENERATION(){
 mkdir -p $DIR/work $DIR/iso $DIR/profil/airootfs/etc/skel/;
-cp -r /usr/share/archiso/configs/$PROFIL/* $DIR/profil;
+cp -r /usr/share/archiso/configs/releng/* $DIR/profil;
 }
 
 ###################################################################################################################
 # Configuration de Pacman #
 ###########################
 PACMAN(){
-# Prise en charge x86
 sed -i "/\[multilib\]/,/Include/"'s/^#//' $DIR/profil/pacman.conf;
-
-# Téléchargement en Parallèle
 sed -i -e "s/\ParallelDownloads = 5/ParallelDownloads = 10/g" $DIR/profil/pacman.conf;
-
-# Activation du cache Local
 sed -i -e "s/\#CacheDir/CacheDir/g" $DIR/profil/pacman.conf;
-# Ajout du Dépôt Local
 echo "[Local]
 SigLevel = Optional TrustAll
 Server = file://$DIR/repo" >> $DIR/profil/pacman.conf;
@@ -91,6 +85,24 @@ sed -i '/gshadow/a \\  ["/etc/sudoers"]="0:0:400"'            $DIR/profil/profil
 sed -i '/sudoers/a \\  ["/etc/sudoers.d/username"]="0:0:400"' $DIR/profil/profiledef.sh;
 }
 
+# Gestion des Services #
+########################
+SERVICES(){
+
+mkdir -p                                                           $DIR/profil/airootfs/etc/systemd/system/multi-user.target.wants 2>/dev/null;
+ln -s /usr/lib/systemd/system/NetworkManager-wait-online.service   $DIR/profil/airootfs/etc/systemd/system/multi-user.target.wants/NetworkManager-wait-online.service 2>/dev/null;
+ln -s /usr/lib/systemd/system/NetworkManager.service               $DIR/profil/airootfs/etc/systemd/system/multi-user.target.wants/NetworkManager.service 2>/dev/null;
+ln -s /usr/lib/systemd/system/NetworkManager-dispatcher.service    $DIR/profil/airootfs/etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service 2>/dev/null;
+ln -s /usr/lib/systemd/system/lightdm.service                      $DIR/profil/airootfs/etc/systemd/system/display-manager.service 2>/dev/null;
+
+# Auto-Login:
+echo "[Service]
+ExecStart=
+ExecStart=-/sbin/agetty -o '-p -f -- \\u' --noclear --autologin $USERNAME - $TERM" > $DIR/profil/airootfs/etc/systemd/system/getty@tty1.service.d/autologin.conf;
+}
+
+
+
 ###################################################################################################################
 # Compilation de l'image ISO #
 ##############################
@@ -98,3 +110,12 @@ COMPILATION(){
 rm -rf $DIR/{iso,work}/* 2>/dev/null;
 mkarchiso -v -w $DIR/work -o $DIR/iso $DIR/profil;
 }
+
+###################################################################################################################
+# Renommer l'image ISO #
+########################
+RENAME(){
+rm $DIR/iso/Archlinux-custom.iso 2>/dev/null;
+mv $DIR/iso/*.iso $DIR/iso/Archlinux-custom.iso 2>/dev/null;
+}
+
