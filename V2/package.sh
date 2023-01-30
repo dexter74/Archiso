@@ -63,7 +63,7 @@ fi
 # Génération du Dépot #
 #######################
 if [[ "$GENERATION_DEPOT" = [yY] ]]; then
-  GENERATION_ARCHISO;
+  GENERATION_DEPOT;
   echo "# [Y]  GENERATION DEPOT    #";
 else
   echo "# [N]  GENERATION DEPOT    #";
