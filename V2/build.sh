@@ -97,6 +97,19 @@ else
   echo "# [N]  CUSTOMIZE_AIROOTFS  #";
 fi
 
+
+####################################################################
+# Création de l'utilisateur #
+#############################
+if [[ "$UTILISATEUR" = [yY] ]]; then
+  UTILISATEUR;
+  echo "# [Y]  UTILISATEUR         #";
+else
+  echo "# [N]  UTILISATEUR         #";
+fi
+
+
+
 ####################################################################
 # Edtion des permissions #
 ##########################
@@ -128,5 +141,10 @@ else
 fi
 
 
-# UTILISATEUR=N
+
+
+
+
+
+# =N
 # SKEL=N
