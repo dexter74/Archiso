@@ -2,14 +2,15 @@
 # Fonction pour les packages à intégrer #
 #########################################
 
-
 calamares(){
 #####################################################################################################################
 rm -rf /tmp/calamares;
+
 QT5WEBKIT="https://archive.archlinux.org/packages/q/qt5-webkit/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst"
 CALAMARES="https://raw.githubusercontent.com/dexter74/Archiso/main/V2/build/calamares/PKGBUILD"
 ICECREAM="https://aur.archlinux.org/icecream.git"
 PYTHONQT="https://aur.archlinux.org/pythonqt.git"
+
 rm -rf /tmp/{calamares,icecream,pythonqt,yay} 2>/dev/null;
 runuser -l $USERNAME -c "mkdir /tmp/calamares;"
 wget $QT5WEBKIT -O $DIR/repo/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst 2>/dev/null;
