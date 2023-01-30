@@ -1,7 +1,7 @@
 #######################################################################################################################################################################
 # Liste des packages embarquées #
 #################################
-PACKAGE(){
+LIST_ADD_PACKAGE(){
 echo "archiso
 git
 gvfs
@@ -24,6 +24,4 @@ xfce4-goodies
 xf86-video-vesa
 xf86-video-vmware
 xorg" >> $DIR/profil/packages.x86_64;
-
-
 }
