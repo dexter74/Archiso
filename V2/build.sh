@@ -106,3 +106,13 @@ if [[ "$COMPILATION" = [yY] ]]; then
 else
   echo "# [N]  COMPILATION         #";
 fi
+
+####################################################################
+# Renommer l'image iso #
+########################
+if [[ "$RENAME" = [yY] ]]; then
+  RENAME;
+  echo "# [Y]  RENAME              #";
+else
+  echo "# [N]  RENAME              #";
+fi
