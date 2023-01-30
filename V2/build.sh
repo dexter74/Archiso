@@ -24,13 +24,6 @@ if [[ "$PURGE_ISO" = [yY] ]]; then
 else
   echo "# [N]  PURGE_ISO           #";
 fi
-#########################################
-if [[ "$PURGE_PROFIL" = [yY] ]]; then
-  PURGE_PROFIL;
-  echo "# [Y]  PURGE_PROFIL        #";
-else
-  echo "# [N]  PURGE_PROFIL        #";
-fi
 
 #########################################
 if [[ "$PURGE_WORK" = [yY] ]]; then
