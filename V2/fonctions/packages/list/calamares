@@ -1,6 +1,8 @@
-
+package_yay(){
 echo "yay" >> $DIR/profil/packages.x86_64;
+}
 
+package_calamares(){
 "###########################
 # Dépendance de Calamares #
 ###########################
@@ -50,5 +52,5 @@ yaml-cpp
 #############
 # Calamares #
 #############
-calamares
-" >> $DIR/profil/packages.x86_64;
+calamares" >> $DIR/profil/packages.x86_64;
+}
