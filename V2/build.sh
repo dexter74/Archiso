@@ -126,3 +126,7 @@ if [[ "$RENAME" = [yY] ]]; then
 else
   echo "# [N]  RENAME              #";
 fi
+
+
+# UTILISATEUR=N
+# SKEL=N
