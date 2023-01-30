@@ -28,29 +28,29 @@ build(){
 	sed -i -e 's/"Install configuration files" OFF/"Install configuration files" ON/g' CMakeLists.txt
 	cp settings.conf ./build/
 	cd build;
-	cmake \
-		-DCMAKE_BUILD_TYPE=Release 		\
-		-DCMAKE_INSTALL_PREFIX=/usr 		\
-		-DCMAKE_INSTALL_LIBDIR=lib  		\
-		-DWITH_PYTHONQT=ON          		\
-		-DBoost_NO_BOOST_CMAKE=ON   		\
-		-DSKIP_MODULES="interactiveterminal"	\
-		-DAppStreamQt_DIR=... ..
+	cmake -DCMAKE_BUILD_TYPE=Debug ..
 
 }
 
-		
-#tracking
-#dracut
-#dracutlukscfg
-#dummycpp
-#dummyprocess
-#dummypython
-#dummypythonqt
-#initramfs
-#initramfscfg
-#services-openrc
-#webview
+#cmake \
+#	-DCMAKE_BUILD_TYPE=Release 		\
+#	-DCMAKE_INSTALL_PREFIX=/usr 		\
+#	-DCMAKE_INSTALL_LIBDIR=lib  		\
+#	-DWITH_PYTHONQT=ON          		\
+#	-DBoost_NO_BOOST_CMAKE=ON   		\
+#	-DSKIP_MODULES="dummycpp dummyprocess dummypython dummypythonqt dracut dracutlukscfg initramfs initramfscfg interactiveterminal services-openrc tracking webview" \#
+#	-DAppStreamQt_DIR=... ..
+#
+# 
+# 
+# 
+# 
+# 
+#
+# 
+#
+#		
+
 
 #############################################################################################################################
 package(){
