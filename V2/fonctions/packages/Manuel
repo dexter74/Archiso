@@ -34,6 +34,8 @@ ICECREAM="https://aur.archlinux.org/icecream.git"
 cd; rm -rf /tmp/icecream;
 git clone $ICECREAM /tmp/icecream;
 cd /tmp/icecream;
+rm PKGBUILD
+curl https://raw.githubusercontent.com/dexter74/Archiso/main/V2/build/icecream > PKGBUILD
 makepkg -s;
 
 ########################################################################################################################
