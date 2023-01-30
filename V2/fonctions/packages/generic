@@ -8,7 +8,7 @@ rm -rf /tmp/calamares;
 # Déclaration des sources des packages #
 ########################################
 QT5WEBKIT="https://archive.archlinux.org/packages/q/qt5-webkit/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst"
-CALAMARES="https://raw.githubusercontent.com/dexter74/Archiso/main/V1/PKGBUILD/calamares"
+CALAMARES="https://raw.githubusercontent.com/dexter74/Archiso/main/V2/build/calamares/PKGBUILD"
 ICECREAM="https://aur.archlinux.org/icecream.git"
 PYTHONQT="https://aur.archlinux.org/pythonqt.git"
 
