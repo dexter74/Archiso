@@ -10,5 +10,5 @@ source ./fonctions/packages/list/experimental;
 source ./fonctions/packages/list/stable;
 source ./fonctions/packages/generic;
 source ./fonctions/experimental;
-#source ./fonctions/base;
+source ./fonctions/stable;
 source ./settings.conf;
