@@ -53,16 +53,17 @@ fi
 if [[ "$PURGE_WORK" = [yY] ]]; then
   PURGE_WORK;
   echo "# [Y]  PURGE_WORK          #";
+  FORM;
 else
   echo "# [N]  PURGE_WORK          #";
+  FORM;
 fi
 ####################################################################
 
 if [[ "$GENERATION_ARCHISO" = [yY] ]]; then
   GENERATION_ARCHISO;
   echo "# [Y]  GENERATION ARCHISO  #";
-  FORM;
 else
   echo "# [N]  GENERATION ARCHISO  #";
-  FORM;
+  FORM
 fi
