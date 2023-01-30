@@ -13,9 +13,9 @@ rm -rf /tmp/{calamares,icecream,pythonqt} 2>/dev/null;
 ###########################
 QT5WEBKIT="https://archive.archlinux.org/packages/q/qt5-webkit/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst"
 CALAMARES="https://raw.githubusercontent.com/dexter74/Archiso/main/V2/build/calamares/PKGBUILD"
-PYTHONQT="https://aur.archlinux.org/pythonqt.git"
+ICECREAM2="https://raw.githubusercontent.com/dexter74/Archiso/main/V2/build/icecream/PKGBUILD"
 ICECREAM1="https://aur.archlinux.org/icecream.git"
-ICECREAM2="https://raw.githubusercontent.com/dexter74/Archiso/main/V2/build/icecream"
+PYTHONQT="https://aur.archlinux.org/pythonqt.git"
 
 
 #####################################################################################################################
