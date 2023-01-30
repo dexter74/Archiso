@@ -7,6 +7,7 @@ calamares(){
 ######################
 rm -rf /tmp/{calamares,icecream,pythonqt} 2>/dev/null;
 
+sleep 10
 
 #####################################################################################################################
 # Déclaration des sources #
@@ -56,7 +57,6 @@ sed -i "s/	make/	make -j$(nproc)/g" /tmp/pythonqt/PKGBUILD;
 runuser -l $USERNAME -c "cd /tmp/calamares  && makepkg -s 1>/dev/null 2>/dev/null;"
 runuser -l $USERNAME -c "cd /tmp/icecream   && makepkg -s 1>/dev/null 2>/dev/null;"
 runuser -l $USERNAME -c "cd /tmp/pythonqt   && makepkg -s 1>/dev/null 2>/dev/null;"
-
 
 #####################################################################################################################
 # Déplacement des packages dans le dépôt #
