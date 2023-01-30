@@ -85,15 +85,6 @@ echo "~/.automated_script.sh" > $DIR/profil/airootfs/root/.zlogin;
 }
 
 ###################################################################################################################
-# PROFILEDEF #
-##############
-PROFILEDEF(){
-sed -i '/shadow/a \\  ["/etc/gshadow"]="0:0:400"'             $DIR/profil/profiledef.sh;
-sed -i '/gshadow/a \\  ["/etc/sudoers"]="0:0:400"'            $DIR/profil/profiledef.sh;
-sed -i '/sudoers/a \\  ["/etc/sudoers.d/username"]="0:0:400"' $DIR/profil/profiledef.sh;
-}
-
-###################################################################################################################
 # Compilation de l'image ISO #
 ##############################
 COMPILATION(){
