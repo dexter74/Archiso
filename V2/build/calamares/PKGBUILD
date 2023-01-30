@@ -1,0 +1,50 @@
+######################################################################################################################################################################################################
+# Dépendances: 
+# sudo pacman -Sy --noconfirm ack appstream-qt boost cmake extra-cmake-modules kcoreaddons kiconthemes kio kparts kservice kpmcore plasma-framework;
+# sudo pacman -Sy --noconfirm python-pip python-qt.py python-yaml qt5-declarative qt5-location qt5-tools qt5-xmlpatterns qt5-webengine yaml-cpp;
+#      yay    -Sy --noconfirm icecream pythonqt qt
+######################################################################################################################################################################################################
+pkgname=calamares
+pkgver=3.2.61
+pkgrel=1
+pkgdesc='Installateur Calamares by Drthrax74'
+arch=('x86_64')
+makedepends=( 'ack' 'appstream-qt' 'autoconf' 'automake' 'binutils' 'bison' 'boost' 'cmake' 'extra-cmake-modules' 'fakeroot' 'flex'
+	      'gcc' 'gcc-libs-multilib' 'gcc-multilib' 'git' 'icu'  'kcoreaddons' 'kiconthemes' 'kio' 'kparts' 'kservice' 'kpmcore'
+	      'libtool' 'm4' 'make' 'os-prober' 'patch' 'plasma-framework' 'python' 'python3' 'python-pip' 'python-qt.py' 'python-yaml'
+	      'qt5-declarative' 'qt5-location' 'qt5-tools' 'qt5-translations' 'qt5-xmlpatterns' 'qt5-webengine' 'yaml-cpp')
+license=('GPL3')
+source=("https://github.com/calamares/calamares/releases/download/v$pkgver/$pkgname-$pkgver.tar.gz")
+sha256sums=('7591b9b60738bdba7b9de2b8da5462ab21006db06a006f0dd21ac5b832711dd2')
+CPU=$(lscpu  | grep "Processeur(s)" | cut -c 42-44)
+#####################################################################################################################################################
+
+#####################################################################################################################################################
+prepare(){
+	cd $pkgname-$pkgver;
+}
+#####################################################################################################################################################
+build(){
+	cd $pkgname-$pkgver;
+	mkdir build;
+	sed -i -e 's/"Install configuration files" OFF/"Install configuration files" ON/g' CMakeLists.txt
+	cp settings.conf ./build/
+	cd build;
+	cmake -DCMAKE_BUILD_TYPE=Debug ..
+
+}
+
+#cmake \
+#	-DCMAKE_BUILD_TYPE=Release 		\
+#	-DCMAKE_INSTALL_PREFIX=/usr 		\
+#	-DCMAKE_INSTALL_LIBDIR=lib  		\
+#	-DWITH_PYTHONQT=ON          		\
+#	-DBoost_NO_BOOST_CMAKE=ON   		\
+#	-DSKIP_MODULES="dummycpp dummyprocess dummypython dummypythonqt dracut dracutlukscfg initramfs initramfscfg interactiveterminal services-openrc tracking webview" \#
+#	-DAppStreamQt_DIR=... ..
+
+#####################################################################################################################################################
+package(){
+	cd $pkgname-$pkgver/build;
+	make -j $CPU  DESTDIR="$pkgdir/" install
+}
