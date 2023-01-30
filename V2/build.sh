@@ -70,6 +70,16 @@ fi
 ####################################################################
 # Configuration de la Langue #
 ##############################
+if [[ "$SERVICES" = [yY] ]]; then
+  SERVICES;
+  echo "# [Y]  SERVICES            #";
+else
+  echo "# [N]  SERVICES            #";
+fi
+
+####################################################################
+# Configuration de la Langue #
+##############################
 if [[ "$LANGUE" = [yY] ]]; then
   LANGUE;
   echo "# [Y]  LANGUE              #";
