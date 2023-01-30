@@ -25,11 +25,11 @@ rm -rf $DIR/iso;
 }
 
 PURGE_REPO(){
-rm -rf $DIR/repo
+rm -rf $DIR/repo;
 }
 
 PURGE_WORK(){
-rm -rf $DIR/work
+rm -rf $DIR/work;
 }
 
 ###################################################################################################################
