@@ -10,7 +10,8 @@ rm -rf /tmp/{calamares,icecream,pythonqt,yay} 2>/dev/null;
 ###########################
 QT5WEBKIT="https://archive.archlinux.org/packages/q/qt5-webkit/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst"
 CALAMARES="https://raw.githubusercontent.com/dexter74/Archiso/main/V2/build/calamares/PKGBUILD"
-ICECREAM="https://raw.githubusercontent.com/dexter74/Archiso/main/V2/build/icecream"
+ICECREAM1="https://aur.archlinux.org/icecream.git"
+ICECREAM2="https://raw.githubusercontent.com/dexter74/Archiso/main/V2/build/icecream"
 PYTHONQT="https://aur.archlinux.org/pythonqt.git"
 
 #####################################################################################################################
@@ -21,23 +22,23 @@ wget $QT5WEBKIT -O $DIR/repo/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst 2>/d
 #####################################################################################################################
 # Création des dossiers #
 #########################
-runuser -l $USERNAME -c "mkdir /tmp/{calamares,icecream} 2>/dev/null;"
-
+runuser -l $USERNAME -c "mkdir /tmp/calamares 2>/dev/null;"
+# ,icecream
 #####################################################################################################################
 # Téléchargement des PKGBUILD #
 ###############################
 runuser -l $USERNAME -c "curl $CALAMARES > /tmp/calamares/PKGBUILD 2>/dev/null;"
-runuser -l $USERNAME -c "curl $ICECREAM   > /tmp/icecream/PKGBUILD  2>/dev/null;"
 
 #####################################################################################################################
 # Téléchargements des sources #
 ###############################
 runuser -l $USERNAME -c "git clone $PYTHONQT    /tmp/pythonqt   1>/dev/null 2>/dev/null;"
+runuser -l $USERNAME -c "git clone $ICECREAM1   /tmp/icdecream  1>/dev/null 2>/dev/null;"
 
 #####################################################################################################################
 # Amélioration compilation #
 ############################
-sed -i "s/	make/	make -j$(nproc)/g" /tmp/pythonqt/PKGBUILD;
+#sed -i "s/	make/	make -j$(nproc)/g" /tmp/pythonqt/PKGBUILD;
 
 #####################################################################################################################
 # Compilation des packages #
