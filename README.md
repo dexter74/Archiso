@@ -18,40 +18,24 @@ yay -Sy --noconfirm icecream pythonqt qt qt5-webkit;
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 #### B. Télécharger les sources GIT
 ```bash
+#####################################################################
+# Nettoyage de la console #
+###########################
 clear;
+#####################################################################
+# Téléchargement du GitHub #
+############################
 cd;
 rm -rf $HOME/script 2>/dev/null;
 git clone https://github.com/dexter74/Archiso.git $HOME/script;
 rm $HOME/script/V1/README.md 2>/dev/null;
 cd  $HOME/script/V1/;
+sh package.sh;
+sh archiso.sh;
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 #### C. Configurer l'environnement
 ```bash
-nano settings.conf;
+nano $HOME/script/V1/settings.conf;
 ```
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------
-#### D. Constuire les packages
-```bash
-sh package.sh;
-```
-
-Note:
-`Compiler à la main pour vérifier si les dépendances sont OK`
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------
-#### E. Constuire Archiso
-```bash
-sh archiso.sh;
-```
-
-#### F. Ajouter un Package
-```
-nano ./package/<packagename>
-nano ./fonctions/PACKAGE;
-nano ./package.sh;
-nano ./settings.conf;
-```
-
