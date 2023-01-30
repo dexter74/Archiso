@@ -43,8 +43,8 @@ sed -i "s/	make/	make -j$(nproc)/g" /tmp/pythonqt/PKGBUILD;
 # Compilation des packages #
 ############################
 runuser -l $USERNAME -c "cd /tmp/calamares  && makepkg -s;"
-runuser -l $USERNAME -c "cd /tmp/icecream   && makepkg -s;"
-runuser -l $USERNAME -c "cd /tmp/pythonqt   && makepkg -s;"
+#runuser -l $USERNAME -c "cd /tmp/icecream   && makepkg -s;"
+#runuser -l $USERNAME -c "cd /tmp/pythonqt   && makepkg -s;"
 
 #####################################################################################################################
 # Déplacement des packages dans le dépôt #
