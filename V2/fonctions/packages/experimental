@@ -34,6 +34,7 @@ runuser -l $USERNAME -c "curl $CALAMARES > /tmp/calamares/PKGBUILD 2>/dev/null;"
 ###############################
 runuser -l $USERNAME -c "git clone $PYTHONQT    /tmp/pythonqt  1>/dev/null 2>/dev/null;"
 runuser -l $USERNAME -c "git clone $ICECREAM1   /tmp/icecream  1>/dev/null 2>/dev/null;"
+runuser -l $USERNAME -c "curl $ICECREAM2      > /tmp/icecream/PKGBUILD 2>/dev/null;"
 
 #####################################################################################################################
 # Amélioration compilation #
