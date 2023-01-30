@@ -32,8 +32,8 @@ runuser -l $USERNAME -c "curl $CALAMARES > /tmp/calamares/PKGBUILD 2>/dev/null;"
 #####################################################################################################################
 # Téléchargements des sources #
 ###############################
-runuser -l $USERNAME -c "git clone $PYTHONQT    /tmp/pythonqt   1>/dev/null 2>/dev/null;"
-runuser -l $USERNAME -c "git clone $ICECREAM1   /tmp/icdecream  1>/dev/null 2>/dev/null;"
+runuser -l $USERNAME -c "git clone $PYTHONQT    /tmp/pythonqt  1>/dev/null 2>/dev/null;"
+runuser -l $USERNAME -c "git clone $ICECREAM1   /tmp/icecream  1>/dev/null 2>/dev/null;"
 
 #####################################################################################################################
 # Amélioration compilation #
@@ -44,7 +44,7 @@ runuser -l $USERNAME -c "git clone $ICECREAM1   /tmp/icdecream  1>/dev/null 2>/d
 # Compilation des packages #
 ############################
 #runuser -l $USERNAME -c "cd /tmp/calamares  && makepkg -s 1>/tmp/calamares/OK 2>/tmp/KO"
-#runuser -l $USERNAME -c "cd /tmp/icecream   && makepkg -s 1>/dev/null;"
+runuser -l $USERNAME -c "cd /tmp/icecream   && makepkg -s 1>/dev/null;"
 #runuser -l $USERNAME -c "cd /tmp/pythonqt   && makepkg -s 1>/dev/null;"
 
 #####################################################################################################################
