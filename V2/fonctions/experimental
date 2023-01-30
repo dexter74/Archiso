@@ -15,6 +15,15 @@ ExecStart=
 ExecStart=-/sbin/agetty -o '-p -f -- \\u' --noclear --autologin $USERNAME - $TERM" > $DIR/profil/airootfs/etc/systemd/system/getty@tty1.service.d/autologin.conf;
 }
 
+##################################################################################################################################################################################
+# PROFILEDEF #
+##############
+PROFILEDEF(){
+sed -i '/shadow/a \\  ["/etc/gshadow"]="0:0:400"'             $DIR/profil/profiledef.sh;
+sed -i '/gshadow/a \\  ["/etc/sudoers"]="0:0:400"'            $DIR/profil/profiledef.sh;
+sed -i '/sudoers/a \\  ["/etc/sudoers.d/username"]="0:0:400"' $DIR/profil/profiledef.sh;
+}
+
 
 ##################################################################################################################################################################################
 # Création d'un Utilisateur #
