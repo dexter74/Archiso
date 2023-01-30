@@ -1,20 +1,6 @@
 ##################################################################################################################################################################################
 # Gestion des Services #
 ########################
-SERVICES(){
-
-mkdir -p                                                           $DIR/profil/airootfs/etc/systemd/system/multi-user.target.wants 2>/dev/null;
-ln -s /usr/lib/systemd/system/NetworkManager-wait-online.service   $DIR/profil/airootfs/etc/systemd/system/multi-user.target.wants/NetworkManager-wait-online.service 2>/dev/null;
-ln -s /usr/lib/systemd/system/NetworkManager.service               $DIR/profil/airootfs/etc/systemd/system/multi-user.target.wants/NetworkManager.service 2>/dev/null;
-ln -s /usr/lib/systemd/system/NetworkManager-dispatcher.service    $DIR/profil/airootfs/etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service 2>/dev/null;
-ln -s /usr/lib/systemd/system/lightdm.service                      $DIR/profil/airootfs/etc/systemd/system/display-manager.service 2>/dev/null;
-
-# Auto-Login:
-echo "[Service]
-ExecStart=
-ExecStart=-/sbin/agetty -o '-p -f -- \\u' --noclear --autologin $USERNAME - $TERM" > $DIR/profil/airootfs/etc/systemd/system/getty@tty1.service.d/autologin.conf;
-}
-
 ##################################################################################################################################################################################
 # PROFILEDEF #
 ##############
@@ -31,7 +17,6 @@ sed -i '/sudoers/a \\  ["/etc/sudoers.d/username"]="0:0:400"' $DIR/profil/profil
 UTILISATEUR(){
 # /etc/passwd
 echo "$USERNAME:x:1000:1000::/home/$USERNAME:/usr/bin/zsh" >> $DIR/profil/airootfs/etc/passwd;
-
 
 # /etc/group
 echo "root:x:0:root
