@@ -1,0 +1,15 @@
+#######################################################################################################################################################################
+# Script personnalisé #
+#######################
+CUSTOMIZE_AIROOTFS(){
+echo "#######################################################################
+# Génération de la langue
+locale-gen;
+
+#######################################################################
+# TimeZone Paris
+ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime;" > $DIR/profil/airootfs/root/customize_airootfs.sh;
+
+
+echo "~/.automated_script.sh" > $DIR/profil/airootfs/root/.zlogin;
+}

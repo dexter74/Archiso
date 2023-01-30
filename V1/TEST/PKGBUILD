@@ -1,0 +1,79 @@
+##########################################################################################################################################################
+# Problème Post LiveCD: Problème Dépendance !
+
+pkgname=calamares
+pkgver=3.2.61
+pkgrel=1
+pkgdesc='Installateur Calamares by Drthrax74'
+arch=('x86_64')
+
+depends=( 
+	'autoconf' 'automake' 'bison' 'flex' 'git' 'libtool' 'm4' 'make' 'cmake' 'extra-cmake-modules' 
+	'binutils' 'fakeroot' 'gcc' 'boost' 'patch' 'qt5-tools' 'yaml-cpp' 'ack' 'kpmcore' 'qt5-location'
+	'icu' 'qt5-declarative' 'qt5-translations' 'qt5-xmlpatterns'
+	)
+license=('GPL3')
+source=("https://github.com/calamares/calamares/releases/download/v$pkgver/$pkgname-$pkgver.tar.gz")
+sha256sums=('7591b9b60738bdba7b9de2b8da5462ab21006db06a006f0dd21ac5b832711dd2')
+package(){
+	cd $pkgname-$pkgver;
+} 
+build(){ 
+	#####################################################################################################################
+	cd $pkgname-$pkgver;
+	#####################################################################################################################
+	sed -i -e 's/"Install configuration files" OFF/"Install configuration files" ON/g' CMakeLists.txt
+	#sed -i -e 's/branding: default/branding: Drthrax74/g'	CMakeLists.txt
+	#####################################################################################################################
+	mkdir build;
+	cd build;
+	#####################################################################################################################
+	cp ../settings.conf .;
+	#####################################################################################################################
+	cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr -DWITH_PYTHONQT=ON -DAppStreamQt_DIR=... ..;
+	#####################################################################################################################
+ }
+
+package(){
+	#####################################################################################################################
+	cd $pkgname-$pkgver/build;
+	#####################################################################################################################
+	THREAD=$(lscpu | grep Processeur | cut -c 42-100)
+	make -j $THREAD DESTDIR="$pkgdir/" install
+	#####################################################################################################################
+}
+
+
+
+
+#############################################################################################################################################################################################################################
+# Dependance: 
+# https://calamares.io/deploycala.py (def pacman_update)
+# https://github.com/calamares/calamares/blob/calamares/CONTRIBUTING.md
+#############################################################################################################################################################################################################################
+# Guide:
+# https://habr.com/en/post/654755/
+# https://github.com/calamares/calamares/wiki/Develop-Guide#build
+# https://www.mankier.com/5/PKGBUILD
+# https://rebornos.discourse.group/t/guide-advanced-hacking-into-the-rebornos-calamares-installer/799
+#############################################################################################################################################################################################################################
+# Exemple :
+# https://github.com/Cleanjaro/calamares/blob/master/PKGBUILD
+#############################################################################################################################################################################################################################
+# Branding: https://github.com/calamares/calamares/blob/calamares/src/branding/README.md
+# /calamares-3.2.61/build/src/branding
+# /calamares-3.2.61/src/branding
+# /calamares-3.2.61/data/config-appimage/branding
+#############################################################################################################################################################################################################################
+# Configuration:
+# /src/calamares-3.2.61/src/modules/<moduleName/*.conf
+# /src/calamares-3.2.61/src/modules/unpackfs/unpackfs.conf
+#############################################################################################################################################################################################################################
+# package(){} Elle est utilisée pour installer des fichiers dans le répertoire qui deviendra le répertoire racine du package construit et est exécutée après toutes les fonctions optionnelles répertoriées ci-dessous.
+# prepare(){} Opérations de préparation des sources pour la construction, telles que le patch, sont effectuées. Cette fonction est exécutée après l'extraction de la source et avant la fonction build
+# build(){}   Elle est utilisée pour compiler et/ou ajuster les fichiers source en vue de leur installation par la fonction
+
+# ${srcdir} Celui-ci contient le répertoire où makepkg extrait ou copie tous les fichiers source.
+# ${pkgdir} Celui-ci contient le répertoire où makepkg regroupe le package installé. Ce répertoire deviendra le répertoire racine de votre paquet construit. (A utiliser dans package() )
+# ${startdir} Celui-ci contient le chemin absolu vers le répertoire où se trouve le PKGBUILD, qui est généralement la sortie de $(pwd) lorsque makepkg est démarré.
+#############################################################################################################################################################################################################################

@@ -1,0 +1,91 @@
+#######################################################################################################################################################################
+# Liste des packages embarquées #
+#################################
+PACKAGE(){
+echo "archiso
+git
+gvfs
+gvfs-smb
+inetutils
+networkmanager
+network-manager-applet
+pulseaudio
+pulseaudio-alsa
+pulseaudio-bluetooth
+pulseaudio-qt
+wget
+lightdm
+lightdm-gtk-greeter
+papirus-icon-theme
+pavucontrol
+plank
+xfce4
+xfce4-goodies
+xf86-video-vesa
+xf86-video-vmware
+xorg" >> $DIR/profil/packages.x86_64;
+
+####################################################################
+# YAY #
+#######
+if [[ "$YAY" = [yY] ]]; then
+echo "yay" >> $DIR/profil/packages.x86_64;
+fi
+
+####################################################################
+# CALAMARES #
+#############
+if [[ "$CALAMARES" = [yY] ]]; then
+echo "###########################
+# Dépendance de Calamares #
+###########################
+ack
+appstream-qt
+autoconf
+automake
+binutils
+bison
+boost
+cmake
+extra-cmake-modules
+fakeroot
+flex
+gcc
+gcc-libs-multilib
+gcc-multilib
+git
+icu
+icecream
+kcoreaddons
+kiconthemes
+kio
+kparts
+kservice
+kpmcore
+libtool
+m4
+make
+patch
+plasma-framework
+python
+python3
+python-pip
+python-qt.py
+python-yaml
+pythonqt
+qt
+qt5-declarative
+qt5-location
+qt5-tools
+qt5-translations
+qt5-webengine
+qt5-webkit
+qt5-xmlpatterns
+yaml-cpp
+#############
+# Calamares #
+#############
+calamares
+" >> $DIR/profil/packages.x86_64;
+fi
+}

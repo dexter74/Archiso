@@ -1,0 +1,7 @@
+#######################################################################################################################################################################
+# Génération du dossier Archiso #
+#################################
+GENERATION(){
+mkdir -p $DIR/work $DIR/iso $DIR/profil/airootfs/etc/skel/;
+cp -r /usr/share/archiso/configs/$PROFIL/* $DIR/profil;
+}

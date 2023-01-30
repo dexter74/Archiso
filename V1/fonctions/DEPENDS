@@ -1,0 +1,7 @@
+#######################################################################################################################################################################
+# Installation des Dépendances ArchLinux #
+##########################################
+DEPENDS(){
+pacman -Sy --noconfirm archiso;
+runuser -l $USERNAME -c 'yay -Sy --noconfirm archiso-profiles;'
+}

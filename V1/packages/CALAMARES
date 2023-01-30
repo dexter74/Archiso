@@ -1,0 +1,58 @@
+##############################################################################################################################################################################################################################
+# Package Calamares #
+#####################
+CALAMARES(){
+
+#####################################################################################################################
+# Déclaration de Variables #
+############################
+QT5WEBKIT="https://archive.archlinux.org/packages/q/qt5-webkit/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst"
+CALAMARES="https://raw.githubusercontent.com/dexter74/Archiso/main/TEST/PKGBUILD_V2"
+ICECREAM="https://aur.archlinux.org/icecream.git"
+PYTHONQT="https://aur.archlinux.org/pythonqt.git"
+
+#####################################################################################################################
+# Préparation Environnement #
+#############################
+rm -rf /tmp/{calamares,icecream,pythonqt,yay} 2>/dev/null;
+runuser -l $USERNAME -c "mkdir /tmp/calamares;"
+
+#####################################################################################################################
+# Téléchargement Packages #
+###########################
+wget $QT5WEBKIT -O $DIR/repo/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst 2>/dev/null;
+
+#####################################################################################################################
+# Téléchargement sources #
+##########################
+runuser -l $USERNAME -c "curl      $CALAMARES > /tmp/calamares/PKGBUILD     2>/dev/null;"
+runuser -l $USERNAME -c "git clone $ICECREAM    /tmp/icecream   1>/dev/null 2>/dev/null;"
+runuser -l $USERNAME -c "git clone $PYTHONQT    /tmp/pythonqt   1>/dev/null 2>/dev/null;"
+
+#####################################################################################################################
+# Multithread #
+###############
+sed -i "s/	make/	make -j $CPU/g" /tmp/pythonqt/PKGBUILD;
+
+#####################################################################################################################
+# Compilation #
+###############
+runuser -l $USERNAME -c "cd /tmp/calamares  && makepkg -s -d 1>/dev/null 2>/dev/null;"
+runuser -l $USERNAME -c "cd /tmp/icecream   && makepkg -s -d 1>/dev/null 2>/dev/null;"
+runuser -l $USERNAME -c "cd /tmp/pythonqt   && makepkg -s -d 1>/dev/null 2>/dev/null;"
+
+#####################################################################################################################
+# Déplacement Packages #
+########################
+mv /tmp/{calamares,icecream,pythonqt}/*.zst $DIR/repo;
+
+#####################################################################################################################
+# Menage du dossier temporaire #
+################################
+rm -rf /tmp/{calamares,icecream,pythonqt,yay}
+
+
+#####################################################################################################################
+# -d : No check Dependencies
+#####################################################################################################################
+}

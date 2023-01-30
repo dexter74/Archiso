@@ -1,0 +1,20 @@
+##########################################################################################
+# Génération du package YAY #
+#############################
+YAY(){
+
+# Dossier
+rm -rf /tmp/yay;
+
+# Téléchargement
+runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/yay.git /tmp/yay 1>/dev/null 2>/dev/null;'
+
+# Génération Package
+runuser -l $USERNAME -c 'cd /tmp/yay && makepkg -s 1>/dev/null 2>/dev/null;'
+
+# Déplacement du package dans le repo
+mv /tmp/yay/*.zst $DIR/repo;
+
+# Ajout du package dans la liste
+# echo "yay" >> $DIR/profil/packages.x86_64;
+}
