@@ -1,7 +1,8 @@
 #### A. Multithread Make:
 ```
-sed -i -e 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$(nproc)"/' /etc/makepkg.conf
-sed -i -e 's/MAKEFLAGS="-j$(nproc)/#MAKEFLAGS="-j2""/' /etc/makepkg.conf
+clear;
+sudo sed -i -e 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$(nproc)"/' /etc/makepkg.conf;grep "^MAKEFLAGS" /etc/makepkg.conf
+sudo sed -i -e 's/MAKEFLAGS="-j$(nproc)"/#MAKEFLAGS="-j2"/' /etc/makepkg.conf;grep "#MAKEFLAGS" /etc/makepkg.conf
 sudo nano /etc/makepkg.conf
 
 
