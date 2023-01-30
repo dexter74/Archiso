@@ -60,8 +60,8 @@ fi
 
 if [[ "$GENERATION_ARCHISO" = [yY] ]]; then
   GENERATION_ARCHISO;
-  FORM;
   echo "# [Y]  GENERATION ARCHISO  #";
+  FORM;
 else
   echo "# [N]  GENERATION ARCHISO  #";
   FORM;
