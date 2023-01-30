@@ -83,7 +83,38 @@ fi
 if [[ "$LANGUE" = [yY] ]]; then
   LANGUE;
   CUSTOMIZE_AIROOTFS;
+  PROFILEDEF;
   echo "# [Y]  LANGUE              #";
 else
   echo "# [N]  LANGUE              #";
+fi
+
+####################################################################
+# Configuration de la Langue #
+##############################
+if [[ "$LANGUE" = [yY] ]]; then
+  LANGUE;
+  echo "# [Y]  LANGUE              #";
+else
+  echo "# [N]  LANGUE              #";
+fi
+
+####################################################################
+# Regénérer la langue FR #
+##########################
+if [[ "$CUSTOMIZE_AIROOTFS" = [yY] ]]; then
+  CUSTOMIZE_AIROOTFS;
+  echo "# [Y]  CUSTOMIZE_AIROOTFS  #";
+else
+  echo "# [N]  CUSTOMIZE_AIROOTFS  #";
+fi
+
+####################################################################
+# Edtion des permissions #
+##########################
+if [[ "$PROFILEDEF" = [yY] ]]; then
+  PROFILEDEF;
+  echo "# [Y]  PROFILEDEF          #";
+else
+  echo "# [N]  PROFILEDEF          #";
 fi
