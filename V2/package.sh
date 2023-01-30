@@ -23,43 +23,44 @@ FORM;
 #############################
 if [[ "$PURGE_ALL" = [yY] ]]; then
   PURGE_ALL;
-  echo "# [Y]  PURGE_ALL    [OK]   #";
+  echo "# [Y]  PURGE_ALL           #";
 else
-  echo "# [N]  PURGE_ALL    [OK]   #";
+  echo "# [N]  PURGE_ALL           #";
 fi
 #########################################
 if [[ "$PURGE_ISO" = [yY] ]]; then
   PURGE_ISO;
-  echo "# [Y]  PURGE_ISO    [OK]   #";
+  echo "# [Y]  PURGE_ISO           #";
 else
-  echo "# [N]  PURGE_ISO    [OK]   #";
+  echo "# [N]  PURGE_ISO           #";
 fi
 #########################################
 if [[ "$PURGE_PROFIL" = [yY] ]]; then
   PURGE_PROFIL;
-  echo "# [Y]  PURGE_PROFIL [OK]   #";
+  echo "# [Y]  PURGE_PROFIL        #";
 else
-  echo "# [N]  PURGE_PROFIL [OK]   #";
+  echo "# [N]  PURGE_PROFIL        #";
 fi
 #########################################
 if [[ "$PURGE_REPO" = [yY] ]]; then
   PURGE_REPO;
-  echo "# [Y]  PURGE_REPO   [OK]   #";
+  echo "# [Y]  PURGE_REPO          #";
 else
-  echo "# [N]  PURGE_REPO   [OK]   #";
+  echo "# [N]  PURGE_REPO          #";
+
 fi
 #########################################
 if [[ "$PURGE_WORK" = [yY] ]]; then
   PURGE_WORK;
-  echo "# [Y]  PURGE_WORK   [OK]   #";
+  echo "# [Y]  PURGE_WORK          #";
 else
-  echo "# [N]  PURGE_WORK   [OK]   #";
+  echo "# [N]  PURGE_WORK          #";
 fi
 ####################################################################
 
 if [[ "$GENERATION_ARCHISO" = [yY] ]]; then
   GENERATION_ARCHISO;
-  echo "# [Y]  GENERATION ARCHISO   [OK]   #";
+  echo "# [Y]  GENERATION ARCHISO  #";
 else
-  echo "# [N]  GENERATION ARCHISO   [OK]   #";
+  echo "# [N]  GENERATION ARCHISO  #";
 fi
