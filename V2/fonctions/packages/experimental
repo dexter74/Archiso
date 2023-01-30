@@ -48,7 +48,7 @@ runuser -l $USERNAME -c "cd /tmp/pythonqt   && makepkg -s -d 1>/dev/null 2>/dev/
 #####################################################################################################################
 # Déplacement des packages dans le dépôt #
 ##########################################
-mv /tmp/{calamares,icecream,pythonqt}/*.zst $DIR/repo;
+# mv /tmp/{calamares,icecream,pythonqt}/*.zst $DIR/repo;
 
 #####################################################################################################################
 # Nettoyage du système Hôte #
