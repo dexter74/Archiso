@@ -78,28 +78,6 @@ else
 fi
 
 ####################################################################
-# Configuration de la Langue #
-##############################
-if [[ "$LANGUE" = [yY] ]]; then
-  LANGUE;
-  CUSTOMIZE_AIROOTFS;
-  PROFILEDEF;
-  echo "# [Y]  LANGUE              #";
-else
-  echo "# [N]  LANGUE              #";
-fi
-
-####################################################################
-# Configuration de la Langue #
-##############################
-if [[ "$LANGUE" = [yY] ]]; then
-  LANGUE;
-  echo "# [Y]  LANGUE              #";
-else
-  echo "# [N]  LANGUE              #";
-fi
-
-####################################################################
 # Regénérer la langue FR #
 ##########################
 if [[ "$CUSTOMIZE_AIROOTFS" = [yY] ]]; then
