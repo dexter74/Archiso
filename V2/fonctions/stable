@@ -16,7 +16,6 @@ runuser -l $USERNAME -c 'yay -Sy --noconfirm archiso-profiles;'
 ##############################################################################################
 # Fonctions pour la purge de donnée d'archiso #
 ###############################################
-
 PURGE_ALL(){
 rm -rf $DIR;
 }
@@ -36,7 +35,6 @@ rm -rf $DIR/profil
 PURGE_WORK(){
 rm -rf $DIR/work
 }
-
 
 ###################################################################################################################
 # Génération du dossier Repo #
@@ -93,7 +91,6 @@ sed -i '/gshadow/a \\  ["/etc/sudoers"]="0:0:400"'            $DIR/profil/profil
 sed -i '/sudoers/a \\  ["/etc/sudoers.d/username"]="0:0:400"' $DIR/profil/profiledef.sh;
 }
 
-
 ###################################################################################################################
 # Compilation de l'image ISO #
 ##############################
@@ -109,4 +106,3 @@ RENAME(){
 rm $DIR/iso/Archlinux-custom.iso 2>/dev/null;
 mv $DIR/iso/*.iso $DIR/iso/Archlinux-custom.iso 2>/dev/null;
 }
-
