@@ -67,7 +67,6 @@ else
   echo "# [N]  PACMAN              #";
 fi
 
-
 ####################################################################
 # Configuration de la Langue #
 ##############################
@@ -78,4 +77,13 @@ else
   echo "# [N]  LANGUE              #";
 fi
 
-
+####################################################################
+# Configuration de la Langue #
+##############################
+if [[ "$LANGUE" = [yY] ]]; then
+  LANGUE;
+  CUSTOMIZE_AIROOTFS;
+  echo "# [Y]  LANGUE              #";
+else
+  echo "# [N]  LANGUE              #";
+fi
