@@ -3,7 +3,7 @@ echo "yay" >> $DIR/profil/packages.x86_64;
 }
 
 package_calamares(){
-"###########################
+echo "###########################
 # Dépendance de Calamares #
 ###########################
 ack
