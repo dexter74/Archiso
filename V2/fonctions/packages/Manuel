@@ -16,6 +16,7 @@ DIR=/archiso
 ########################################################################################################################
 # Gestion des dossiers #
 ########################
+cd;
 rm -rf /tmp/{calamares,icecream,pythonqt,yay} 2>/dev/null;
 mkdir /tmp/calamares;
 
