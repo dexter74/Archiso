@@ -73,7 +73,8 @@ fi
 # Génération des Packages #
 ###########################
 if [[ "$PACKAGE_GENERIC" = [yY] ]]; then
-  PACKAGE_GENERIC;
+  calamares;
+  yay;
   echo "# [Y]  PACKAGE GENERIC     #";
 else
   echo "# [N]  PACKAGE GENERIC     #";
