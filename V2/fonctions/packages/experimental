@@ -1,4 +1,11 @@
 calamares(){
+
+#####################################################################################################################
+# Purge des dossiers #
+######################
+rm -rf /tmp/{calamares,icecream,pythonqt,yay} 2>/dev/null;
+
+
 #####################################################################################################################
 # Déclaration des sources #
 ###########################
@@ -11,11 +18,6 @@ PYTHONQT="https://aur.archlinux.org/pythonqt.git"
 # Téléchargements des packages compilés #
 #########################################
 wget $QT5WEBKIT -O $DIR/repo/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst 2>/dev/null;
-
-#####################################################################################################################
-# Purge des dossiers #
-######################
-rm -rf /tmp/{calamares,icecream,pythonqt,yay} 2>/dev/null;
 
 #####################################################################################################################
 # Création du dossier Calamares #
@@ -41,17 +43,14 @@ sed -i "s/	make/	make -j$(nproc)/g" /tmp/pythonqt/PKGBUILD;
 #####################################################################################################################
 # Compilation des packages #
 ############################
-runuser -l $USERNAME -c "cd /tmp/calamares  && makepkg -s 1>/dev/null 2>/dev/null;"
-runuser -l $USERNAME -c "cd /tmp/icecream   && makepkg -s 1>/dev/null 2>/dev/null;"
-runuser -l $USERNAME -c "cd /tmp/pythonqt   && makepkg -s 1>/dev/null 2>/dev/null;"
+runuser -l $USERNAME -c "cd /tmp/calamares  && makepkg -s;"
+runuser -l $USERNAME -c "cd /tmp/icecream   && makepkg -s;"
+runuser -l $USERNAME -c "cd /tmp/pythonqt   && makepkg -s;"
 
 #####################################################################################################################
 # Déplacement des packages dans le dépôt #
 ##########################################
 # mv /tmp/{calamares,icecream,pythonqt}/*.zst $DIR/repo;
 
-#####################################################################################################################
-# Nettoyage du système Hôte #
-#############################
-# rm -rf /tmp/{calamares,icecream,pythonqt,yay}
+
 }
