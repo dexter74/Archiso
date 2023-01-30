@@ -17,3 +17,42 @@ source ./settings.conf;
 # Mise en Forme #
 #################
 FORM;
+
+####################################################################
+# Configuration de la Purge #
+#############################
+if [[ "$PURGE_ALL" = [yY] ]]; then
+  PURGE;
+  echo "# [Y]  PURGE_ALL    [OK]   #";
+else
+  echo "# [N]  PURGE_ALL    [OK]   #";
+fi
+
+if [[ "$PURGE_ISO" = [yY] ]]; then
+  PURGE;
+  echo "# [Y]  PURGE_ISO    [OK]   #";
+else
+  echo "# [N]  PURGE_ISO    [OK]   #";
+fi
+
+
+if [[ "$PURGE_PROFIL" = [yY] ]]; then
+  PURGE;
+  echo "# [Y]  PURGE_PROFIL [OK]   #";
+else
+  echo "# [N]  PURGE_PROFIL [OK]   #";
+fi
+
+if [[ "$PURGE_REPO" = [yY] ]]; then
+  PURGE;
+  echo "# [Y]  PURGE_REPO   [OK]   #";
+else
+  echo "# [N]  PURGE_REPO   [OK]   #";
+fi
+
+if [[ "$PURGE_WORK" = [yY] ]]; then
+  PURGE;
+  echo "# [Y]  PURGE_WORK   [OK]   #";
+else
+  echo "# [N]  PURGE_WORK   [OK]   #";
+fi
