@@ -36,5 +36,5 @@ build(){
 #####################################################################################################################################################
 package(){
 	cd $pkgname-$pkgver/build;
-	make j$(nproc) DESTDIR="$pkgdir/" install
+	make -j$(nproc) DESTDIR="$pkgdir/" install
 }
