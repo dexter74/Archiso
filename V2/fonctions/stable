@@ -75,9 +75,9 @@ ln -s /usr/lib/systemd/system/NetworkManager-dispatcher.service    $DIR/profil/a
 ln -s /usr/lib/systemd/system/lightdm.service                      $DIR/profil/airootfs/etc/systemd/system/display-manager.service 2>/dev/null;
 
 # Auto-Login:
-echo "[Service]
-ExecStart=
-ExecStart=-/sbin/agetty -o '-p -f -- \\u' --noclear --autologin $USERNAME - $TERM" > $DIR/profil/airootfs/etc/systemd/system/getty@tty1.service.d/autologin.conf;
+# echo "[Service]
+# ExecStart=
+# ExecStart=-/sbin/agetty -o '-p -f -- \\u' --noclear --autologin $USERNAME - $TERM" > $DIR/profil/airootfs/etc/systemd/system/getty@tty1.service.d/autologin.conf;
 }
 
 ###################################################################################################################
