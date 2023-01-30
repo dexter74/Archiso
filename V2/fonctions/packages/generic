@@ -13,7 +13,7 @@ PYTHONQT="https://aur.archlinux.org/pythonqt.git"
 #####################################################################################################################
 # Téléchargements des packages compilés #
 #########################################
-#wget $QT5WEBKIT -O $DIR/repo/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst 2>/dev/null;
+wget $QT5WEBKIT -O $DIR/repo/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst 2>/dev/null;
 
 #####################################################################################################################
 # Purge des dossiers #
@@ -23,15 +23,18 @@ rm -rf /tmp/{calamares,icecream,pythonqt,yay} 2>/dev/null;
 #####################################################################################################################
 # Création du dossier Calamares #
 #################################
-#runuser -l $USERNAME -c "mkdir /tmp/calamares;"
+runuser -l $USERNAME -c "mkdir /tmp/calamares;"
+
+#####################################################################################################################
+# Téléchargement des PKGBUILD #
+###############################
+runuser -l $USERNAME -c "curl $CALAMARES > /tmp/calamares/PKGBUILD 2>/dev/null;"
 
 #####################################################################################################################
 # Téléchargements des sources #
 ###############################
-#runuser -l $USERNAME -c "curl      $CALAMARES > /tmp/calamares/PKGBUILD     2>/dev/null;"
-#runuser -l $USERNAME -c "git clone $ICECREAM    /tmp/icecream   1>/dev/null 2>/dev/null;"
-
-runuser -l $USERNAME -c "git clone $PYTHONQT    /tmp/pythonqt   1>/dev/null;"
+runuser -l $USERNAME -c "git clone $ICECREAM    /tmp/icecream   1>/dev/null 2>/dev/null;"
+runuser -l $USERNAME -c "git clone $PYTHONQT    /tmp/pythonqt   1>/dev/null 2>/dev/null;"
 
 #####################################################################################################################
 # Amélioration compilation #
