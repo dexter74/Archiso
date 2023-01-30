@@ -58,21 +58,3 @@ if [[ "$PACKAGE_GENERIC" = [yY] ]]; then
 else
   echo "# [N]  PACKAGE GENERIC     #";
 fi
-
-####################################################################
-# Génération d'ArchISO #
-########################
-if [[ "$GENERATION_ARCHISO" = [yY] ]]; then
-  GENERATION_ARCHISO;
-  echo "# [Y]  GENERATION ARCHISO  #";
-else
-  echo "# [N]  GENERATION ARCHISO  #";
-fi
-
-####################################################################
-if [[ "$PACMAN" = [yY] ]]; then
-  PACMAN;
-  echo "# [Y]  PACMAN              #";
-else
-  echo "# [N]  PACMAN              #";
-fi
