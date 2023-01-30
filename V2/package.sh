@@ -12,3 +12,8 @@ source ./fonctions/packages/generic;
 source ./fonctions/experimental;
 source ./fonctions/stable;
 source ./settings.conf;
+
+####################################################################
+# Mise en Forme #
+#################
+FORM;
