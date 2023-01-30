@@ -28,7 +28,6 @@ if [[ "$PURGE_ALL" = [yY] ]]; then
 else
   echo "# [N]  PURGE_ALL           #";
 fi
-
 #########################################
 if [[ "$PURGE_REPO" = [yY] ]]; then
   PURGE_REPO;
@@ -37,7 +36,6 @@ else
   echo "# [N]  PURGE_REPO          #";
 
 fi
-
 ####################################################################
 # Génération du Dépot #
 #######################
@@ -47,7 +45,6 @@ if [[ "$GENERATION_DEPOT" = [yY] ]]; then
 else
   echo "# [N]  GENERATION DEPOT    #";
 fi
-
 ####################################################################
 # Génération des Packages #
 ###########################
