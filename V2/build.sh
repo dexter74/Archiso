@@ -20,7 +20,9 @@ source ./settings.conf;
 #################
 FORM;
 
-#########################################
+####################################################################
+# Gestion de la purge #
+#######################
 if [[ "$PURGE_ISO" = [yY] ]]; then
   PURGE_ISO;
   echo "# [Y]  PURGE_ISO           #";
@@ -43,4 +45,22 @@ if [[ "$PURGE_WORK" = [yY] ]]; then
 else
   echo "# [N]  PURGE_WORK          #";
   FORM;
+fi
+
+####################################################################
+# Génération d'ArchISO #
+########################
+if [[ "$GENERATION_ARCHISO" = [yY] ]]; then
+  GENERATION_ARCHISO;
+  echo "# [Y]  GENERATION ARCHISO  #";
+else
+  echo "# [N]  GENERATION ARCHISO  #";
+fi
+
+####################################################################
+if [[ "$PACMAN" = [yY] ]]; then
+  PACMAN;
+  echo "# [Y]  PACMAN              #";
+else
+  echo "# [N]  PACMAN              #";
 fi
