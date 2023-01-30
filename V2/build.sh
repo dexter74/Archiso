@@ -72,6 +72,8 @@ fi
 ##################################
 if [[ "$PACKAGE" = [yY] ]]; then
   LIST_ADD_PACKAGE;
+  package_yay;
+  package_calamares;
   echo "# [Y]  PACKAGE             #";
 else
   echo "# [N]  PACKAGE             #";
