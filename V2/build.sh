@@ -58,9 +58,24 @@ else
 fi
 
 ####################################################################
+# Edition de Pacman.conf #
+##########################
 if [[ "$PACMAN" = [yY] ]]; then
   PACMAN;
   echo "# [Y]  PACMAN              #";
 else
   echo "# [N]  PACMAN              #";
 fi
+
+
+####################################################################
+# Configuration de la Langue #
+##############################
+if [[ "$LANGUE" = [yY] ]]; then
+  LANGUE;
+  echo "# [Y]  LANGUE              #";
+else
+  echo "# [N]  LANGUE              #";
+fi
+
+
