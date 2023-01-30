@@ -68,6 +68,16 @@ else
 fi
 
 ####################################################################
+# Ajout de la liste des Packages #
+##################################
+if [[ "$PACKAGE" = [yY] ]]; then
+  PACKAGE;
+  echo "# [Y]  PACKAGE             #";
+else
+  echo "# [N]  PACKAGE             #";
+fi
+
+####################################################################
 # Configuration de la Langue #
 ##############################
 if [[ "$SERVICES" = [yY] ]]; then
