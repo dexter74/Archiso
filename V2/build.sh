@@ -96,3 +96,13 @@ if [[ "$PROFILEDEF" = [yY] ]]; then
 else
   echo "# [N]  PROFILEDEF          #";
 fi
+
+####################################################################
+# Compilation d'ArchISO #
+#########################
+if [[ "$COMPILATION" = [yY] ]]; then
+  COMPILATION;
+  echo "# [Y]  COMPILATION         #";
+else
+  echo "# [N]  COMPILATION         #";
+fi
