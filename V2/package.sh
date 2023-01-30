@@ -54,6 +54,7 @@ fi
 if [[ "$PACKAGE_GENERIC" = [yY] ]]; then
   calamares;
   yay;
+  DEPOT_REGEN;
   echo "# [Y]  PACKAGE GENERIC     #";
 else
   echo "# [N]  PACKAGE GENERIC     #";
