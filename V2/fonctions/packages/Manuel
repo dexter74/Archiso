@@ -1,0 +1,34 @@
+########################################################################################################################
+# Déclaration des variables d'environnements #
+##############################################
+QT5WEBKIT="https://archive.archlinux.org/packages/q/qt5-webkit/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst"
+CALAMARES="https://raw.githubusercontent.com/dexter74/Archiso/main/V2/build/calamares/PKGBUILD"
+ICECREAM="https://aur.archlinux.org/icecream.git"
+PYTHONQT="https://aur.archlinux.org/pythonqt.git"
+USERNAME=$(id 1000 | cut -d  ")" -f 1 | cut -d "(" -f 2)
+DIR=/archiso
+
+########################################################################################################################
+# Gestion des dossiers #
+########################
+rm -rf /tmp/{calamares,icecream,pythonqt,yay} 2>/dev/null;
+mkdir /tmp/calamares;
+
+########################################################################################################################
+# Téléchargement Package #
+##########################
+wget $QT5WEBKIT -O $DIR/repo/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst 2>/dev/null;
+
+########################################################################################################################
+# Téléchargement des sources #
+##############################
+curl $CALAMARES > /tmp/calamares/PKGBUILD 2>/dev/null;
+git clone $ICECREAM /tmp/icecream   1>/dev/null 2>/dev/null;
+git clone $PYTHONQT /tmp/pythonqt   1>/dev/null 2>/dev/null;
+
+##################################################################################################################################
+# Compilation #
+###############
+cd /tmp/calamares  && makepkg -s;
+cd /tmp/icecream   && makepkg -s;
+cd /tmp/pythonqt   && makepkg -s;
