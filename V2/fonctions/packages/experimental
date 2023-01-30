@@ -27,7 +27,7 @@ runuser -l $USERNAME -c "mkdir /tmp/{calamares,icecream} 2>/dev/null;"
 # Téléchargement des PKGBUILD #
 ###############################
 runuser -l $USERNAME -c "curl $CALAMARES > /tmp/calamares/PKGBUILD 2>/dev/null;"
-runuser -l $USERNAME -c "curl ICECREAM   > /tmp/icecream/PKGBUILD  2>/dev/null;"
+runuser -l $USERNAME -c "curl $ICECREAM   > /tmp/icecream/PKGBUILD  2>/dev/null;"
 
 #####################################################################################################################
 # Téléchargements des sources #
