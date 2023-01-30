@@ -71,8 +71,8 @@ echo "
 SigLevel = Optional TrustAll
 Server = file://$DIR/repo" >> $DIR/profil/pacman.conf;
 }
-###################################################################################################################
-# Gestion des services #
+##################################################################################################################################################################################
+# Gestion des Services #
 ########################
 SERVICES(){
 mkdir -p                                                           $DIR/profil/airootfs/etc/systemd/system/multi-user.target.wants 2>/dev/null;
