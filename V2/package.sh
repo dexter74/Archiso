@@ -51,7 +51,7 @@ fi
 ####################################################################
 # Génération des Packages #
 ###########################
-if [[ "$PACKAGE_GENERIC" = [yY] ]]; then
+if [[ "$BUILD_PACKAGE" = [yY] ]]; then
   calamares;
   yay;
   DEPOT_REGEN;
