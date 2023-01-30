@@ -32,6 +32,7 @@ kpmcore
 libtool
 m4
 make
+os-prober
 patch
 plasma-framework
 python
