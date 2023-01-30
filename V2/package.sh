@@ -58,12 +58,21 @@ else
   echo "# [N]  PURGE_WORK          #";
   FORM;
 fi
-####################################################################
 
+####################################################################
+# Génération du Dépot #
+#######################
+if [[ "$GENERATION_DEPOT" = [yY] ]]; then
+  GENERATION_ARCHISO;
+  echo "# [Y]  GENERATION DEPOT    #";
+else
+  echo "# [N]  GENERATION DEPOT    #";
+fi
+
+####################################################################
 if [[ "$GENERATION_ARCHISO" = [yY] ]]; then
   GENERATION_ARCHISO;
   echo "# [Y]  GENERATION ARCHISO  #";
 else
   echo "# [N]  GENERATION ARCHISO  #";
-  FORM
 fi
