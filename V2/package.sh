@@ -27,32 +27,32 @@ if [[ "$PURGE_ALL" = [yY] ]]; then
 else
   echo "# [N]  PURGE_ALL    [OK]   #";
 fi
-
+#########################################
 if [[ "$PURGE_ISO" = [yY] ]]; then
   PURGE_ISO;
   echo "# [Y]  PURGE_ISO    [OK]   #";
 else
   echo "# [N]  PURGE_ISO    [OK]   #";
 fi
-
-
+#########################################
 if [[ "$PURGE_PROFIL" = [yY] ]]; then
   PURGE_PROFIL;
   echo "# [Y]  PURGE_PROFIL [OK]   #";
 else
   echo "# [N]  PURGE_PROFIL [OK]   #";
 fi
-
+#########################################
 if [[ "$PURGE_REPO" = [yY] ]]; then
   PURGE_REPO;
   echo "# [Y]  PURGE_REPO   [OK]   #";
 else
   echo "# [N]  PURGE_REPO   [OK]   #";
 fi
-
+#########################################
 if [[ "$PURGE_WORK" = [yY] ]]; then
   PURGE_WORK;
   echo "# [Y]  PURGE_WORK   [OK]   #";
 else
   echo "# [N]  PURGE_WORK   [OK]   #";
 fi
+####################################################################
