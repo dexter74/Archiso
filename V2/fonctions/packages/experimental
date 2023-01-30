@@ -5,7 +5,8 @@ calamares(){
 #####################################################################################################################
 # Purge des dossiers #
 ######################
-rm -rf /tmp/{calamares,icecream,pythonqt,yay} 2>/dev/null;
+rm -rf /tmp/{calamares,icecream,pythonqt} 2>/dev/null;
+
 
 #####################################################################################################################
 # Déclaration des sources #
@@ -13,19 +14,21 @@ rm -rf /tmp/{calamares,icecream,pythonqt,yay} 2>/dev/null;
 QT5WEBKIT="https://archive.archlinux.org/packages/q/qt5-webkit/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst"
 CALAMARES="https://raw.githubusercontent.com/dexter74/Archiso/main/V2/build/calamares/PKGBUILD"
 PYTHONQT="https://aur.archlinux.org/pythonqt.git"
-
 ICECREAM1="https://aur.archlinux.org/icecream.git"
 ICECREAM2="https://raw.githubusercontent.com/dexter74/Archiso/main/V2/build/icecream"
+
 
 #####################################################################################################################
 # Téléchargements des packages compilés #
 #########################################
 wget $QT5WEBKIT -O $DIR/repo/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst 2>/dev/null;
 
+
 #####################################################################################################################
 # Création des dossiers #
 #########################
 runuser -l $USERNAME -c "mkdir /tmp/calamares 2>/dev/null;"
+
 
 #####################################################################################################################
 # Téléchargements des sources #
@@ -33,26 +36,31 @@ runuser -l $USERNAME -c "mkdir /tmp/calamares 2>/dev/null;"
 runuser -l $USERNAME -c "git clone $ICECREAM1   /tmp/icecream  1>/dev/null 2>/dev/null;"
 runuser -l $USERNAME -c "git clone $PYTHONQT    /tmp/pythonqt  1>/dev/null 2>/dev/null;"
 
+
 #####################################################################################################################
 # Téléchargement des PKGBUILD #
 ###############################
 runuser -l $USERNAME -c "curl $CALAMARES > /tmp/calamares/PKGBUILD 2>/dev/null;"
 runuser -l $USERNAME -c "curl $ICECREAM2 > /tmp/icecream/PKGBUILD  2>/dev/null;"
 
+
 #####################################################################################################################
 # Amélioration compilation #
 ############################
 sed -i "s/	make/	make -j$(nproc)/g" /tmp/pythonqt/PKGBUILD;
+
 
 #####################################################################################################################
 # Compilation des packages #
 ############################
 runuser -l $USERNAME -c "cd /tmp/calamares  && makepkg -s 1>/dev/null 2>/dev/null;"
 runuser -l $USERNAME -c "cd /tmp/icecream   && makepkg -s 1>/dev/null 2>/dev/null;"
-runuser -l $USERNAME -c "cd /tmp/pythonqt   && makepkg -s 1>/dev/null;"
+runuser -l $USERNAME -c "cd /tmp/pythonqt   && makepkg -s 1>/dev/null 2>/dev/null;"
+
 
 #####################################################################################################################
 # Déplacement des packages dans le dépôt #
 ##########################################
 mv /tmp/{calamares,icecream,pythonqt}/*.zst $DIR/repo;
+
 }
