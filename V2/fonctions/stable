@@ -58,7 +58,9 @@ PACMAN(){
 sed -i "/\[multilib\]/,/Include/"'s/^#//' $DIR/profil/pacman.conf;
 sed -i -e "s/\ParallelDownloads = 5/ParallelDownloads = 10/g" $DIR/profil/pacman.conf;
 sed -i -e "s/\#CacheDir/CacheDir/g" $DIR/profil/pacman.conf;
-echo "[Local]
+
+echo "
+[Local]
 SigLevel = Optional TrustAll
 Server = file://$DIR/repo" >> $DIR/profil/pacman.conf;
 }
