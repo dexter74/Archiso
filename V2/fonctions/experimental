@@ -1,4 +1,63 @@
 ###################################################################################################################
+# Gestion des Services #
+########################
+SERVICES(){
+
+mkdir -p                                                           $DIR/profil/airootfs/etc/systemd/system/multi-user.target.wants 2>/dev/null;
+ln -s /usr/lib/systemd/system/NetworkManager-wait-online.service   $DIR/profil/airootfs/etc/systemd/system/multi-user.target.wants/NetworkManager-wait-online.service 2>/dev/null;
+ln -s /usr/lib/systemd/system/NetworkManager.service               $DIR/profil/airootfs/etc/systemd/system/multi-user.target.wants/NetworkManager.service 2>/dev/null;
+ln -s /usr/lib/systemd/system/NetworkManager-dispatcher.service    $DIR/profil/airootfs/etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service 2>/dev/null;
+ln -s /usr/lib/systemd/system/lightdm.service                      $DIR/profil/airootfs/etc/systemd/system/display-manager.service 2>/dev/null;
+
+# Auto-Login:
+echo "[Service]
+ExecStart=
+ExecStart=-/sbin/agetty -o '-p -f -- \\u' --noclear --autologin $USERNAME - $TERM" > $DIR/profil/airootfs/etc/systemd/system/getty@tty1.service.d/autologin.conf;
+}
+
+
+#######################################################################################################################################################################
+# Création d'un Utilisateur #
+#############################
+UTILISATEUR(){
+# /etc/passwd
+echo "$USERNAME:x:1000:1000::/home/$USERNAME:/usr/bin/zsh" >> $DIR/profil/airootfs/etc/passwd;
+
+
+# /etc/group
+echo "root:x:0:root
+adm:x:4:$USERNAME
+wheel:x:10:$USERNAME
+uucp:x:14:$USERNAME
+$USERNAME:x:1000:" > $DIR/profil/airootfs/etc/group;
+
+# /etc/shadow
+echo "root::14871::::::
+$USERNAME:$HASH:14871::::::" > $DIR/profil/airootfs/etc/shadow;
+
+# /etc/gshadow
+echo "root:!*::root
+$USERNAME:!*::" > $DIR/profil/airootfs/etc/gshadow;
+
+# /etc/sudoers.d
+mkdir -p $DIR/profil/airootfs/etc/sudoers.d/
+
+# /etc/sudoers
+echo "root ALL=(ALL) ALL
+%wheel ALL=(ALL) ALL" > $DIR/profil/airootfs/etc/sudoers;
+
+# /etc/sudoers.d/username
+echo "$USERNAME ALL=(ALL) NOPASSWD: ALL" > $DIR/profil/airootfs/etc/sudoers.d/username;
+}
+
+
+
+
+
+
+
+
+###################################################################################################################
 # Personnalisation de l'utilisateur #
 #####################################
 SKEL(){
