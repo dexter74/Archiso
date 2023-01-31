@@ -2,6 +2,7 @@
 # Fonction pour les packages à intégrer #
 #########################################
 yay(){
+USERNAME=marc
 rm -rf /tmp/yay;
 runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/yay.git /tmp/yay 1>/dev/null 2>/dev/null;'
 sed -i -e 's/79773659c33b3d9d7424825c1c9af98501a2ddff9d1e565a484e3477f986c03e/4aecd06d38f09c8f5aa1f712c8d7b9f13bfbb50814b8936aba82bda1e135504c/' /tmp/yay/PKGBUILD;
