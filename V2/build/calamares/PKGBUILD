@@ -8,7 +8,7 @@
 pkgname=calamares
 pkgver=3.2.61
 pkgrel=1
-pkgdesc='Installateur Calamares by Drthrax74'
+pkgdesc='Installateur Calamares'
 arch=('x86_64')
 makedepends=( 'ack' 'appstream-qt' 'autoconf' 'automake' 'binutils' 'bison' 'boost' 'cmake' 'extra-cmake-modules' 'fakeroot' 'flex'
 	      'gcc' 'gcc-libs-multilib' 'gcc-multilib' 'git' 'icu' 'kcoreaddons' 'kiconthemes' 'kio' 'kparts' 'kservice' 'kpmcore'
