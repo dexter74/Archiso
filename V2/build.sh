@@ -9,7 +9,6 @@ source ./fonctions/experimental;
 source ./fonctions/stable;
 source ./settings.conf;
 
-
 ####################################################################
 # Mise en Forme #
 #################
@@ -77,8 +76,6 @@ package_drthrax;
 else
   echo "# [N]  ADD Driver Pacman   #";
 fi
- ;
-
 
 ####################################################################
 # Configuration de la Langue #
@@ -109,7 +106,6 @@ if [[ "$CUSTOMIZE_AIROOTFS" = [yY] ]]; then
 else
   echo "# [N]  CUSTOMIZE_AIROOTFS  #";
 fi
-
 
 ####################################################################
 # Création de l'utilisateur #
@@ -161,7 +157,3 @@ if [[ "$RENAME" = [yY] ]]; then
 else
   echo "# [N]  RENAME              #";
 fi
-
-
-
-
