@@ -52,7 +52,7 @@ fi
 # Pilote Matériel #
 ###################
 if [[ "$DRIVER" = [yY] ]]; then
-  Driver_Drthrax;
+  package_driver_drthrax;
   echo "# [Y]  Driver Drthra x     #";
 else
   echo "# [N]  Driver Drthra x     #";
