@@ -50,8 +50,8 @@ fi
 ###########################
 if [[ "$BUILD_PACKAGE" = [yY] ]]; then
   yay;
- # calamares;
- # DEPOT_REGEN;
+  calamares;
+  DEPOT_REGEN;
   echo "# [Y]  PACKAGE GENERIC     #";
 else
   echo "# [N]  PACKAGE GENERIC     #";
