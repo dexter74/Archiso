@@ -19,6 +19,12 @@ cd $HOME/Documents/calamares;
 Les fichiers *.desc permettent d'avoir des informations sur le module et des dépendances.
 ```
 
+|       Modules       |      Dépendance      |  Language  |
+| ------------------- | -------------------- | ---------- |
+| Bootloader          | Partition            | Python     |
+
+
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ##### X. Edition de la configuration Calamares
 ```bash
@@ -27,17 +33,11 @@ mousepad $HOME/Documents/calamares/CMakeLists.txt;
 ```
 
 
-
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ##### X. Configurer BootLoader
 ```bash
 mousepad $HOME/calamares/src/modules/bootloader/bootloader.conf;
 ```
 
-
-
-|       Modules       |      Dépendance      |  Language  |
-| ------------------- | -------------------- | ---------- |
-| Bootloader          | Partition            | Python     |
 
 
