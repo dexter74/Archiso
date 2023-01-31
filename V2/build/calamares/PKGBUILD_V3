@@ -90,11 +90,6 @@ package(){
     cp "../src/modules/welcome/welcome.conf"                            "$pkgdir/usr/share/calamares/";
     cp "../src/modules/welcomeq/welcomeq.conf"                          "$pkgdir/usr/share/calamares/";
     cp "../src/modules/zfs/zfs.conf"                                    "$pkgdir/usr/share/calamares/";
-
-
-
-
-
 }
 
 
