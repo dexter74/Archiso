@@ -2,7 +2,9 @@
 # Le GitHub intégrera déjà les correctifs #
 ###########################################
 
-# Inspiré : https://github.com/Cleanjaro/calamares/blob/master/PKGBUILD
+# Inspiré :
+# https://www.arcolinuxiso.com/13-fixing-the-carli-calamares-config/
+# https://github.com/Cleanjaro/calamares/blob/master/PKGBUILD
 
 pkgname=calamares
 pkgver=3.2.61
