@@ -7,7 +7,7 @@
 > Warning: Partition-module settint *defaultPartitiononTableType* is unset, will use gpt for efi or msdos for bios.
 
 **Erreur**
-> /home/CHANGES : Dossier à crée
+> /home/CHANGES n'existe pas.
 > 
 > Le système de fichier source "/home/marc/src/qml/calamares/slideshow" n'existe pas.
 
