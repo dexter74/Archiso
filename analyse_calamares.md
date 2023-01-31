@@ -8,3 +8,7 @@
 
 **Erreur**
 > /home/CHANGES : Dossier à crée
+> 
+> Le système de fichier source "/home/marc/src/qml/calamares/slideshow" n'existe pas.
+
+
