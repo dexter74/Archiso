@@ -36,6 +36,7 @@ kio
 kparts
 kservice
 kpmcore
+libpwquality
 libtool
 m4
 make
