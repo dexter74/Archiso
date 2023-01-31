@@ -46,6 +46,7 @@ package(){
     cd ${srcdir}/calamares-custom/build;
     make -j$(nproc) DESTDIR="$pkgdir" install;
     cp "../settings.conf" "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/*/*.conf "$pkgdir/usr/share/calamares/";
 }
 
 
