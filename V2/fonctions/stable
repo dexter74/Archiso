@@ -108,7 +108,7 @@ echo "~/.automated_script.sh" > $DIR/profil/airootfs/root/.zlogin;
 ##############################
 COMPILATION(){
 rm -rf $DIR/{iso,work}/* 2>/dev/null;
-mkarchiso -w $DIR/work -o $DIR/iso $DIR/profil;
+mkarchiso -v -w $DIR/work -o $DIR/iso $DIR/profil;
 }
 
 ###################################################################################################################
