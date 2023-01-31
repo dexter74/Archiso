@@ -83,10 +83,10 @@ package(){
     cp "../src/modules/services-systemd/services-systemd.conf"          "$pkgdir/usr/share/calamares/";
     cp "../src/modules/shellprocess/shellprocess.conf"                  "$pkgdir/usr/share/calamares/";
     cp "../src/modules/tracking/tracking.conf"                          "$pkgdir/usr/share/calamares/";
-    cp "../src/modules/ umount/umount.conf"                             "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/umount/umount.conf"                              "$pkgdir/usr/share/calamares/";
     cp "../src/modules/unpackfs/unpackfs.conf"                          "$pkgdir/usr/share/calamares/";
-    cp "../src/modules/ users/users.conf"                               "$pkgdir/usr/share/calamares/";
-    cp "../src/modules/ usersq/usersq.conf"                             "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/users/users.conf"                                "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/usersq/usersq.conf"                              "$pkgdir/usr/share/calamares/";
     cp "../src/modules/welcome/welcome.conf"                            "$pkgdir/usr/share/calamares/";
     cp "../src/modules/welcomeq/welcomeq.conf"                          "$pkgdir/usr/share/calamares/";
     cp "../src/modules/zfs/zfs.conf"                                    "$pkgdir/usr/share/calamares/";
