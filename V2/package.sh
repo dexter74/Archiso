@@ -25,9 +25,9 @@ FORM;
 #############################
 if [[ "$PURGE_ALL" = [yY] ]]; then
   PURGE_ALL;
-  echo "# [Y]  PURGE_ALL           #";
+  echo "# [Y]  PURGE ALL           #";
 else
-  echo "# [N]  PURGE_ALL           #";
+  echo "# [N]  PURGE ALL           #";
 fi
 #########################################
 if [[ "$PURGE_REPO" = [yY] ]]; then
@@ -65,7 +65,7 @@ if [[ "$BUILD_PACKAGE" = [yY] ]]; then
   yay;
   calamares;
   DEPOT_REGEN;
-  echo "# [Y]  PACKAGE GENERIC     #";
+  echo "# [Y]  Compilation Package #";
 else
-  echo "# [N]  PACKAGE GENERIC     #";
+  echo "# [N]  Compilation Package #";
 fi
