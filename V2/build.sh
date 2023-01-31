@@ -1,6 +1,6 @@
-####################################################################
-# Chargement des fonctions #
-############################
+########################################################################################################################################
+# Chargement des fichiers #
+###########################
 source ./fonctions/packages/list/experimental;
 source ./fonctions/packages/list/stable;
 source ./fonctions/packages/experimental;
@@ -8,6 +8,7 @@ source ./fonctions/packages/stable;
 source ./fonctions/experimental;
 source ./fonctions/stable;
 source ./settings.conf;
+
 
 ####################################################################
 # Mise en Forme #
