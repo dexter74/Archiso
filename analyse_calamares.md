@@ -8,3 +8,6 @@ sudo calamares -D9
 ```
 - Warning: ckbcomp not found.
 ```
+
+
+http://termbin.com/898l
