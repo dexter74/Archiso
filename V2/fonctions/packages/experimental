@@ -7,8 +7,6 @@ calamares(){
 ######################
 rm -rf /tmp/{calamares,icecream,pythonqt} 2>/dev/null;
 
-sleep 10
-
 #####################################################################################################################
 # Déclaration des sources #
 ###########################
@@ -18,12 +16,10 @@ ICECREAM2="https://raw.githubusercontent.com/dexter74/Archiso/main/V2/build/icec
 ICECREAM1="https://aur.archlinux.org/icecream.git"
 PYTHONQT="https://aur.archlinux.org/pythonqt.git"
 
-
 #####################################################################################################################
 # Téléchargements des packages compilés #
 #########################################
 wget $QT5WEBKIT -O $DIR/repo/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst 2>/dev/null;
-
 
 #####################################################################################################################
 # Création des dossiers #
