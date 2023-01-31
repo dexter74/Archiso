@@ -7,6 +7,18 @@ echo "yay" >> $DIR/profil/packages.x86_64;
 
 
 ################################################################################################
+# Ajouter les pilotes #
+#######################
+package_drthrax(){
+echo "upd72020x-fw
+ast-firmware
+wd719x-firmware
+linux-firmware-qlogic
+aic94xx-firmware" >>  $DIR/profil/packages.x86_64;
+}
+
+
+################################################################################################
 # Ajouter Calamares #
 #####################
 package_calamares(){
@@ -62,5 +74,4 @@ yaml-cpp
 # Calamares #
 #############
 calamares" >> $DIR/profil/packages.x86_64;
-
 }
