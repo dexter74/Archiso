@@ -19,18 +19,18 @@ FORM;
 #######################
 if [[ "$PURGE_ISO" = [yY] ]]; then
   PURGE_ISO;
-  echo "# [Y]  PURGE_ISO           #";
+  echo "# [Y]  PURGE ISO           #";
 else
-  echo "# [N]  PURGE_ISO           #";
+  echo "# [N]  PURGE ISO           #";
 fi
 
 #########################################
 if [[ "$PURGE_WORK" = [yY] ]]; then
   PURGE_WORK;
-  echo "# [Y]  PURGE_WORK          #";
+  echo "# [Y]  PURGE WORK          #";
   FORM;
 else
-  echo "# [N]  PURGE_WORK          #";
+  echo "# [N]  PURGE WORK          #";
   FORM;
 fi
 
@@ -49,9 +49,9 @@ fi
 ##########################
 if [[ "$PACMAN" = [yY] ]]; then
   PACMAN;
-  echo "# [Y]  PACMAN              #";
+  echo "# [Y]  Edit PACMAN.conf    #";
 else
-  echo "# [N]  PACMAN              #";
+  echo "# [N]  Edit PACMAN.conf    #";
 fi
 
 ####################################################################
@@ -61,9 +61,9 @@ if [[ "$PACKAGE" = [yY] ]]; then
   package_base;
   package_yay;
   package_calamares;
-  echo "# [Y]  PACKAGE             #";
+  echo "# [Y]  ADD LIST PACKAGE    #";
 else
-  echo "# [N]  PACKAGE             #";
+  echo "# [N]  ADD LIST PACKAGE    #";
 fi
 
 
@@ -102,9 +102,9 @@ fi
 ##########################
 if [[ "$CUSTOMIZE_AIROOTFS" = [yY] ]]; then
   CUSTOMIZE_AIROOTFS;
-  echo "# [Y]  CUSTOMIZE_AIROOTFS  #";
+  echo "# [Y]  CUSTOMIZE AIROOTFS  #";
 else
-  echo "# [N]  CUSTOMIZE_AIROOTFS  #";
+  echo "# [N]  CUSTOMIZE AIROOTFS  #";
 fi
 
 ####################################################################
