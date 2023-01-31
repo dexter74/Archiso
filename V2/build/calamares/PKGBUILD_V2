@@ -42,9 +42,7 @@ build(){
 		-DWITH_KF5DBus=OFF \
               	-DBoost_NO_BOOST_CMAKE=OFF \
 		-DWEBVIEW_FORCE_WEBKIT=OFF \
- 		-DSKIP_MODULES="dracut dracutlukscfg dummycpp dummyprocess dummypython dummypythonqt \
-				luksbootkeyfile luksopenswaphookcfg initramfs initramfscfg interactiveterminal \
-				machineid services-openrc tracking unpackfs webview"
+ 		-DSKIP_MODULES=""
 	make -j$(nproc)
 }
 
