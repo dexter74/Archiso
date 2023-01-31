@@ -12,101 +12,38 @@ pkgrel=1
 pkgdesc='Installateur Calamares by Drthrax74'
 arch=('x86_64')
 depends=( 'ack' 'appstream-qt' 'autoconf' 'automake' 'binutils' 'bison' 'boost' 'cmake' 'extra-cmake-modules' 'fakeroot' 'flex'
-	      'gcc' 'gcc-libs-multilib' 'gcc-multilib' 'git' 'icu' 'kcoreaddons' 'kiconthemes' 'kio' 'kparts' 'kservice' 'kpmcore'
-	      'libtool' 'libpwquality' 'm4' 'make' 'os-prober' 'patch' 'plasma-framework' 'python' 'python3' 'python-pip' 'python-qt.py' 'python-yaml'
-	      'qt5-declarative' 'qt5-location' 'qt5-tools' 'qt5-translations' 'qt5-xmlpatterns' 'qt5-webengine' 'yaml-cpp')
+          'gcc' 'gcc-libs-multilib' 'gcc-multilib' 'git' 'icu' 'kcoreaddons' 'kiconthemes' 'kio' 'kparts' 'kservice' 'kpmcore'
+          'libtool' 'libpwquality' 'm4' 'make' 'os-prober' 'patch' 'plasma-framework' 'python' 'python3' 'python-pip' 'python-qt.py' 'python-yaml'
+          'qt5-declarative' 'qt5-location' 'qt5-tools' 'qt5-translations' 'qt5-xmlpatterns' 'qt5-webengine' 'yaml-cpp')
 license=('GPL3')
 source=("git+https://github.com/dexter74/calamares-custom.git")
 sha256sums=('SKIP')
 
 
 prepare(){
-	mkdir ${srcdir}/calamares-custom/build;
-	cd ${srcdir}/calamares-custom/
-	cp settings.conf ${srcdir}/calamares-custom/build;
-	}
+    mkdir -p ${srcdir}/calamares-custom/build;
+    cd ${srcdir}/calamares-custom/
+}
 
 
 build(){
-	cd ${srcdir}/calamares-custom/build;
-	cmake .. \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=lib \
-              	-DWITH_PYTHONQT=OFF \
-		-DWITH_KF5DBus=ON \
-              	-DBoost_NO_BOOST_CMAKE=ON \
-		-DWEBVIEW_FORCE_WEBKIT=OFF \
- 		-DSKIP_MODULES=""
-	make -j$(nproc)
+    cd ${srcdir}/calamares-custom/build;
+    cmake .. \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DWITH_PYTHONQT=OFF \
+        -DWITH_KF5DBus=ON \
+        -DBoost_NO_BOOST_CMAKE=ON \
+        -DWEBVIEW_FORCE_WEBKIT=OFF \
+         -DSKIP_MODULES=""
+    make -j$(nproc)
 }
 
 
 package(){
-	cd ${srcdir}/calamares-custom/build;
-	make -j$(nproc) DESTDIR="$pkgdir" install
+    cd ${srcdir}/calamares-custom/build;
+    make -j$(nproc) DESTDIR="$pkgdir" install
+
+    cp "../settings.conf" "$pkgdir/usr/share/calamares/";
 }
-
-
-
-
-# bootloader
-# contextualprocess
-# displaymanager
-# dracut
-# dracutlukscfg
-# dummycpp
-# dummyprocess
-# dummypython
-# dummypythonqt
-# finished
-# finishedq
-# fsresizer
-# fstab
-# grubcfg
-# hostinfo
-# hwclock
-# initcpio
-# initcpiocfg
-# initramfs
-# initramfscfg
-# interactiveterminal
-# keyboard
-# keyboardq
-# license
-# locale
-# localecfg
-# localeq
-# luksbootkeyfile
-# luksopenswaphookcfg
-# machineid
-# mkinitfs
-# mount
-# netinstall
-# networkcfg
-# notesqml
-# oemid
-# openrcdmcryptcfg
-# packagechooser
-# packagechooserq
-# packages
-# partition
-# plasmalnf
-# plymouthcfg
-# preservefiles
-# rawfs
-# removeuser
-# services-openrc
-# services-systemd
-# shellprocess
-# summary
-# summaryq
-# tracking
-# umount
-# unpackfs
-# users
-# usersq
-# webview
-# welcome
-# welcomeq
-# zfs
