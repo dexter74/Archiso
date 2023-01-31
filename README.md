@@ -26,10 +26,9 @@ clear;
 # Téléchargement du GitHub #
 ############################
 cd;
-rm -rf $HOME/script 2>/dev/null;
-git clone https://github.com/dexter74/Archiso.git $HOME/script;
-rm $HOME/script/V1/README.md 2>/dev/null;
-cd  $HOME/script/V1/;
+rm -rf $HOME/archiso;
+git clone https://github.com/dexter74/Archiso.git $HOME/archiso 2>/dev/null;
+cd $HOME/archiso/V2;
 sh package.sh;
-sh archiso.sh;
+sh build.sh;
 ```
