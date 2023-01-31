@@ -5,7 +5,7 @@
 #### A. Présentation
 ```
 Archiso permet de concevoir une image Live personnalisée.
-Se connecter en Root avant toute action.
+Calamares permet de réaliser une installation via une interface.
 ```
 
 ##### B. Dépendances:
