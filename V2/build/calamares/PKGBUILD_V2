@@ -28,6 +28,8 @@ prepare(){
 	_ver="$(cat CMakeLists.txt | grep -m3 -e "  VERSION" | grep -o "[[:digit:]]*" | xargs | sed s'/ /./g')";
 	printf 'Version: %s-%s' "${_ver}" "${pkgrel}";
 	sed -i -e "s|\${CALAMARES_VERSION_MAJOR}.\${CALAMARES_VERSION_MINOR}.\${CALAMARES_VERSION_PATCH}|${_ver}-${pkgrel}|g" CMakeLists.txt;
+	# Correctif:
+	# sed -i -e 's/src//g' $pkgname-$pkgver/src/modules/unpackfs/unpackfs.conf
 }
 #####################################################################################################################################################
 build(){
