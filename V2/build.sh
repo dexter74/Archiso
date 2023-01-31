@@ -62,11 +62,23 @@ if [[ "$PACKAGE" = [yY] ]]; then
   package_base;
   package_yay;
   package_calamares;
-  package_drthrax;
   echo "# [Y]  PACKAGE             #";
 else
   echo "# [N]  PACKAGE             #";
 fi
+
+
+####################################################################
+# Ajout dans la liste les pilotes #
+###################################
+if [[ "$DRIVER" = [yY] ]]; then
+package_drthrax;
+  echo "# [Y]  ADD Driver Pacman   #";
+else
+  echo "# [N]  ADD Driver Pacman   #";
+fi
+ ;
+
 
 ####################################################################
 # Configuration de la Langue #
