@@ -49,8 +49,8 @@ fi
 # Génération des Packages #
 ###########################
 if [[ "$BUILD_PACKAGE" = [yY] ]]; then
-  calamares;
   yay;
+  calamares;
   DEPOT_REGEN;
   echo "# [Y]  PACKAGE GENERIC     #";
 else
