@@ -19,10 +19,28 @@ cd $HOME/Documents/calamares;
 Les fichiers *.desc permettent d'avoir des informations sur le module et des dépendances.
 ```
 
-|       Modules       |      Dépendance      |  Language  |
-| ------------------- | -------------------- | ---------- |
-| Bootloader          | Partition            | Python     |
-
+|       Modules       |      Dépendance      |
+| ------------------- | -------------------- |
+| Bootloader          | Partition            |
+| Displaymanager      | Aucun                |
+| Dracut              | Aucun                |
+| Ddummycpp           | Aucun                |
+| Dummyprocess        | Aucun                |
+| Dummypython         | Aucun                |
+| Finished            | ?????                |
+| Finishedq           | ?????                |
+| FSResizer           | ?????                |
+| FStab               | ?????                |
+| Grubcfg             | ?????                |
+| Initramfscfg        | ?????                |
+|                     | ?????                |
+|                     | ?????                |
+|                     | ?????                |
+|                     | ?????                |
+|                     | ?????                |
+|                     | ?????                |
+|                     | ?????                |
+|                     | ?????                |
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
