@@ -2,6 +2,8 @@
 # Le GitHub intégrera déjà les correctifs #
 ###########################################
 
+# Inspiré : https://github.com/Cleanjaro/calamares/blob/master/PKGBUILD
+
 pkgname=calamares
 pkgver=3.2.61
 pkgrel=1
@@ -40,8 +42,6 @@ package(){
 	cd ${srcdir}/calamares-custom/build;
 	make -j$(nproc) DESTDIR="$pkgdir" install
 }
-
-
 
 
 # bootloader
