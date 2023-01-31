@@ -53,9 +53,9 @@ fi
 ###################
 if [[ "$DRIVER" = [yY] ]]; then
   package_driver_drthrax;
-  echo "# [Y]  Driver Drthra x     #";
+  echo "# [Y]  Driver Drthrax      #";
 else
-  echo "# [N]  Driver Drthra x     #";
+  echo "# [N]  Driver Drthrax      #";
 fi
 
 ####################################################################
