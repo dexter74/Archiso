@@ -1,11 +1,8 @@
-###########################################
-# Le GitHub intégrera déjà les correctifs #
-###########################################
+##############################################################################
+# Le GitHub Calamares-custom sera personnalisé, pour éviter toute action ici #
+##############################################################################
 
-# Inspiré :
-# https://www.arcolinuxiso.com/13-fixing-the-carli-calamares-config/
-# https://github.com/Cleanjaro/calamares/blob/master/PKGBUILD
-
+############################################################################################################################################################
 pkgname=calamares
 pkgver=3.2.61
 pkgrel=1
@@ -20,12 +17,14 @@ source=("git+https://github.com/dexter74/calamares-custom.git")
 sha256sums=('SKIP')
 
 
+############################################################################################################################################################
 prepare(){
     mkdir -p ${srcdir}/calamares-custom/build;
-    cd ${srcdir}/calamares-custom/
+    cd ${srcdir}/calamares-custom/;
 }
 
 
+############################################################################################################################################################
 build(){
     cd ${srcdir}/calamares-custom/build;
     cmake .. \
@@ -41,9 +40,16 @@ build(){
 }
 
 
+############################################################################################################################################################
 package(){
     cd ${srcdir}/calamares-custom/build;
-    make -j$(nproc) DESTDIR="$pkgdir" install
-
+    make -j$(nproc) DESTDIR="$pkgdir" install;
     cp "../settings.conf" "$pkgdir/usr/share/calamares/";
 }
+
+
+
+############################################################################################################################################################
+# https://www.arcolinuxiso.com/13-fixing-the-carli-calamares-config/
+# https://github.com/Cleanjaro/calamares/blob/master/PKGBUILD
+############################################################################################################################################################
