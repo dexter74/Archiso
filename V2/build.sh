@@ -59,9 +59,10 @@ fi
 # Ajout de la liste des Packages #
 ##################################
 if [[ "$PACKAGE" = [yY] ]]; then
-  LIST_ADD_PACKAGE;
+  package_base;
   package_yay;
   package_calamares;
+  package_drthrax;
   echo "# [Y]  PACKAGE             #";
 else
   echo "# [N]  PACKAGE             #";
