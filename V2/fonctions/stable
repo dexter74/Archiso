@@ -46,7 +46,6 @@ DEPOT_REGEN(){
 repo-add $DIR/repo/Local.db.tar.gz $DIR/repo/*.zst 1>/dev/null;
 }
 
-
 ###################################################################################################################
 # Génération du dossier Archiso #
 #################################
@@ -62,12 +61,12 @@ PACMAN(){
 sed -i "/\[multilib\]/,/Include/"'s/^#//' $DIR/profil/pacman.conf;
 sed -i -e "s/\ParallelDownloads = 5/ParallelDownloads = 10/g" $DIR/profil/pacman.conf;
 sed -i -e "s/\#CacheDir/CacheDir/g" $DIR/profil/pacman.conf;
-
 echo "
 [Local]
 SigLevel = Optional TrustAll
 Server = file://$DIR/repo" >> $DIR/profil/pacman.conf;
 }
+
 ##################################################################################################################################################################################
 # Gestion des Services #
 ########################
@@ -77,7 +76,6 @@ ln -s /usr/lib/systemd/system/NetworkManager-wait-online.service   $DIR/profil/a
 ln -s /usr/lib/systemd/system/NetworkManager.service               $DIR/profil/airootfs/etc/systemd/system/multi-user.target.wants/NetworkManager.service 2>/dev/null;
 ln -s /usr/lib/systemd/system/NetworkManager-dispatcher.service    $DIR/profil/airootfs/etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service 2>/dev/null;
 ln -s /usr/lib/systemd/system/lightdm.service                      $DIR/profil/airootfs/etc/systemd/system/display-manager.service 2>/dev/null;
-
 # Auto-Login:
 # echo "[Service]
 # ExecStart=
