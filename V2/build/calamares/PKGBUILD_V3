@@ -16,13 +16,57 @@ license=('GPL3')
 source=("git+https://github.com/dexter74/calamares-custom.git")
 sha256sums=('SKIP')
 
+backup=( 'usr/share/calamares/bootloader.conf'
+'usr/share/calamares/displaymanager.conf'
+'usr/share/calamares/dracut.conf'
+'usr/share/calamares/dummycpp.conf'
+'usr/share/calamares/dummypython.conf'
+'usr/share/calamares/finished.conf'
+'usr/share/calamares/finishedq.conf'
+'usr/share/calamares/fsresizer.conf'
+'usr/share/calamares/fstab.conf'
+'usr/share/calamares/grubcfg.conf'
+'usr/share/calamares/initramfs.conf'
+'usr/share/calamares/interactiveterminal.conf'
+'usr/share/calamares/keyboard.conf'
+'usr/share/calamares/keyboardq.conf'
+'usr/share/calamares/license.conf'
+'usr/share/calamares/locale.conf'
+'usr/share/calamares/localeq.conf'
+'usr/share/calamares/luksopenswaphookcfg.conf'
+'usr/share/calamares/machineid.conf'
+'usr/share/calamares/mount.conf'
+'usr/share/calamares/netinstall.conf'
+'usr/share/calamares/notesqml.conf'
+'usr/share/calamares/oemid.conf'
+'usr/share/calamares/openrcdmcryptcfg.conf'
+'usr/share/calamares/packagechooser.conf'
+'usr/share/calamares/packagechooserq.conf'
+'usr/share/calamares/packages.conf'
+'usr/share/calamares/partition.conf'
+'usr/share/calamares/plasmalnf.conf'
+'usr/share/calamares/plymouthcfg.conf'
+'usr/share/calamares/preservefiles.conf'
+'usr/share/calamares/rawfs.conf'
+'usr/share/calamares/removeuser.conf'
+'usr/share/calamares/services-openrc.conf'
+'usr/share/calamares/services-systemd.conf'
+'usr/share/calamares/settings.conf'
+'usr/share/calamares/shellprocess.conf'
+'usr/share/calamares/tracking.conf'
+'usr/share/calamares/umount.conf'
+'usr/share/calamares/unpackfs.conf'
+'usr/share/calamares/users.conf'
+'usr/share/calamares/usersq.conf'
+'usr/share/calamares/welcome.conf'
+'usr/share/calamares/welcomeq.conf'
+'usr/share/calamares/zfs.conf' )
 
 ############################################################################################################################################################
 prepare(){
     mkdir -p ${srcdir}/calamares-custom/build;
     cd ${srcdir}/calamares-custom/;
 }
-
 
 ############################################################################################################################################################
 build(){
@@ -39,7 +83,6 @@ build(){
 
     make -j$(nproc)
 }
-
 
 ############################################################################################################################################################
 package(){
@@ -91,11 +134,6 @@ package(){
     cp "../src/modules/welcomeq/welcomeq.conf"                          "$pkgdir/usr/share/calamares/";
     cp "../src/modules/zfs/zfs.conf"                                    "$pkgdir/usr/share/calamares/";
 }
-
-
-
-
-
 
 ############################################################################################################################################################
 # https://www.arcolinuxiso.com/13-fixing-the-carli-calamares-config/
