@@ -11,4 +11,13 @@
 > 
 > Le système de fichier source "/home/marc/src/qml/calamares/slideshow" n'existe pas.
 
+```
+=== START CALAMARES 3.2.61
+2023-01-31 - 02:00:58 [1]: void Calamares::ViewManager::onInstallationFailed(const QString&, const QString&)
+    ERROR: Installation failed: "Mauvaise configuration unpackfs" 
 
+=== START CALAMARES 3.2.61
+=== START CALAMARES 3.2.61
+2023-01-31 - 02:03:12 [1]: void Calamares::ViewManager::onInstallationFailed(const QString&, const QString&)
+    ERROR: Installation failed: "Mauvaise configuration unpackfs" 
+```
