@@ -45,5 +45,5 @@ sudo calamares -D9
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 #### D. Configurer l'environnement
 ```bash
-nano $HOME/script/V1/settings.conf;
+nano $HOME/script/V2/settings.conf;
 ```
