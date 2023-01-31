@@ -1,5 +1,6 @@
 #####################################################################################################################
-# Le PKGUILB du paquet ICECREAM est un paliatif . (signature fichier incorrect)
+# Compilation de packages #
+###########################
 
 calamares(){
 #####################################################################################################################
@@ -12,7 +13,6 @@ rm -rf /tmp/{calamares,icecream,pythonqt} 2>/dev/null;
 ###########################
 QT5WEBKIT="https://archive.archlinux.org/packages/q/qt5-webkit/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst"
 CALAMARES="https://raw.githubusercontent.com/dexter74/Archiso/main/V2/build/calamares/PKGBUILD_V2"
-ICECREAM2="https://raw.githubusercontent.com/dexter74/Archiso/main/V2/build/icecream/PKGBUILD"
 ICECREAM1="https://aur.archlinux.org/icecream.git"
 PYTHONQT="https://aur.archlinux.org/pythonqt.git"
 
@@ -26,7 +26,6 @@ wget $QT5WEBKIT -O $DIR/repo/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst 2>/d
 #########################
 runuser -l $USERNAME -c "mkdir /tmp/calamares 2>/dev/null;"
 
-
 #####################################################################################################################
 # Téléchargements des sources #
 ###############################
@@ -38,14 +37,11 @@ runuser -l $USERNAME -c "git clone $PYTHONQT    /tmp/pythonqt  1>/dev/null 2>/de
 # Téléchargement des PKGBUILD #
 ###############################
 runuser -l $USERNAME -c "curl $CALAMARES > /tmp/calamares/PKGBUILD 2>/dev/null;"
-runuser -l $USERNAME -c "curl $ICECREAM2 > /tmp/icecream/PKGBUILD  2>/dev/null;"
-
 
 #####################################################################################################################
 # Amélioration compilation #
 ############################
 sed -i "s/	make/	make -j$(nproc)/g" /tmp/pythonqt/PKGBUILD;
-
 
 #####################################################################################################################
 # Compilation des packages #
@@ -58,5 +54,4 @@ runuser -l $USERNAME -c "cd /tmp/pythonqt   && makepkg -s 1>/dev/null 2>/dev/nul
 # Déplacement des packages dans le dépôt #
 ##########################################
 mv /tmp/{calamares,icecream,pythonqt}/*.zst $DIR/repo;
-
 }
