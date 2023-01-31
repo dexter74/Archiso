@@ -7,8 +7,9 @@ clear;
 # Chargement des fonctions #
 ############################
 source ./fonctions/packages/list/experimental;
-source ./fonctions/packages/list/stable;
 source ./fonctions/packages/experimental;
+source ./fonctions/packages/list/stable;
+source ./fonctions/packages/list/driver;
 source ./fonctions/packages/stable;
 source ./fonctions/experimental;
 source ./fonctions/stable;
@@ -36,6 +37,7 @@ else
   echo "# [N]  PURGE_REPO          #";
 
 fi
+
 ####################################################################
 # Génération du Dépot #
 #######################
@@ -45,6 +47,17 @@ if [[ "$GENERATION_DEPOT" = [yY] ]]; then
 else
   echo "# [N]  GENERATION DEPOT    #";
 fi
+
+####################################################################
+# Pilote Matériel #
+###################
+if [[ "$DRIVER" = [yY] ]]; then
+  Driver_Drthrax;
+  echo "# [Y]  Driver Drthra x     #";
+else
+  echo "# [N]  Driver Drthra x     #";
+fi
+
 ####################################################################
 # Génération des Packages #
 ###########################
