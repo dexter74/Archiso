@@ -45,14 +45,27 @@ build(){
 package(){
     cd ${srcdir}/calamares-custom/build;
     make -j$(nproc) DESTDIR="$pkgdir" install;
-    cp "../settings.conf" "$pkgdir/usr/share/calamares/";
-    cp "../src/modules/bootloader/bootloader.conf" "$pkgdir/usr/share/calamares/";
+    cp "../settings.conf"                                  "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/bootloader/bootloader.conf"         "$pkgdir/usr/share/calamares/";
     cp "../src/modules/displaymanager/displaymanager.conf" "$pkgdir/usr/share/calamares/";
-    cp "../src/modules/dracut/dracut.conf" "$pkgdir/usr/share/calamares/";
-    cp "../src/modules/dummycpp/dummycpp.conf" "$pkgdir/usr/share/calamares/";
-    cp "../src/modules/dummypython/dummypython.conf" "$pkgdir/usr/share/calamares/";
-    cp "../src/modules/finished/finished.conf" "$pkgdir/usr/share/calamares/";
-    cp "../src/modules/finishedq/finishedq.con" "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/dracut/dracut.conf"                 "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/dummycpp/dummycpp.conf"             "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/dummypython/dummypython.conf"       "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/finished/finished.conf"             "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/finishedq/finishedq.conf"           "$pkgdir/usr/share/calamares/";
+    fsresizer/fsresizer.conf
+    fstab/fstab.conf
+    grubcfg/grubcfg.conf
+    initramfs/initramfs.conf
+    interactiveterminal/interactiveterminal.conf
+    keyboard/keyboard.conf
+    keyboardq/keyboardq.conf
+    license/license.conf
+    locale/locale.conf
+    localeq/localeq.conf
+    luksopenswaphookcfg/luksopenswaphookcfg.conf
+    machineid/machineid.conf
+    
 }
 
 
