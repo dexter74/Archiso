@@ -45,27 +45,56 @@ build(){
 package(){
     cd ${srcdir}/calamares-custom/build;
     make -j$(nproc) DESTDIR="$pkgdir" install;
-    cp "../settings.conf"                                  "$pkgdir/usr/share/calamares/";
-    cp "../src/modules/bootloader/bootloader.conf"         "$pkgdir/usr/share/calamares/";
-    cp "../src/modules/displaymanager/displaymanager.conf" "$pkgdir/usr/share/calamares/";
-    cp "../src/modules/dracut/dracut.conf"                 "$pkgdir/usr/share/calamares/";
-    cp "../src/modules/dummycpp/dummycpp.conf"             "$pkgdir/usr/share/calamares/";
-    cp "../src/modules/dummypython/dummypython.conf"       "$pkgdir/usr/share/calamares/";
-    cp "../src/modules/finished/finished.conf"             "$pkgdir/usr/share/calamares/";
-    cp "../src/modules/finishedq/finishedq.conf"           "$pkgdir/usr/share/calamares/";
-    fsresizer/fsresizer.conf
-    fstab/fstab.conf
-    grubcfg/grubcfg.conf
-    initramfs/initramfs.conf
-    interactiveterminal/interactiveterminal.conf
-    keyboard/keyboard.conf
-    keyboardq/keyboardq.conf
-    license/license.conf
-    locale/locale.conf
-    localeq/localeq.conf
-    luksopenswaphookcfg/luksopenswaphookcfg.conf
-    machineid/machineid.conf
-    
+    cp "../settings.conf"                                               "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/bootloader/bootloader.conf"                      "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/displaymanager/displaymanager.conf"              "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/dracut/dracut.conf"                              "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/dummycpp/dummycpp.conf"                          "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/dummypython/dummypython.conf"                    "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/finished/finished.conf"                          "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/finishedq/finishedq.conf"                        "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/fsresizer/fsresizer.conf"                        "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/fstab/fstab.conf"                                "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/grubcfg/grubcfg.conf"                            "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/initramfs/initramfs.conf"                        "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/interactiveterminal/interactiveterminal.conf"    "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/keyboard/keyboard.conf"                          "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/keyboardq/keyboardq.conf"                        "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/license/license.conf"                            "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/locale/locale.conf"                              "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/localeq/localeq.conf"                            "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/luksopenswaphookcfg/luksopenswaphookcfg.conf"    "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/machineid/machineid.conf"                        "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/mount/mount.conf"                                "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/netinstall/netinstall.conf"                      "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/notesqml/notesqml.conf"                          "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/oemid/oemid.conf"                                "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/openrcdmcryptcfg/openrcdmcryptcfg.conf"          "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/packagechooser/packagechooser.conf"              "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/packagechooserq/packagechooserq.conf"            "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/packages/packages.conf"                          "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/partition/partition.conf"                        "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/plasmalnf/plasmalnf.conf"                        "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/plymouthcfg/plymouthcfg.conf"                    "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/preservefiles/preservefiles.conf"                "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/rawfs/rawfs.conf"                                "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/removeuser/removeuser.conf"                      "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/services-openrc/services-openrc.conf"            "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/services-systemd/services-systemd.conf"          "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/shellprocess/shellprocess.conf"                  "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/tracking/tracking.conf"                          "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/ umount/umount.conf"                             "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/unpackfs/unpackfs.conf"                          "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/ users/users.conf"                               "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/ usersq/usersq.conf"                             "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/welcome/welcome.conf"                            "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/welcomeq/welcomeq.conf"                          "$pkgdir/usr/share/calamares/";
+    cp "../src/modules/zfs/zfs.conf"                                    "$pkgdir/usr/share/calamares/";
+
+
+
+
+
 }
 
 
