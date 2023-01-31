@@ -20,6 +20,8 @@ sha256sums=('SKIP')
 
 prepare(){
 	mkdir ${srcdir}/calamares-custom/build;
+	cd ${srcdir}/calamares-custom/
+	cp settings.conf ${srcdir}/calamares-custom/build;
 	}
 
 
@@ -42,6 +44,8 @@ package(){
 	cd ${srcdir}/calamares-custom/build;
 	make -j$(nproc) DESTDIR="$pkgdir" install
 }
+
+
 
 
 # bootloader
