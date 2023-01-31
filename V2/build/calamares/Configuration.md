@@ -30,6 +30,9 @@ mousepad $HOME/Documents/calamares/CMakeLists.txt;
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ##### X. Configurer BootLoader
+> Dépendance: Aucune
+> 
+
 ```bash
 mousepad $HOME/calamares/src/modules/bootloader/bootloader.conf;
 ```
