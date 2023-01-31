@@ -8,6 +8,7 @@
 
 **Erreur**
 > /src/modules/unpackfs/
+> 
 > /home/CHANGES n'existe pas.
 > 
 > Le système de fichier source "/home/marc/src/qml/calamares/slideshow" n'existe pas.
