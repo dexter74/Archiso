@@ -29,13 +29,15 @@ mousepad $HOME/Documents/calamares/CMakeLists.txt;
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-##### X. Configurer BootLoader (Dépendance: partition)
+##### X. Configurer BootLoader
 ```bash
 mousepad $HOME/calamares/src/modules/bootloader/bootloader.conf;
 ```
 
 
 
-
+|       Modules       |      Dépendance      |  Language  |
+| ------------------- | -------------------- | ---------- |
+| Bootloader          | Partition            | Python     |
 
 
