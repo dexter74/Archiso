@@ -15,6 +15,7 @@ depends=( 'ack' 'appstream-qt' 'autoconf' 'automake' 'binutils' 'bison' 'boost' 
 license=('GPL3')
 source=("git+https://github.com/dexter74/calamares-custom.git")
 sha256sums=('SKIP')
+
 ############################################################################################################################################################
 backup=( 'usr/share/calamares/bootloader.conf'
 'usr/share/calamares/displaymanager.conf'
@@ -63,13 +64,11 @@ backup=( 'usr/share/calamares/bootloader.conf'
 'usr/share/calamares/zfs.conf'
 )
 
-
 ############################################################################################################################################################
 prepare(){
     mkdir -p ${srcdir}/calamares-custom/build;
     cd ${srcdir}/calamares-custom/;
 }
-
 
 ############################################################################################################################################################
 build(){
@@ -136,7 +135,6 @@ package(){
     cp "../src/modules/welcomeq/welcomeq.conf"                          "$pkgdir/usr/share/calamares/";
     cp "../src/modules/zfs/zfs.conf"                                    "$pkgdir/usr/share/calamares/";
 }
-
 
 ############################################################################################################################################################
 # https://www.arcolinuxiso.com/13-fixing-the-carli-calamares-config/
