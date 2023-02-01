@@ -7,5 +7,6 @@ source ./fonctions/rename;
 ################################################################################################################################################
 # Lancement de la Fonction #
 ############################
-echo "Démarrage du script renommage de l'iso.";
+echo "###########################################################";
+echo "# Démarrage du script renommage de l'iso                  #";
 RENAME;
