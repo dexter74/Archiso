@@ -5,7 +5,7 @@ source ./settings.conf;
 source ./fonctions/skel;
 
 ################################################################################################################################################
-# Lancement des Fonctions #
-###########################
+# Lancement de la Fonction #
+############################
 echo "Démarrage du script de l'utilisateur type.";
 SKEL;
