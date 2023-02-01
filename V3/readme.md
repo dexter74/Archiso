@@ -30,7 +30,9 @@ sh ./13.Compilation.sh;
 sh ./14.Rename.sh;
 ```
 
-#### X. Dépendances 
+#### X. Dépendances
 ```bash
-XXX
+sudo pacman -Sy --noconfirm ack appstream-qt boost cmake extra-cmake-modules kcoreaddons kiconthemes kio kparts kservice kpmcore plasma-framework;
+sudo pacman -Sy --noconfirm python-pip python-qt.py python-yaml qt5-declarative qt5-location qt5-tools qt5-xmlpatterns qt5-webengine yaml-cpp;
+     yay    -Sy --noconfirm icecream pythonqt qt
 ```
