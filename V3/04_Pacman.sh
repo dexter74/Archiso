@@ -8,5 +8,6 @@ source ./fonctions/pacman;
 # Lancement des Fonctions #
 ###########################
 if [[ $PACMAN = [Yy] ]]; then
+  echo "Démarrage du script 04_Pacman.sh"
   PACMAN;
 fi
