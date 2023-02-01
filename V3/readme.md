@@ -15,7 +15,7 @@ cd $HOME/archiso/V3;
 ```
 
 
-#### C. Préparation de l'environnement
+#### C. Génération de l'image Système
 ```bash
 sh ./00_Clean.sh;
 sh ./01_Generation.sh;
@@ -29,17 +29,12 @@ sh ./08_Customize.sh;
 sh ./09_Utilisateur.sh;
 sh ./10_Profildef.sh;
 sh ./11_Skel.sh;
-```
-
-
-#### D. Nettoyage et Compilation du système 
-```bash
 sh ./12_Regen_depot.sh;
 sh ./13_Clean_OS.sh;
 sh ./14_Permission.sh;
 sh ./15_Compilation.sh;
 sh ./16_Rename.sh;
-``` 
+```
 
 #### X. Dépendances
 ```bash
