@@ -7,4 +7,4 @@ clear;
 # Chargements des fonctions #
 #############################
 source ./settings.conf;
-source ./fonctions/
+source ./fonctions/utilisateur;
