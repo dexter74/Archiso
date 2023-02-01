@@ -29,6 +29,7 @@ Icon=calamares
 Path=
 Terminal=false
 StartupNotify=true' > $DIR/profil/airootfs/etc/skel/Bureau/Calamares.desktop;
+chmod +x $DIR/profil/airootfs/etc/skel/Bureau/*.desktop;
 
 ########################################################################################################################################################
 # Remplacement du Terme #
