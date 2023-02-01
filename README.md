@@ -10,7 +10,7 @@ Calamares permet de réaliser une installation via une interface.
 
 ##### B. Dépendances:
 ```
-yay -Sy --noconfirm icecream pythonqt qt qt5-webkit;
+ack appstream-qt autoconf automake binutils bison boost cmake extra-cmake-modules fakeroot flex gcc gcc-libs-multilib gcc-multilib git icecream icu kcoreaddons kiconthemes kio kparts kservice kpmcore libtool libpwquality m4 make os-prober patch plasma-framework python python3 python-pip python-qt.py python-yaml pythonqt qt qt5-declarative qt5-location qt5-tools qt5-translations qt5-xmlpatterns qt5-webengine qt5-webkit yaml-cpp 
 ```
 
 <br />
