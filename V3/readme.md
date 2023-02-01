@@ -7,6 +7,7 @@ Script  : Charge les fonctions uniquements
 
 #### B. Télécharger les scripts 
 ```bash
+clear;
 cd;
 rm -rf $HOME/archiso;
 git clone https://github.com/dexter74/Archiso.git $HOME/archiso 2>/dev/null;
