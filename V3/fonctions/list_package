@@ -2,7 +2,7 @@
 # Package de base #
 ###################
 package_base(){
-if [[ $(grep -L "archiso" $DIR/profil/packages.x86_64) ]]; then
+if [[ $(grep -L "^archiso" $DIR/profil/packages.x86_64) ]]; then
 RC=0
 else
 echo "####################
