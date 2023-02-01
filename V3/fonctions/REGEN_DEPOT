@@ -1,3 +1,0 @@
-REGEN_DEPOT(){
-repo-add $DIR/repo/Local.db.tar.gz $DIR/repo/*.zst 1>/dev/null;
-}
