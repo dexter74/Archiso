@@ -4,7 +4,8 @@
 package_base(){
 
 if [[ $(grep -L "archiso" $DIR/profil/packages.x86_64) ]]; then
-
+  RC=0
+else
 echo "####################
 # Packages Generic #
 ####################
@@ -38,6 +39,8 @@ fi
 ###############
 package_yay(){
 if [[ $(grep -L "yay" $DIR/profil/packages.x86_64) ]]; then
+  RC=0
+else
 echo "###############
 # Package Yay #
 ###############
@@ -50,7 +53,8 @@ fi
 #######################
 package_drthrax(){
 if [[ $(grep -L "upd72020x-fw" $DIR/profil/packages.x86_64) ]]; then
-
+  RC=0
+else
 echo "
 ###########
 # Pilotes #
@@ -68,6 +72,8 @@ fi
 #####################
 package_calamares(){
 if [[ $(grep -L "ack" $DIR/profil/packages.x86_64) ]]; then
+  RC=0
+else
 echo "###########################
 # Dépendance de Calamares #
 ###########################
@@ -120,6 +126,5 @@ yaml-cpp
 # Calamares #
 #############
 calamares" >> $DIR/profil/packages.x86_64;
-
 fi
 }
