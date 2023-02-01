@@ -2,8 +2,8 @@
 ```
 00_Clean.sh          : Nettoie tout
 01_Generation.sh     : Génère l'environnement archiso
-02_Build_Package.sh  : Génère les packages
-03_Build_Driver.sh   : Génère les packages pilotes
+02_Build_package.sh  : Génère les packages
+03_Build_driver.sh   : Génère les packages pilotes
 04_PACMAN.sh         : AJoute le dépôt Local
 05_ADD_Package.sh    : Ajoute les packages dans la liste
 06_SERVICES.sh       : Ajoute les services au démarrage
