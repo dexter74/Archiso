@@ -7,5 +7,6 @@ source ./fonctions/skel;
 ################################################################################################################################################
 # Lancement de la Fonction #
 ############################
-echo "Démarrage du script de l'utilisateur type.";
+echo "###########################################################";
+echo "# Démarrage du script de l'utilisateur type               #";
 SKEL;
