@@ -2,9 +2,7 @@
 # Package de base #
 ###################
 package_base(){
-if [[ $(grep -L "^archiso" $DIR/profil/packages.x86_64) ]]; then
-RC=0
-else
+if [[ $(grep -L "^archiso" $DIR/profil/packages.x86_64) ]]; then   
 echo "####################
 # Packages Generic #
 ####################
@@ -31,16 +29,16 @@ xf86-video-vesa
 xf86-video-vmware
 xorg" >> $DIR/profil/packages.x86_64;
 fi
-}
+
+
+
+
 
 #######################################################################################################################################################################
 # Ajouter yay #
 ###############
 package_yay(){
-RC=0
-if [[ $(grep -L "yay" $DIR/profil/packages.x86_64) ]]; then
-RC=0
-else
+if [[ $(grep -L "^yay" $DIR/profil/packages.x86_64) ]]; then   
 echo "###############
 # Package Yay #
 ###############
@@ -52,9 +50,7 @@ fi
 # Ajouter Calamares #
 #####################
 package_calamares(){
-if [[ $(grep -L "ack" $DIR/profil/packages.x86_64) ]]; then
-RC=0;
-else
+if [[ $(grep -L "^ack" $DIR/profil/packages.x86_64) ]]; then   
 echo "###########################
 # Dépendance de Calamares #
 ###########################
@@ -113,9 +109,8 @@ fi
 # Ajout du Package Microsoft Edge #
 ###################################
 package_microsoft(){
+
 if [[ $(grep -L "microsoft" $DIR/profil/packages.x86_64) ]]; then
-RC=0;
-else
 echo "microsoft-edge-stable-bin" >> $DIR/profil/packages.x86_64;
 fi
 }
@@ -124,9 +119,7 @@ fi
 # Ajouter les pilotes #
 #######################
 package_drthrax(){
-if [[ $(grep -L "upd72020x-fw" $DIR/profil/packages.x86_64) ]]; then
-RC=0
-else
+if [[ $(grep -L "^upd72020x-fw" $DIR/profil/packages.x86_64) ]]; then
 echo "###########
 # Pilotes #
 ###########
