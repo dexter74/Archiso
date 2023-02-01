@@ -1,1 +1,14 @@
+###################################################################################################################
+# Génération du Dépot #
+#######################
+GENERATION_DEPOT(){
+mkdir -p $DIR/repo;
+}
 
+###################################################################################################################
+# Génération du dossier Archiso #
+#################################
+GENERATION_ARCHISO(){
+mkdir -p $DIR/work $DIR/iso $DIR/profil/airootfs/etc/skel/;
+cp -r /usr/share/archiso/configs/releng/* $DIR/profil;
+}
