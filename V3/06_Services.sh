@@ -7,5 +7,5 @@ source ./fonctions/services;
 ################################################################################################################################################
 # Lancement des Fonctions #
 ###########################
-echo "Démarrage du script 06_Services.sh";
+echo "Démarrage du script d'édition de services.";
 SERVICES;
