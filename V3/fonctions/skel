@@ -2,27 +2,41 @@
 # Personnalisation de l'utilisateur #
 #####################################
 SKEL(){
-########################################################################
+######################################################################################################################################
 # /etc/Skel #
 #############
 mkdir -p $DIR/profil/airootfs/etc/skel/;
-########################################################################
+
+######################################################################################################################################
 # Copie Profil #
 ################
 sudo  cp -r /home/$USERNAME/. $DIR/profil/airootfs/etc/skel/;
+rm -rf $DIR/profil/airootfs/etc/skel/{.cmake,.pki,gnupg,.ssh,.bash*,.drmc,.dmrc,.git*,.ICE*,.trans,.wget*,.X*,.xs*} 2>/dev/null;
+rm -rf $DIR/profil/airootfs/etc/skel/.config/{discord,Microsoft*,microsoft*,pulse,smplayer,Thunar,Trolltech,VirtualBox} 2>/dev/null;
 
-########################################################################
+######################################################################################################################################
+# Remplacement du Terme #
+#########################
+sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml;
+sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml;
+sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/xfce4/desktop/icons.screen0-3424x1397.rc;
+sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/xfce4/desktop/xfce4-screenshooter;
+sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/gtk-3.0/bookmarks;
+
+######################################################################################################################################
 # /usr/share #
 ##############
 #mkdir -p $DIR/profil/airootfs/usr/share/;
 
-########################################################################
+######################################################################################################################################
 # /usr/share/{icons,themes} #
 #############################
 # sudo cp -r /usr/share/{icons,themes} $DIR/profil/airootfs/usr/share/;
 }
 
 
+# Autostart  : /home/USERNAME/.config/autostart/
+# Background : /home/USERNAME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
 
 
 
