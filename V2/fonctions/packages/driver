@@ -4,11 +4,6 @@
 package_driver_drthrax(){
 
 #####################################################################################################################################################################
-# Broadcom-wl #
-###############
-wget https://europe.mirror.pkgbuild.com/community/os/x86_64/broadcom-wl-6.30.223.271-445-x86_64.pkg.tar.zst -O $DIR/repo/broadcom-wl.pkg.tar.zst 2>/dev/null;
-
-#####################################################################################################################################################################
 # aic94xx-firmware #
 ####################
 rm -rf /tmp/aic94xx-firmware;
@@ -24,6 +19,10 @@ runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/ast-firmware.git /t
 runuser -l $USERNAME -c 'cd /tmp/ast-firmware && makepkg -s 1>/dev/null 2>/dev/null;'
 mv /tmp/ast-firmware/*.zst $DIR/repo;
 
+#####################################################################################################################################################################
+# Broadcom-wl #
+###############
+wget https://europe.mirror.pkgbuild.com/community/os/x86_64/broadcom-wl-6.30.223.271-445-x86_64.pkg.tar.zst -O $DIR/repo/broadcom-wl.pkg.tar.zst 2>/dev/null;
 
 #####################################################################################################################################################################
 # linux-firmware-qlogic #
@@ -32,7 +31,6 @@ mv /tmp/ast-firmware/*.zst $DIR/repo;
 #runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/linux-firmware-git.git /tmp/linux-firmware-qlogic 1>/dev/null 2>/dev/null;'
 #runuser -l $USERNAME -c 'cd /tmp/linux-firmware-qlogic && makepkg -s 1>/dev/null 2>/dev/null;'
 #mv /tmp/linux-firmware-qlogic/*.zst $DIR/repo;
-
 
 #####################################################################################################################################################################
 # upd72020x-fw #
