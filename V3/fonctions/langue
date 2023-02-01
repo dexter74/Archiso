@@ -1,1 +1,9 @@
-
+###################################################################################################################
+# Configuration de la langue (X11 inclus) #
+###########################################
+LANGUE(){
+mkdir -p                                    $DIR/profil/airootfs/etc/X11/xorg.conf.d/;
+cat /etc/locale.conf                      > $DIR/profil/airootfs/etc/locale.conf;
+cat /etc/locale.gen                       > $DIR/profil/airootfs/etc/locale.gen;
+cat /etc/X11/xorg.conf.d/00-keyboard.conf > $DIR/profil/airootfs/etc/X11/xorg.conf.d/00-keyboard.conf;
+}
