@@ -7,5 +7,5 @@ source ./settings.conf
 # Modifier les permissions #
 ############################
 echo "###########################################################";
-echo "# Démarrage du script pour les permissions $DIR           #";
+echo "# Démarrage du script pour les permissions                #";
 chown -R $USERNAME:users $DIR;
