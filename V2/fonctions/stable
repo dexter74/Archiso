@@ -22,15 +22,15 @@ rm -rf /tmp/*;
 }
 
 PURGE_ISO(){
-rm -rf $DIR/iso 2>/dev/null;
+rm -rf $DIR/iso/* 2>/dev/null;
 }
 
 PURGE_REPO(){
-rm -rf $DIR/repo 2>/dev/null;
+rm -rf $DIR/repo/* 2>/dev/null;
 }
 
 PURGE_WORK(){
-rm -rf $DIR/work 2>/dev/null;
+rm -rf $DIR/work/* 2>/dev/null;
 }
 
 ###################################################################################################################
