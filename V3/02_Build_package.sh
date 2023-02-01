@@ -18,6 +18,7 @@ fi
 if [[ $BUILD_CALAMARES = [yY] ]]; then
   echo "# - Compilation du package Calamares                      #";
   calamares;
+fi
 
 if [[ $BUILD_MICROSOFT_EDGE = [yY] ]]; then
   echo "# - Compilation du package Microsoft-edge                 #";
