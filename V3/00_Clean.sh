@@ -12,5 +12,5 @@ source ./fonctions/clean;
 ################################################################################################################################################
 # Lancement des Fonctions #
 ###########################
-echo "Démarrage du script de Nettoyage"
+echo "Démarrage du script de Nettoyage."
 CLEAN;
