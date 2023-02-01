@@ -7,7 +7,9 @@ source ./fonctions/pacman;
 ################################################################################################################################################
 # Lancement des Fonctions #
 ###########################
+echo "Démarrage du script 04_Pacman.sh"
+
 if [[ $PACMAN = [Yy] ]]; then
-  echo "Démarrage du script 04_Pacman.sh"
+  echo "Edition de Pacman.conf"
   PACMAN;
 fi
