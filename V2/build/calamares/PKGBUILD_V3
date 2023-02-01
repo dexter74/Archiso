@@ -62,7 +62,6 @@ backup=( 'usr/share/calamares/settings.conf'
 'usr/share/calamares/modules/welcome.conf'
 'usr/share/calamares/modules/welcomeq.conf'
 'usr/share/calamares/modules/zfs.conf'
-
 )
 
 ############################################################################################################################################################
