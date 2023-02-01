@@ -7,6 +7,6 @@ source ./fonctions/customize;
 ################################################################################################################################################
 # Lancement de la Fonction #
 ############################
-echo "Démarrage du script Customize.";
+echo "# Démarrage du script Customize                           #";
 CUSTOMIZE;
 
