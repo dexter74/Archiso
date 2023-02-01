@@ -7,5 +7,5 @@ source ./fonctions/regen_depot;
 ################################################################################################################################################
 # Lancement des Fonctions #
 ###########################
-echo "Démarrage du script 12_Regen_depot.sh";
+echo "Démarrage du script de regénération du dépôt.";
 REGEN_DEPOT;
