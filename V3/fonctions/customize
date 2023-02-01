@@ -1,1 +1,8 @@
-
+###################################################################################################################
+# Script personnalisé #
+#######################
+CUSTOMIZE(){
+echo "locale-gen;
+ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime;" > $DIR/profil/airootfs/root/customize_airootfs.sh;
+echo "~/.automated_script.sh" > $DIR/profil/airootfs/root/.zlogin;
+}
