@@ -2,7 +2,11 @@
 # Liste des packages embarquées #
 #################################
 package_base(){
-echo "archiso
+echo "
+####################
+# Packages Generic #
+####################
+archiso
 git
 gvfs
 gvfs-smb
@@ -30,14 +34,21 @@ xorg" >> $DIR/profil/packages.x86_64;
 # Ajouter yay #
 ###############
 package_yay(){
-echo "yay" >> $DIR/profil/packages.x86_64;
+echo "###############
+# Package Yay #
+###############
+yay" >> $DIR/profil/packages.x86_64;
 }
 
 ################################################################################################
 # Ajouter les pilotes #
 #######################
 package_drthrax(){
-echo "upd72020x-fw
+echo "
+###########
+# Pilotes #
+###########
+upd72020x-fw
 ast-firmware
 wd719x-firmware
 linux-firmware-qlogic
