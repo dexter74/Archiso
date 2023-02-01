@@ -5,7 +5,7 @@ source ./settings.conf;
 source ./fonctions/langue;
 
 ################################################################################################################################################
-# Lancement des Fonctions #
-###########################
+# Lancement de la Fonction #
+############################
 echo "Démarrage du script Langue.";
 LANGUE;
