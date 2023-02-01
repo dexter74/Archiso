@@ -5,7 +5,7 @@ source ./settings.conf;
 source ./fonctions/services;
 
 ################################################################################################################################################
-# Lancement des Fonctions #
-###########################
+# Lancement de la Fonction #
+############################
 echo "Démarrage du script d'édition de services.";
 SERVICES;
