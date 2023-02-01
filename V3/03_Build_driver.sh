@@ -5,8 +5,8 @@ source ./settings.conf;
 source ./fonctions/build/driver;
 
 ################################################################################################################################################
-# Lancement des Fonctions #
-###########################
+# Lancement de la Fonction #
+############################
 echo "Démarrage du script de compilation pilote.";
 
 if [[ $BUILD_DRIVER = [yY] ]]; then
