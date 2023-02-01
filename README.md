@@ -18,5 +18,5 @@ cd;
 rm -rf $HOME/archiso;
 git clone https://github.com/dexter74/Archiso.git $HOME/archiso 2>/dev/null;
 cd $HOME/archiso/V3;
-sh test.sh
+sh test.sh;
 ```
