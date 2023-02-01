@@ -8,5 +8,6 @@ source ./fonctions/build/driver;
 # Lancement des Fonctions #
 ###########################
 if [[ $BUILD_DRIVER = [yY] ]]; then
+  echo "Démarrage du script 03_Build_Driver.sh"
   package_driver_drthrax;
 fi
