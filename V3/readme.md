@@ -32,9 +32,10 @@ sh ./11_Skell.sh;
 
 #### D. Nettoyage et Compilation du système 
 ```bash
-sh ./12_Clean_OS.sh;
-sh ./13.Compilation.sh;
-sh ./14.Rename.sh;
+sh ./12_Regen_depot;
+sh ./13_Clean_OS.sh;
+sh ./14_Compilation.sh;
+sh ./15_Rename.sh;
 ``` 
 
 #### X. Dépendances
