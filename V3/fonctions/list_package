@@ -2,8 +2,10 @@
 # Liste des packages embarquées #
 #################################
 package_base(){
-echo "
-####################
+
+if [[ $(grep -L "archiso" $DIR/profil/packages.x86_64) ]]; then
+
+echo "####################
 # Packages Generic #
 ####################
 archiso
@@ -28,22 +30,27 @@ xfce4-goodies
 xf86-video-vesa
 xf86-video-vmware
 xorg" >> $DIR/profil/packages.x86_64;
+fi
 }
 
 ###############################################################################################
 # Ajouter yay #
 ###############
 package_yay(){
+if [[ $(grep -L "yay" $DIR/profil/packages.x86_64) ]]; then
 echo "###############
 # Package Yay #
 ###############
 yay" >> $DIR/profil/packages.x86_64;
+fi
 }
 
 ################################################################################################
 # Ajouter les pilotes #
 #######################
 package_drthrax(){
+if [[ $(grep -L "upd72020x-fw" $DIR/profil/packages.x86_64) ]]; then
+
 echo "
 ###########
 # Pilotes #
@@ -53,12 +60,14 @@ ast-firmware
 wd719x-firmware
 linux-firmware-qlogic
 aic94xx-firmware" >>  $DIR/profil/packages.x86_64;
+fi
 }
 
 ################################################################################################
 # Ajouter Calamares #
 #####################
 package_calamares(){
+if [[ $(grep -L "ack" $DIR/profil/packages.x86_64) ]]; then
 echo "###########################
 # Dépendance de Calamares #
 ###########################
@@ -111,4 +120,6 @@ yaml-cpp
 # Calamares #
 #############
 calamares" >> $DIR/profil/packages.x86_64;
+
+fi
 }
