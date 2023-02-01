@@ -25,6 +25,12 @@ echo "# - Le Package Calamares a été ajouté                     #";
 package_calamares;
 fi
 
+if [[ $MICROSOFT-EDGE = [yY] ]]; then
+echo "# - Le Package Microsoft Edge                             #";
+package_microsoft;
+fi
+
+
 if [[ $LIST_PILOTE = [yY] ]]; then
 echo "# - Le Package Pilote Drthrax a été ajouté                #";
 package_drthrax;
