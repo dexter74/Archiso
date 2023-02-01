@@ -1,18 +1,18 @@
 #### A. Présentation
 ```
-00_Clean.sh
-01_Generation.sh
-02_Build_package.sh
-03_Build_driver.sh
-04_Pacman.sh
-05_List_Package.sh
-06_Services.sh
-07_Langue.sh
-08_Customize.sh
-09_Utilisateur.sh
-10_Profildef.sh
-11_Skell.sh
-12_Clean_OS.sh
-13.Compilation.sh
-14.Rename.sh
+sh ./00_Clean.sh;
+sh ./01_Generation.sh;
+sh ./02_Build_package.sh;
+sh ./03_Build_driver.sh;
+sh ./04_Pacman.sh;
+sh ./05_List_Package.sh;
+sh ./06_Services.sh;
+sh ./07_Langue.sh;
+sh ./08_Customize.sh;
+sh ./09_Utilisateur.sh;
+sh ./10_Profildef.sh;
+sh ./11_Skell.sh;
+sh ./12_Clean_OS.sh;
+sh ./13.Compilation.sh;
+sh ./14.Rename.sh;
 ```
