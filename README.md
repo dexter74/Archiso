@@ -16,14 +16,11 @@ Calamares permet de réaliser une installation via une interface.
 clear;
 cd;
 rm -rf $HOME/archiso;
-git clone https://github.com/dexter74/Archiso.git $HOME/archiso 2>/dev/null;
+git clone git@github.com:dexter74/Archiso.git $HOME/archiso 2>/dev/null;
 cd $HOME/archiso/V3;
 sh test.sh;
 ```
 
 ```
-nano .gitconfig
-git config --global user.name
-git config --global user.email 
-git config --global user.password
+sh /mnt/Home/Documents/CLE_SSH/Install.sh;
 ```
