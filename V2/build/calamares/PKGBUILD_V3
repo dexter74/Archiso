@@ -15,7 +15,7 @@ depends=( 'ack' 'appstream-qt' 'autoconf' 'automake' 'binutils' 'bison' 'boost' 
 license=('GPL3')
 source=("git+https://github.com/dexter74/calamares-custom.git")
 sha256sums=('SKIP')
-
+############################################################################################################################################################
 backup=( 'usr/share/calamares/bootloader.conf'
 'usr/share/calamares/displaymanager.conf'
 'usr/share/calamares/dracut.conf'
@@ -60,13 +60,16 @@ backup=( 'usr/share/calamares/bootloader.conf'
 'usr/share/calamares/usersq.conf'
 'usr/share/calamares/welcome.conf'
 'usr/share/calamares/welcomeq.conf'
-'usr/share/calamares/zfs.conf' )
+'usr/share/calamares/zfs.conf'
+)
+
 
 ############################################################################################################################################################
 prepare(){
     mkdir -p ${srcdir}/calamares-custom/build;
     cd ${srcdir}/calamares-custom/;
 }
+
 
 ############################################################################################################################################################
 build(){
@@ -80,7 +83,7 @@ build(){
              -DBoost_NO_BOOST_CMAKE=OFF \
              -DWEBVIEW_FORCE_WEBKIT=OFF \
              -DSKIP_MODULES="";
-    make -j$(nproc)
+    make -j$(nproc);
 }
 
 ############################################################################################################################################################
@@ -132,8 +135,8 @@ package(){
     cp "../src/modules/welcome/welcome.conf"                            "$pkgdir/usr/share/calamares/";
     cp "../src/modules/welcomeq/welcomeq.conf"                          "$pkgdir/usr/share/calamares/";
     cp "../src/modules/zfs/zfs.conf"                                    "$pkgdir/usr/share/calamares/";
-
 }
+
 
 ############################################################################################################################################################
 # https://www.arcolinuxiso.com/13-fixing-the-carli-calamares-config/
