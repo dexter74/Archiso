@@ -10,6 +10,6 @@ source ./fonctions/build/driver;
 echo "Démarrage du script 03_Build_Driver.sh";
 
 if [[ $BUILD_DRIVER = [yY] ]]; then
-  echo "Construction des packages Pilotes";
+  echo " - Construction des packages Pilotes";
   package_driver_drthrax;
 fi
