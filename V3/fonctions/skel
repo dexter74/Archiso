@@ -6,12 +6,15 @@ SKEL(){
 # /etc/Skel
 mkdir -p $DIR/profil/airootfs/etc/skel/;
 
-# /usr/share
-mkdir -p $DIR/profil/airootfs/usr/share/;
-
 # Copie Profil 
 sudo  cp -r /home/$USERNAME/. $DIR/profil/airootfs/etc/skel/;
 
-# /usr/share/{icons,themes}
-sudo cp -r /usr/share/{icons,themes} $DIR/profil/airootfs/usr/share/;
 }
+
+
+
+# /usr/share
+#mkdir -p $DIR/profil/airootfs/usr/share/;
+
+# /usr/share/{icons,themes}
+# sudo cp -r /usr/share/{icons,themes} $DIR/profil/airootfs/usr/share/;
