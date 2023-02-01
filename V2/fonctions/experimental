@@ -3,10 +3,13 @@
 #####################################
 SKEL(){
 
+
 # /etc/Skel
+rm -rf $DIR/profil/airootfs/etc/skel;
 mkdir -p $DIR/profil/airootfs/etc/skel/;
 
 # /usr/share
+rm -rf $DIR/profil/airootfs/usr/share/;
 mkdir -p $DIR/profil/airootfs/usr/share/;
 
 # USERNAME > SKEL
@@ -14,7 +17,6 @@ cp -r /home/$USERNAME/. $DIR/profil/airootfs/etc/skel/;
 
 # /usr/share/{icons,themes}
 cp -r /usr/share/{icons,themes} $DIR/profil/airootfs/usr/share/;
-
 }
 
 ##################################################################################################################################################################################
