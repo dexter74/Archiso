@@ -22,6 +22,7 @@ sh test.sh;
 ```
 
 ```
+nano .gitconfig
 git config --global user.name
 git config --global user.email 
 git config --global user.password
