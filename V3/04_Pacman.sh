@@ -7,4 +7,9 @@ clear;
 # Chargements des fonctions #
 #############################
 source ./settings.conf;
-source ./fonctions/pacman
+source ./fonctions/pacman;
+
+################################################################################################################################################
+# Lancement des Fonctions #
+###########################
+PACMAN;
