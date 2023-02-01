@@ -7,6 +7,6 @@ source ./fonctions/build/driver;
 ################################################################################################################################################
 # Lancement des Fonctions #
 ###########################
-if [ $BUILD_DRIVER = [yY] ]]; then
+if [[ $BUILD_DRIVER = [yY] ]]; then
   package_driver_drthrax;
 fi
