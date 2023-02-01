@@ -1,4 +1,23 @@
 ##################################################################################################################################################################################
+# Personnalisation de l'utilisateur #
+#####################################
+SKEL(){
+
+# /etc/Skel
+mkdir -p $DIR/profil/airootfs/etc/skel/;
+
+# /usr/share
+mkdir -p $DIR/profil/airootfs/usr/share/;
+
+# USERNAME > SKEL
+cp -r /home/$USERNAME/. $DIR/profil/airootfs/etc/skel/;
+
+# /usr/share/{icons,themes}
+cp -r /usr/share/{icons,themes} $DIR/profil/airootfs/usr/share/;
+
+}
+
+##################################################################################################################################################################################
 # PROFILEDEF #
 ##############
 PROFILEDEF(){
@@ -40,25 +59,4 @@ echo "root ALL=(ALL) ALL
 echo "$USERNAME ALL=(ALL) NOPASSWD: ALL" > $DIR/profil/airootfs/etc/sudoers.d/username;
 }
 
-##################################################################################################################################################################################
-# Personnalisation de l'utilisateur #
-#####################################
-SKEL(){
 
-# /etc/Skel
-mkdir -p $DIR/profil/airootfs/etc/skel/;
-
-# /usr/share
-mkdir -p $DIR/profil/airootfs/usr/share/;
-
-# USERNAME > SKEL
-cp -r /home/$USERNAME/. $DIR/profil/airootfs/etc/skel/;
-
-# /usr/share/{icons,themes}
-cp -r /usr/share/{icons,themes} $DIR/profil/airootfs/usr/share/;
-
-}
-##################################################################################################################################################################################
-ICON(){
-RC=0
-}
