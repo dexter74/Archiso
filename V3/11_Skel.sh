@@ -7,5 +7,5 @@ source ./fonctions/skel;
 ################################################################################################################################################
 # Lancement des Fonctions #
 ###########################
-echo "Démarrage du script 11_Skel.sh";
+echo "Démarrage du script de l'utilisateur type.";
 SKEL;
