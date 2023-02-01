@@ -65,6 +65,7 @@ if [[ "$BUILD_PACKAGE" = [yY] ]]; then
   yay;
   calamares;
   DEPOT_REGEN;
+  repo-add $DIR/repo/Local.db.tar.gz $DIR/repo/*.zst 1>/dev/null;
   echo "# [Y]  Compilation Package #";
 else
   echo "# [N]  Compilation Package #";
