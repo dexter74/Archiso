@@ -7,6 +7,6 @@ source ./fonctions/generation;
 ################################################################################################################################################
 # Lancement des Fonctions #
 ###########################
-echo "Démarrage du script de Generation";
+echo "Démarrage du script de Generation.";
 GENERATION_DEPOT;
 GENERATION_ARCHISO;
