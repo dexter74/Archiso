@@ -35,8 +35,9 @@ sh ./11_Skel.sh;
 ```bash
 sh ./12_Regen_depot.sh;
 sh ./13_Clean_OS.sh;
-sh ./14_Compilation.sh;
-sh ./15_Rename.sh;
+sh ./15_Permission.sh;
+sh ./15_Compilation.sh;
+sh ./16_Rename.sh;
 ``` 
 
 #### X. Dépendances
