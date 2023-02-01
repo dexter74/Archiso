@@ -18,6 +18,7 @@ runuser -l $USERNAME -c 'yay -Sy --noconfirm archiso-profiles;'
 ###############################################
 PURGE_ALL(){
 rm -rf $DIR 2>/dev/null;
+rm -rf /tmp/*;
 }
 
 PURGE_ISO(){
