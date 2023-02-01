@@ -7,5 +7,6 @@ source ./fonctions/clean_os;
 ################################################################################################################################################
 # Lancement des Fonctions #
 ###########################
+echo "Démarrage du script 13_Clean_OS.sh";
 CLEAN_ISO;
 CLEAN_WORK;
