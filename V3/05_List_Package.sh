@@ -7,7 +7,7 @@ source ./fonctions/list_package;
 ################################################################################################################################################
 # Lancement des Fonctions #
 ###########################
-echo "Démarrage du script 05_Package_Base.sh";
+echo "Démarrage du script d'ajout de package";
 
 if [[ $LIST_BASE = [yY] ]]; then
   echo "Les packages de bases ont étés ajoutées";
