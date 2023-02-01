@@ -5,14 +5,14 @@ Script  : Charge les fonctions uniquements
 ```
 
 #### B. Télécharger les scripts 
-```
-```
+```bash
 rm -rf $HOME/archiso;
 git clone https://github.com/dexter74/Archiso.git $HOME/archiso;
 cd $HOME/archiso/V3;
 ```
 
 #### C. Lancements des scripts
+```bash
 sh ./00_Clean.sh;
 sh ./01_Generation.sh;
 sh ./02_Build_package.sh;
