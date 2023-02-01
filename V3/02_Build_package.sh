@@ -8,10 +8,10 @@ source ./fonctions/build/package;
 # Lancement des Fonctions #
 ###########################
 
-if [ $BUILD_YAY = [yY] ]]; then
+if [[ $BUILD_YAY = [yY] ]]; then
   yay;
 fi
 
-if [ $BUILD_CALAMARES = [yY] ]]; then
+if [[ $BUILD_CALAMARES = [yY] ]]; then
   calamares;
 fi
