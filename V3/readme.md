@@ -4,6 +4,7 @@ Fonction: Fichier vide
 Script  : Charge les fonctions uniquements
 ```
 
+
 #### B. Télécharger les scripts 
 ```bash
 rm -rf $HOME/archiso;
@@ -11,7 +12,8 @@ git clone https://github.com/dexter74/Archiso.git $HOME/archiso;
 cd $HOME/archiso/V3;
 ```
 
-#### C. Lancements des scripts
+
+#### C. Préparation de l'environnement
 ```bash
 sh ./00_Clean.sh;
 sh ./01_Generation.sh;
@@ -25,10 +27,15 @@ sh ./08_Customize.sh;
 sh ./09_Utilisateur.sh;
 sh ./10_Profildef.sh;
 sh ./11_Skell.sh;
+```
+
+
+#### D. Nettoyage et Compilation du système 
+```bash
 sh ./12_Clean_OS.sh;
 sh ./13.Compilation.sh;
 sh ./14.Rename.sh;
-```
+``` 
 
 #### X. Dépendances
 ```bash
