@@ -7,7 +7,9 @@ source ./fonctions/build/driver;
 ################################################################################################################################################
 # Lancement des Fonctions #
 ###########################
+echo "Démarrage du script 03_Build_Driver.sh"
+
 if [[ $BUILD_DRIVER = [yY] ]]; then
-  echo "Démarrage du script 03_Build_Driver.sh"
+  echo "Construction des packages Pilotes"
   package_driver_drthrax;
 fi
