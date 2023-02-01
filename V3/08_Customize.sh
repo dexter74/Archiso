@@ -7,5 +7,5 @@ source ./fonctions/customize;
 ################################################################################################################################################
 # Lancement des Fonctions #
 ###########################
-echo "Démarrage du script 08_Customize.sh";
+echo "Démarrage du script Customize.";
 CUSTOMIZE;
