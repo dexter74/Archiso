@@ -22,7 +22,8 @@ mv /tmp/ast-firmware/*.zst $DIR/repo;
 #####################################################################################################################################################################
 # Broadcom-wl #
 ###############
-wget https://europe.mirror.pkgbuild.com/community/os/x86_64/broadcom-wl-6.30.223.271-445-x86_64.pkg.tar.zst -O $DIR/repo/broadcom-wl.pkg.tar.zst 2>/dev/null;
+# Conflit
+#wget https://europe.mirror.pkgbuild.com/community/os/x86_64/broadcom-wl-6.30.223.271-445-x86_64.pkg.tar.zst -O $DIR/repo/broadcom-wl.pkg.tar.zst 2>/dev/null;
 
 #####################################################################################################################################################################
 # linux-firmware-qlogic #
