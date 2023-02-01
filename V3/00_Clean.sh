@@ -15,4 +15,5 @@ source ./fonctions/clean;
 
 echo "###########################################################";
 echo "# Démarrage du script de Nettoyage                        #";
+echo "# - Purge du dossier Racine Archiso                       #";
 CLEAN;
