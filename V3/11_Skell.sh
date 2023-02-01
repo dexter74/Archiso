@@ -7,4 +7,9 @@ clear;
 # Chargements des fonctions #
 #############################
 source ./settings.conf;
-source ./fonctions/skell;
+source ./fonctions/skel;
+
+################################################################################################################################################
+# Lancement des Fonctions #
+###########################
+SKEL;
