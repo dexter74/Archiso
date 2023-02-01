@@ -15,5 +15,6 @@ echo "
 [Local]
 SigLevel = Optional TrustAll
 Server = file://$DIR/repo" >> $DIR/profil/pacman.conf;
+cat $DIR/profil/pacman.conf | tail -n 3;
 fi
 }
