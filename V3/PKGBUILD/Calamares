@@ -3,11 +3,17 @@
 ##############################################################################
 
 ############################################################################################################################################################
+# Mode de compilation: Release ou Debug
+MODE=Debug
+############################################################################################################################################################
 pkgname=calamares
 pkgver=3.2.61
 pkgrel=1
 pkgdesc='Installateur Calamares by Drthrax74'
 arch=('x86_64')
+
+############################################################################################################################################################
+
 depends=( 'ack' 'appstream-qt' 'autoconf' 'automake' 'binutils' 'bison' 'boost' 'cmake' 'extra-cmake-modules' 'fakeroot' 'flex'
           'gcc' 'gcc-libs-multilib' 'gcc-multilib' 'git' 'icu' 'kcoreaddons' 'kiconthemes' 'kio' 'kparts' 'kservice' 'kpmcore'
           'libtool' 'libpwquality' 'm4' 'make' 'os-prober' 'patch' 'plasma-framework' 'python' 'python3' 'python-pip' 'python-qt.py' 'python-yaml'
@@ -15,7 +21,6 @@ depends=( 'ack' 'appstream-qt' 'autoconf' 'automake' 'binutils' 'bison' 'boost' 
 license=('GPL3')
 source=("git+https://github.com/dexter74/calamares-custom.git")
 sha256sums=('SKIP')
-
 ############################################################################################################################################################
 backup=( 'usr/share/calamares/settings.conf'
 'usr/share/calamares/modules/bootloader.conf'
@@ -75,7 +80,7 @@ prepare(){
 build(){
     cd ${srcdir}/calamares-custom/build;
     cmake .. \
-             -DCMAKE_BUILD_TYPE=Release \
+             -DCMAKE_BUILD_TYPE=$MODE \
              -DCMAKE_INSTALL_PREFIX=/usr \
              -DCMAKE_INSTALL_LIBDIR=/usr/lib \
              -DWITH_PYTHONQT=OFF \
