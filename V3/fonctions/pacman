@@ -10,7 +10,7 @@ sed -i -e "s/\#CacheDir/CacheDir/g" $DIR/profil/pacman.conf;
 ###################################################################################################################
 # Ajout du Dépôt Local (Anti-doublon) #
 #######################################
-if [[ $(grep -L "Local" /archiso/profil/pacman.conf) ]]; then
+if [[ $(grep -L "Local" $DIR/profil/pacman.conf) ]]; then
 RC=0;
 else
 echo "
