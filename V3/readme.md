@@ -27,7 +27,7 @@ sh ./07_Langue.sh;
 sh ./08_Customize.sh;
 sh ./09_Utilisateur.sh;
 sh ./10_Profildef.sh;
-sh ./11_Skell.sh;
+sh ./11_Skel.sh;
 ```
 
 
