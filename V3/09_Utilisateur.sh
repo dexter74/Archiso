@@ -5,7 +5,7 @@ source ./settings.conf;
 source ./fonctions/utilisateur;
 
 ################################################################################################################################################
-# Lancement des Fonctions #
-###########################
+# Lancement de la Fonction #
+############################
 echo "Démarrage du script de création de l'utilisateur.";
 UTILISATEUR;
