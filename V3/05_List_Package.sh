@@ -25,7 +25,7 @@ echo "# - Le Package Calamares a été ajouté                     #";
 package_calamares;
 fi
 
-if [[ $LIST_MICROSOFT-EDGE = [yY] ]]; then
+if [[ $LIST_MICROSOFT_EDGE = [yY] ]]; then
 echo "# - Le Package Microsoft Edge                             #";
 package_microsoft;
 fi
