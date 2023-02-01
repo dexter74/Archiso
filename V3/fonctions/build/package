@@ -65,9 +65,10 @@ mv /tmp/{calamares,icecream,pythonqt}/*.zst $DIR/repo;
 }
 
 microsoft_edge(){
-MICROSOFT=https://aur.archlinux.org/microsoft-edge-stable-bin.git
-rm -rf /tmp/microsoft-edge;
-runuser -l $USERNAME -c "git clone $MICROSOFT /tmp/microsoft-edge 1>/dev/null 2>/dev/null;"
-runuser -l $USERNAME -c "cd /tmp/microsoft-edge && makepkg -s 1>/dev/null 2>/dev/null;"
-mv /tmp/microsoft-edge/*.zst $DIR/repo;
+#MICROSOFT=https://aur.archlinux.org/microsoft-edge-stable-bin.git
+#rm -rf /tmp/microsoft-edge;
+#runuser -l $USERNAME -c "git clone $MICROSOFT /tmp/microsoft-edge 1>/dev/null 2>/dev/null;"
+#runuser -l $USERNAME -c "cd /tmp/microsoft-edge && makepkg -s 1>/dev/null 2>/dev/null;"
+#mv /tmp/microsoft-edge/*.zst $DIR/repo;
+RC=0
 }
