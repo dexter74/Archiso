@@ -44,5 +44,5 @@ sh ./15_Rename.sh;
 ```bash
 sudo pacman -Sy --noconfirm ack appstream-qt boost cmake extra-cmake-modules kcoreaddons kiconthemes kio kparts kservice kpmcore plasma-framework;
 sudo pacman -Sy --noconfirm python-pip python-qt.py python-yaml qt5-declarative qt5-location qt5-tools qt5-xmlpatterns qt5-webengine yaml-cpp;
-     yay    -Sy --noconfirm icecream pythonqt qt
+     yay    -Sy --noconfirm icecream pythonqt qt;
 ```
