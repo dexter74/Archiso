@@ -7,5 +7,13 @@ source ./fonctions/build/package;
 ################################################################################################################################################
 # Lancement des Fonctions #
 ###########################
-yay;
-calamares;
+
+if [ $BUILD_YAY = [yY] ]]; then
+  yay;
+fi
+
+if [ $BUILD_CALAMARES = [yY] ]]; then
+  calamares;
+fi
+
+;
