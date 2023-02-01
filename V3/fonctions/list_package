@@ -128,3 +128,10 @@ yaml-cpp
 calamares" >> $DIR/profil/packages.x86_64;
 fi
 }
+
+package_microsoft(){
+if [[ $(grep -L "microsoft" $DIR/profil/packages.x86_64) ]]; then
+  RC=0
+else
+  echo "microsoft-edge-stable-bin" >> $DIR/profil/packages.x86_64;
+}
