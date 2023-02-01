@@ -15,5 +15,3 @@ fi
 if [ $BUILD_CALAMARES = [yY] ]]; then
   calamares;
 fi
-
-;
