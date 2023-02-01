@@ -5,7 +5,8 @@ source ./settings.conf;
 source ./fonctions/customize;
 
 ################################################################################################################################################
-# Lancement des Fonctions #
-###########################
+# Lancement de la Fonction #
+############################
 echo "Démarrage du script Customize.";
 CUSTOMIZE;
+
