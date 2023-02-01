@@ -7,5 +7,5 @@ source ./fonctions/langue;
 ################################################################################################################################################
 # Lancement de la Fonction #
 ############################
-echo "Démarrage du script Langue.";
+echo "# Démarrage du script Langue                              #";
 LANGUE;
