@@ -12,7 +12,7 @@ mkdir -p $DIR/profil/airootfs/etc/skel/;
 # Copie Profil #
 ################
 sudo  cp -r /home/$USERNAME/. $DIR/profil/airootfs/etc/skel/;
-rm -rf $DIR/profil/airootfs/etc/skel/{.cmake,.pki,gnupg,.ssh,.bash*,.drmc,.dmrc,.git*,.ICE*,.trans,.wget*,.X*,.xs*} 2>/dev/null;
+rm -rf $DIR/profil/airootfs/etc/skel/{.cmake,.pki,gnupg,.ssh,.bash*,.drmc,.dmrc,.git*,.ICE*,.tran*,.wget*,.X*,.xs*} 2>/dev/null;
 rm -rf $DIR/profil/airootfs/etc/skel/.config/{discord,Microsoft*,microsoft*,pulse,smplayer,Thunar,Trolltech,VirtualBox} 2>/dev/null;
 
 ######################################################################################################################################
