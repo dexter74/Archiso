@@ -3,5 +3,5 @@
 ##############################
 COMPILATION(){
 rm -rf $DIR/{iso,work}/* 2>/dev/null;
-mkarchiso -v -w $DIR/work -o $DIR/iso $DIR/profil;;
+mkarchiso -v -w $DIR/work -o $DIR/iso $DIR/profil;
 }
