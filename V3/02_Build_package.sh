@@ -7,7 +7,7 @@ source ./fonctions/build/package;
 ################################################################################################################################################
 # Lancement des Fonctions #
 ###########################
-echo "Démarrage du script de compilation de package";
+echo "Démarrage du script de compilation de package.";
 
 if [[ $BUILD_YAY = [yY] ]]; then
   echo "- Compilation du package YAY";
