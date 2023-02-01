@@ -5,6 +5,13 @@ Script  : Charge les fonctions uniquements
 Le profil copier sera l'utilisateur 1000.
 ```
 
+**Note**
+````
+[calamares]
+ - PKGBUILD Mode: Debug
+ - settings.conf: Ajout d'une Etape (En test) 
+````
+
 
 #### B. Télécharger les scripts 
 ```bash
