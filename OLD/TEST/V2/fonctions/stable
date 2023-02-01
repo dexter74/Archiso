@@ -1,0 +1,119 @@
+###################################################################################################################
+# Mise en Forme #
+#################
+FORM(){
+echo "############################";
+}
+
+###################################################################################################################
+# Installation des Dépendances ArchLinux #
+##########################################
+DEPENDS_ARCHISO(){
+pacman -Sy --noconfirm archiso;
+runuser -l $USERNAME -c 'yay -Sy --noconfirm archiso-profiles;'
+}
+
+##############################################################################################
+# Fonctions pour la purge de donnée d'archiso #
+###############################################
+PURGE_ALL(){
+rm -rf $DIR 2>/dev/null;
+rm -rf /tmp/*;
+}
+
+PURGE_ISO(){
+rm -rf $DIR/iso/* 2>/dev/null;
+}
+
+PURGE_REPO(){
+rm -rf $DIR/repo/* 2>/dev/null;
+}
+
+PURGE_WORK(){
+rm -rf $DIR/work/* 2>/dev/null;
+}
+
+###################################################################################################################
+# Génération du Dépot #
+#######################
+GENERATION_DEPOT(){
+mkdir -p $DIR/repo;
+}
+
+###################################################################################################################
+# Génération l'arborescence dépôt #
+###################################
+DEPOT_REGEN(){
+repo-add $DIR/repo/Local.db.tar.gz $DIR/repo/*.zst 1>/dev/null;
+}
+
+###################################################################################################################
+# Génération du dossier Archiso #
+#################################
+GENERATION_ARCHISO(){
+mkdir -p $DIR/work $DIR/iso $DIR/profil/airootfs/etc/skel/;
+cp -r /usr/share/archiso/configs/releng/* $DIR/profil;
+}
+
+###################################################################################################################
+# Configuration de Pacman #
+###########################
+PACMAN(){
+sed -i "/\[multilib\]/,/Include/"'s/^#//' $DIR/profil/pacman.conf;
+sed -i -e "s/\ParallelDownloads = 5/ParallelDownloads = 10/g" $DIR/profil/pacman.conf;
+sed -i -e "s/\#CacheDir/CacheDir/g" $DIR/profil/pacman.conf;
+echo "
+[Local]
+SigLevel = Optional TrustAll
+Server = file://$DIR/repo" >> $DIR/profil/pacman.conf;
+}
+
+##################################################################################################################################################################################
+# Gestion des Services #
+########################
+SERVICES(){
+mkdir -p                                                           $DIR/profil/airootfs/etc/systemd/system/multi-user.target.wants 2>/dev/null;
+ln -s /usr/lib/systemd/system/NetworkManager-wait-online.service   $DIR/profil/airootfs/etc/systemd/system/multi-user.target.wants/NetworkManager-wait-online.service 2>/dev/null;
+ln -s /usr/lib/systemd/system/NetworkManager.service               $DIR/profil/airootfs/etc/systemd/system/multi-user.target.wants/NetworkManager.service 2>/dev/null;
+ln -s /usr/lib/systemd/system/NetworkManager-dispatcher.service    $DIR/profil/airootfs/etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service 2>/dev/null;
+ln -s /usr/lib/systemd/system/lightdm.service                      $DIR/profil/airootfs/etc/systemd/system/display-manager.service 2>/dev/null;
+# Auto-Login:
+# echo "[Service]
+# ExecStart=
+# ExecStart=-/sbin/agetty -o '-p -f -- \\u' --noclear --autologin $USERNAME - $TERM" > $DIR/profil/airootfs/etc/systemd/system/getty@tty1.service.d/autologin.conf;
+}
+
+###################################################################################################################
+# Configuration de la langue (X11 inclus) #
+###########################################
+LANGUE(){
+mkdir -p                                    $DIR/profil/airootfs/etc/X11/xorg.conf.d/;
+cat /etc/locale.conf                      > $DIR/profil/airootfs/etc/locale.conf;
+cat /etc/locale.gen                       > $DIR/profil/airootfs/etc/locale.gen;
+cat /etc/X11/xorg.conf.d/00-keyboard.conf > $DIR/profil/airootfs/etc/X11/xorg.conf.d/00-keyboard.conf;
+}
+
+###################################################################################################################
+# Script personnalisé #
+#######################
+CUSTOMIZE_AIROOTFS(){
+echo "locale-gen;
+ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime;" > $DIR/profil/airootfs/root/customize_airootfs.sh;
+echo "~/.automated_script.sh" > $DIR/profil/airootfs/root/.zlogin;
+}
+
+###################################################################################################################
+# Compilation de l'image ISO #
+##############################
+COMPILATION(){
+rm -rf $DIR/{iso,work}/* 2>/dev/null;
+mkarchiso -v -w $DIR/work -o $DIR/iso $DIR/profil 1>/dev/null;
+}
+
+###################################################################################################################
+# Renommer l'image ISO #
+########################
+RENAME(){
+rm $DIR/iso/Archlinux-custom.iso 2>/dev/null;
+mv $DIR/iso/*.iso $DIR/iso/Archlinux-custom.iso 2>/dev/null;
+}
