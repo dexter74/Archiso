@@ -110,7 +110,6 @@ calamares" >> $DIR/profil/packages.x86_64;
 fi
 }
 
-
 ################################################################################################
 # Ajout du Package Microsoft Edge #
 ###################################
@@ -120,8 +119,7 @@ if [[ $(grep -L "microsoft" $DIR/profil/packages.x86_64) ]]; then
 else
   echo "microsoft-edge-stable-bin" >> $DIR/profil/packages.x86_64;
 }
-
-
+fi
 
 ################################################################################################
 # Ajouter les pilotes #
@@ -140,4 +138,5 @@ wd719x-firmware
 linux-firmware-qlogic
 aic94xx-firmware" >>  $DIR/profil/packages.x86_64;
 fi
+
 }
