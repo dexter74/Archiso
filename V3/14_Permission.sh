@@ -7,4 +7,6 @@ source ./settings.conf
 ##########################################################################################################################################################
 # Modifier les permissions #
 ############################
+echo "Démarrage du script 14_Permission.sh";
+
 chown -R $USERNAME:users $DIR;
