@@ -33,7 +33,7 @@ sh ./11_Skel.sh;
 
 #### D. Nettoyage et Compilation du système 
 ```bash
-sh ./12_Regen_depot;
+sh ./12_Regen_depot.sh;
 sh ./13_Clean_OS.sh;
 sh ./14_Compilation.sh;
 sh ./15_Rename.sh;
