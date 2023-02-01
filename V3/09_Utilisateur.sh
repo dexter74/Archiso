@@ -7,5 +7,5 @@ source ./fonctions/utilisateur;
 ################################################################################################################################################
 # Lancement des Fonctions #
 ###########################
-echo "Démarrage du script 09_Utilisateur.sh";
+echo "Démarrage du script de création de l'utilisateur.";
 UTILISATEUR;
