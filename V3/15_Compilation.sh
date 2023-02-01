@@ -7,5 +7,6 @@ source ./fonctions/compilation;
 ################################################################################################################################################
 # Lancement de la Fonction #
 ############################
-echo "Démarrage du script de compilation.";
+echo "###########################################################";
+echo "# Démarrage du script de compilation                      #";
 COMPILATION;
