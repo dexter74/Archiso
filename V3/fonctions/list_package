@@ -2,7 +2,6 @@
 # Liste des packages embarquées #
 #################################
 package_base(){
-
 if [[ $(grep -L "archiso" $DIR/profil/packages.x86_64) ]]; then
   RC=0
 else
@@ -48,31 +47,13 @@ yay" >> $DIR/profil/packages.x86_64;
 fi
 }
 
-################################################################################################
-# Ajouter les pilotes #
-#######################
-package_drthrax(){
-if [[ $(grep -L "upd72020x-fw" $DIR/profil/packages.x86_64) ]]; then
-  RC=0
-else
-echo "
-###########
-# Pilotes #
-###########
-upd72020x-fw
-ast-firmware
-wd719x-firmware
-linux-firmware-qlogic
-aic94xx-firmware" >>  $DIR/profil/packages.x86_64;
-fi
-}
 
 ################################################################################################
 # Ajouter Calamares #
 #####################
 package_calamares(){
 if [[ $(grep -L "ack" $DIR/profil/packages.x86_64) ]]; then
-  RC=0
+  RC=0;
 else
 echo "###########################
 # Dépendance de Calamares #
@@ -129,9 +110,34 @@ calamares" >> $DIR/profil/packages.x86_64;
 fi
 }
 
+
+################################################################################################
+# Ajout du Package Microsoft Edge #
+###################################
 package_microsoft(){
 if [[ $(grep -L "microsoft" $DIR/profil/packages.x86_64) ]]; then
-  RC=0
+  RC=0;
 else
   echo "microsoft-edge-stable-bin" >> $DIR/profil/packages.x86_64;
+}
+
+
+
+################################################################################################
+# Ajouter les pilotes #
+#######################
+package_drthrax(){
+if [[ $(grep -L "upd72020x-fw" $DIR/profil/packages.x86_64) ]]; then
+  RC=0
+else
+echo "
+###########
+# Pilotes #
+###########
+upd72020x-fw
+ast-firmware
+wd719x-firmware
+linux-firmware-qlogic
+aic94xx-firmware" >>  $DIR/profil/packages.x86_64;
+fi
 }
