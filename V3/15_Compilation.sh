@@ -7,5 +7,5 @@ source ./fonctions/compilation;
 ################################################################################################################################################
 # Lancement des Fonctions #
 ###########################
-echo "Démarrage du script 15_Compilation.sh";
+echo "Démarrage du script de compilation.";
 COMPILATION;
