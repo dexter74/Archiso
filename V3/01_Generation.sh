@@ -8,3 +8,9 @@ clear;
 #############################
 source ./settings.conf;
 source ./fonctions/generation;
+
+################################################################################################################################################
+# Lancement des Fonctions #
+###########################
+GENERATION_DEPOT;
+GENERATION_ARCHISO;
