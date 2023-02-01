@@ -7,5 +7,5 @@ source ./fonctions/profiledef;
 ################################################################################################################################################
 # Lancement de la Fonction #
 ############################
-echo "Démarrage du script Profildef.";
+echo "# Démarrage du script Profildef                           #";
 PROFILEDEF;
