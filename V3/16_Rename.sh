@@ -9,3 +9,5 @@ source ./fonctions/rename;
 ############################
 echo "# Démarrage du script renommage de l'iso                  #";
 RENAME;
+echo "###########################################################";
+
