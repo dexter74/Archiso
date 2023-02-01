@@ -7,7 +7,7 @@ source ./fonctions/build/driver;
 ################################################################################################################################################
 # Lancement des Fonctions #
 ###########################
-echo "Démarrage du script 03_Build_Driver.sh";
+echo "Démarrage du script de compilatation pilote";
 
 if [[ $BUILD_DRIVER = [yY] ]]; then
   echo "- Compilation des packages Pilotes";
