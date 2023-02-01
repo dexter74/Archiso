@@ -5,8 +5,8 @@ source ./settings.conf;
 source ./fonctions/pacman;
 
 ################################################################################################################################################
-# Lancement des Fonctions #
-###########################
+# Lancement de la Fonction #
+############################
 echo "Démarrage du script de l'édition de pacman.";
 
 if [[ $PACMAN = [Yy] ]]; then
