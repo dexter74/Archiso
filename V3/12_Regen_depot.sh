@@ -5,7 +5,7 @@ source ./settings.conf;
 source ./fonctions/regen_depot;
 
 ################################################################################################################################################
-# Lancement des Fonctions #
-###########################
+# Lancement de la Fonction #
+############################
 echo "Démarrage du script de regénération du dépôt.";
 REGEN_DEPOT;
