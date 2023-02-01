@@ -29,10 +29,7 @@ xf86-video-vesa
 xf86-video-vmware
 xorg" >> $DIR/profil/packages.x86_64;
 fi
-
-
-
-
+}
 
 #######################################################################################################################################################################
 # Ajouter yay #
@@ -105,11 +102,11 @@ yaml-cpp
 calamares" >> $DIR/profil/packages.x86_64;
 fi
 }
+
 #######################################################################################################################################################################
 # Ajout du Package Microsoft Edge #
 ###################################
 package_microsoft(){
-
 if [[ $(grep -L "microsoft" $DIR/profil/packages.x86_64) ]]; then
 echo "microsoft-edge-stable-bin" >> $DIR/profil/packages.x86_64;
 fi
