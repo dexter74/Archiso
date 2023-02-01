@@ -2,7 +2,7 @@
 # Chargements des fonctions #
 #############################
 source ./settings.conf;
-source ./fonctions/REGEN_DEPOT;
+source ./fonctions/regen_depot;
 
 ################################################################################################################################################
 # Lancement des Fonctions #
