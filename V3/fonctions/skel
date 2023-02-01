@@ -21,9 +21,8 @@ rm -rf $DIR/profil/airootfs/etc/skel/.config/{discord,Microsoft*,microsoft*,puls
 sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml;
 sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml;
 sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/xfce4/desktop/icons.screen0-3424x1397.rc;
-sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/xfce4/desktop/xfce4-screenshooter;
+sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/xfce4/xfce4-screenshooter;
 sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/gtk-3.0/bookmarks;
-
 ######################################################################################################################################
 # /usr/share #
 ##############
