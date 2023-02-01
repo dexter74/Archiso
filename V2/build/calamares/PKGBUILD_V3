@@ -72,15 +72,14 @@ prepare(){
 build(){
     cd ${srcdir}/calamares-custom/build;
     cmake .. \
-          -DCMAKE_BUILD_TYPE=Release \
-	-DCMAKE_INSTALL_PREFIX=/usr \
-	-DCMAKE_INSTALL_LIBDIR=lib \
-          -DWITH_PYTHONQT=OFF \
-	-DWITH_KF5DBus=OFF \
-          -DBoost_NO_BOOST_CMAKE=OFF \
-	-DWEBVIEW_FORCE_WEBKIT=OFF \
- 	-DSKIP_MODULES="";
-
+             -DCMAKE_BUILD_TYPE=Release \
+             -DCMAKE_INSTALL_PREFIX=/usr \
+             -DCMAKE_INSTALL_LIBDIR=lib \
+             -DWITH_PYTHONQT=OFF \
+             -DWITH_KF5DBus=OFF \
+             -DBoost_NO_BOOST_CMAKE=OFF \
+             -DWEBVIEW_FORCE_WEBKIT=OFF \
+             -DSKIP_MODULES="";
     make -j$(nproc)
 }
 
