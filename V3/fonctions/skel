@@ -15,6 +15,21 @@ sudo  cp -r /home/$USERNAME/. $DIR/profil/airootfs/etc/skel/;
 rm -rf $DIR/profil/airootfs/etc/skel/{Documents/*,Téléchargements/*};
 rm -rf $DIR/profil/airootfs/etc/skel/{.cache,.cmake,.pki,.gnupg,.ssh,.bash*,.drmc,.dmrc,.git*,.ICE*,.tran*,.wget*,.X*,.xs*,.local/share} 2>/dev/null;
 rm -rf $DIR/profil/airootfs/etc/skel/.config/{discord,Microsoft*,microsoft*,pulse,smplayer,Thunar,Trolltech,VirtualBox} 2>/dev/null;
+
+########################################################################################################################################################
+# ICône Bureau #
+################
+echo '[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Installer le système
+Comment=Calamares - Installateur Système
+Exec=sh -c "pkexec calamares"
+Icon=calamares
+Path=
+Terminal=false
+StartupNotify=true' > $DIR/profil/airootfs/etc/skel/Bureau/Calamares.desktop;
+
 ########################################################################################################################################################
 # Remplacement du Terme #
 #########################
@@ -24,6 +39,7 @@ sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/xfce4/desk
 sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/xfce4/desktop/icons.screen0-3424x1388.rc;
 sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/xfce4/xfce4-screenshooter;
 sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/gtk-3.0/bookmarks;
+
 ########################################################################################################################################################
 # /usr/share #
 ##############
