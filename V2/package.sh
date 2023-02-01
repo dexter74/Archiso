@@ -30,42 +30,42 @@ else
   echo "# [N]  PURGE ALL           #";
 fi
 #########################################
-#if [[ "$PURGE_REPO" = [yY] ]]; then
-#  PURGE_REPO;
-#  echo "# [Y]  PURGE_REPO          #";
-#else
-#  echo "# [N]  PURGE_REPO          #";
-#
-#fi
+if [[ "$PURGE_REPO" = [yY] ]]; then
+  PURGE_REPO;
+  echo "# [Y]  PURGE_REPO          #";
+else
+  echo "# [N]  PURGE_REPO          #";
+
+fi
 
 ####################################################################
 # Génération du Dépot #
 #######################
-#if [[ "$GENERATION_DEPOT" = [yY] ]]; then
-#  GENERATION_DEPOT;
-#  echo "# [Y]  GENERATION DEPOT    #";
-#else
-#  echo "# [N]  GENERATION DEPOT    #";
-#fi
+if [[ "$GENERATION_DEPOT" = [yY] ]]; then
+  GENERATION_DEPOT;
+  echo "# [Y]  GENERATION DEPOT    #";
+else
+  echo "# [N]  GENERATION DEPOT    #";
+fi
 
 ####################################################################
 # Pilote Matériel #
 ###################
-#if [[ "$DRIVER" = [yY] ]]; then
-#  package_driver_drthrax;  
-#  echo "# [Y]  Compilation Driver  #";
-#else
-#  echo "# [N]  Compilation Driver  #";
-#fi
+if [[ "$DRIVER" = [yY] ]]; then
+  package_driver_drthrax;  
+  echo "# [Y]  Compilation Driver  #";
+else
+  echo "# [N]  Compilation Driver  #";
+fi
 
 ####################################################################
 # Génération des Packages #
 ###########################
-#if [[ "$BUILD_PACKAGE" = [yY] ]]; then
-#  yay;
-#  calamares;
-#  DEPOT_REGEN;
-#  echo "# [Y]  Compilation Package #";
-#else
-#  echo "# [N]  Compilation Package #";
-#fi
+if [[ "$BUILD_PACKAGE" = [yY] ]]; then
+  yay;
+  calamares;
+  DEPOT_REGEN;
+  echo "# [Y]  Compilation Package #";
+else
+  echo "# [N]  Compilation Package #";
+fi
