@@ -7,7 +7,6 @@ source ./fonctions/list_package;
 ################################################################################################################################################
 # Lancement des Fonctions #
 ###########################
-
 echo "Démarrage du script 05_Package_Base.sh";
 
 if [[ $LIST_BASE = [yY] ]]; then
