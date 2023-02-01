@@ -83,7 +83,7 @@ build(){
              -DBoost_NO_BOOST_CMAKE=ON \
              -DWEBVIEW_FORCE_WEBKIT=OFF \
              -USE_services=systemd \
-             -DSKIP_MODULES="";
+             -DSKIP_MODULES="initramfs";
     make -j$(nproc);
 }
 
