@@ -5,7 +5,7 @@ source ./settings.conf;
 source ./fonctions/profiledef;
 
 ################################################################################################################################################
-# Lancement des Fonctions #
-###########################
+# Lancement de la Fonction #
+############################
 echo "Démarrage du script Profildef.";
 PROFILEDEF;
