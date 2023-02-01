@@ -17,7 +17,8 @@ runuser -l $USERNAME -c 'yay -Sy --noconfirm archiso-profiles;'
 # Fonctions pour la purge de donnée d'archiso #
 ###############################################
 PURGE_ALL(){
-rm -rf $DIR 2>/dev/null;
+#rm -rf $DIR 2>/dev/null;
+RC=0
 }
 
 PURGE_ISO(){
