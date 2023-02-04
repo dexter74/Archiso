@@ -8,14 +8,23 @@ runuser -l $USERNAME -c 'cd /tmp/yay && makepkg -s 1>/dev/null 2>/dev/null;'
 mv /tmp/yay/*.zst $DIR/repo;
 }
 
-#####################################################################################################################
-# Compilation de packages #
-###########################
+
+#qt5-webkit(){
+#}
+#icecream(){
+#rm -rf /tmp/icecream 2>/dev/null;
+#}
+#pythonqt(){
+#rm -rf /tmp/{pythonqt} 2>/dev/null;
+#}
+
+
+
 calamares(){
 #####################################################################################################################
 # Purge des dossiers #
 ######################
-rm -rf /tmp/{calamares,icecream,pythonqt} 2>/dev/null;
+rm -rf /tmp/calamares 2>/dev/null;
 
 #####################################################################################################################
 # Déclaration des sources #
