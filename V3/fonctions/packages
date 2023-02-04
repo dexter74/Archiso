@@ -8,6 +8,7 @@ echo "
 # Base #
 ########
 archiso
+accountsservice
 git
 gvfs
 gvfs-smb
