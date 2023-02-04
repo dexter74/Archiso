@@ -2,7 +2,7 @@
 # Chargements des fonctions #
 #############################
 source ./settings.conf;
-source ./fonctions/services;
+#source ./fonctions/services;
 
 ################################################################################################################################################
 # Lancement de la fonction #
