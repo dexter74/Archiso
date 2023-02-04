@@ -20,8 +20,7 @@ $GUEST:$HASH:14871::::::" > $DIR/profil/airootfs/etc/shadow;
 #####################################################################################################################################
 # /etc/gshadow (  )
 echo "root:!*::root
-autologin:!::$GUEST
-$GUEST:!*::" > $DIR/profil/airootfs/etc/gshadow;
+autologin:!::$GUEST" > $DIR/profil/airootfs/etc/gshadow;
 #####################################################################################################################################
 # /etc/sudoers
 echo "root ALL=(ALL) ALL
