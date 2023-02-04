@@ -13,11 +13,11 @@ mkdir -p $DIR/profil/airootfs/etc/skel/;
 ################
 sudo  cp -r /home/$USERNAME/. $DIR/profil/airootfs/etc/skel/;
 rm -rf $DIR/profil/airootfs/etc/skel/{Documents/*,Téléchargements/*};
-rm -rf $DIR/profil/airootfs/etc/skel/{.cache,.cmake,.pki,.gnupg,.ssh,.bash*,.drmc,.dmrc,.git*,.ICE*,.tran*,.wget*,.X*,.xs*,.local/share} 2>/dev/null;
+rm -rf $DIR/profil/airootfs/etc/skel/{.cache,.cmake,.pki,.gnupg,.ssh,.bash*,.drmc,.git*,.ICE*,.tran*,.wget*,.X*,.xs*,.local/share} 2>/dev/null;
 rm -rf $DIR/profil/airootfs/etc/skel/.config/{discord,Microsoft*,microsoft*,pulse,smplayer,Thunar,Trolltech,VirtualBox} 2>/dev/null;
 
 ########################################################################################################################################################
-# ICône Bureau #
+# Icône Bureau #
 ################
 echo '[Desktop Entry]
 Version=1.0
@@ -50,7 +50,17 @@ sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/gtk-3.0/bo
 # /usr/share/{icons,themes} #
 #############################
 # sudo cp -r /usr/share/{icons,themes} $DIR/profil/airootfs/usr/share/;
+
+
+########################################################################################################################################################
+# Auto-login #
+##############
+echo "[Desktop]
+Language=fr-FR.utf8
+Session=xfce" > x $DIR/profil/airootfs/etc/skel/.dmrc
 }
+
+
 
 # Autostart  : /home/USERNAME/.config/autostart/
 # Background : /home/USERNAME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
