@@ -1,9 +1,3 @@
-##############################################################################
-# Le GitHub Calamares-custom sera personnalisé, pour éviter toute action ici #
-##############################################################################
-
-############################################################################################################################################################
-# DCMAKE_BUILD_TYPE : Release ou Debug
 ############################################################################################################################################################
 pkgname=calamares
 pkgver=3.2.61
@@ -79,7 +73,7 @@ prepare(){
 build(){
     cd ${srcdir}/calamares-custom/build;
     cmake .. \
-             -DCMAKE_BUILD_TYPE=Debug \
+             -DCMAKE_BUILD_TYPE=Release \
              -DCMAKE_INSTALL_PREFIX=/usr \
              -DCMAKE_INSTALL_LIBDIR=/usr/lib \
              -DWITH_PYTHONQT=OFF \
