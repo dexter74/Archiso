@@ -1,7 +1,6 @@
 ######################################################################################################
-# Script pour tester toute les étapes #
-#######################################
-
+# Script pour tester toute les étapes manuellements #
+#####################################################
 sh ./00_Update_upgrade.sh;
 sh ./01_Clean.sh;
 sh ./02_Generation.sh;
