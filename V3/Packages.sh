@@ -3,7 +3,7 @@
 #############################
 source ./settings.conf;
 source ./fonctions/pacman;
-source ./fonctions/build/packages;
+source ./fonctions/packages;
 
 ################################################################################################################################################
 # Lancements des fonctions #
@@ -42,7 +42,7 @@ then
     broadcom_wl;
     linux_firmware_qlogic;
     upd72020x_fwl;
-    wd719x_firmware;    
+    wd719x_firmware;
   fi
   #################################################
   
