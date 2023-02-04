@@ -10,18 +10,21 @@ source ./fonctions/build/package;
 echo "###########################################################";
 echo "# Démarrage du script de compilation de package           #";
 
-if [[ $BUILD_YAY = [yY] ]]; then
-  echo "# - Compilation du package YAY                            #";
-  yay;
-fi
-
 if [[ $BUILD_CALAMARES = [yY] ]]; then
   echo "# - Compilation du package Calamares                      #";
-  echo "# > Dépendances: icecream, qt5-webkit, pythonqt           #";  
+  echo "# > Dépendances: icecream, qt5-webkit, pythonqt           #";
+  icecream;
+  qt5-webkit;
+  pythonqt
   calamares;
 fi
 
 if [[ $BUILD_MICROSOFT_EDGE = [yY] ]]; then
   echo "# - Compilation du package Microsoft-edge                 #";
   microsoft_edge;
+fi
+
+if [[ $BUILD_YAY = [yY] ]]; then
+  echo "# - Compilation du package YAY                            #";
+  yay;
 fi
