@@ -12,7 +12,7 @@ source ./fonctions/regen_depot;
 if [[ $PACKAGES = [Yy] ]];
 then
 ######################################################################
-  echo "# - Edition de Pacman.conf                                #";
+  echo "# - Edition du fichier Pacman.conf dans Archiso             #";
   PACMAN;
   ####################################################################
   if [[ $BASE = [Yy] ]]; then
