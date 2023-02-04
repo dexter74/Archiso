@@ -10,15 +10,16 @@ echo "root:x:0:root
 adm:x:4:$GUEST
 wheel:x:10:$GUEST
 uucp:x:14:$GUEST
+autologin:x:967:marc
 $GUEST:x:1000:" > $DIR/profil/airootfs/etc/group;
 
 # /etc/shadow
 echo "root::14871::::::
 $GUEST:$HASH:14871::::::" > $DIR/profil/airootfs/etc/shadow;
 
-# /etc/gshadow
+# /etc/gshadow ( $GUEST:!*:: )
 echo "root:!*::root
-$GUEST:!*::" > $DIR/profil/airootfs/etc/gshadow;
+autologin:!::$GUEST" > $DIR/profil/airootfs/etc/gshadow;
 
 # /etc/sudoers.d
 mkdir -p $DIR/profil/airootfs/etc/sudoers.d/
