@@ -8,6 +8,6 @@ source ./settings.conf
 ############################
 #
 ###################################################################
-echo "# - Script d'édition des permissions                      #";
+echo "# - Modifier les permissions du dossier archiso           #";
 chown -R $USERNAME:users $DIR;
 ###################################################################
