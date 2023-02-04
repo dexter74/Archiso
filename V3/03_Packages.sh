@@ -12,7 +12,6 @@ source ./fonctions/regen_depot;
 if [[ $PACKAGES = [Yy] ]];
 then
   #################################################
-  echo "Pacman"
   PACMAN;
   #################################################
   if [[ $BASE = [Yy] ]]; then
