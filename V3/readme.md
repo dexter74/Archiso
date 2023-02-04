@@ -20,9 +20,8 @@ cd;
 rm -rf $HOME/archiso;
 git clone https://github.com/dexter74/Archiso.git $HOME/archiso 2>/dev/null;
 cd $HOME/archiso/V3;
-
-
 ```
+
 #### D. Génération de l'image Système (Test)
 ```bash
 sh ./00_Clean.sh;
