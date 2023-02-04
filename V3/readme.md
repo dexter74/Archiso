@@ -1,19 +1,4 @@
-#### A. En cours de développement
-```
-Fonction: Fichier vide
-Script  : Charge les fonctions uniquements
-Le profil copier sera l'utilisateur 1000.
-```
-
-**Note**
-````
-[calamares]
- - PKGBUILD Mode: Debug
- - settings.conf: Ajout d'une Etape (En test) 
-````
-
-
-#### B. Télécharger les scripts 
+#### A. Télécharger les scripts 
 ```bash
 clear;
 cd;
@@ -22,12 +7,9 @@ git clone https://github.com/dexter74/Archiso.git $HOME/archiso 2>/dev/null;
 cd $HOME/archiso/V3;
 ```
 
-#### D. Génération de l'image Système (Test)
+#### B. Génération de l'image Système (Test)
 ```bash
-sh ./00_Update_upgrade.sh
-sh ./01_Clean.sh;
-sh ./02_Generation.sh;
-sh ./03_Build_driver.sh;
+sh test.sh
 ```
 
 #### D. Génération de l'image Système (Manuel)
