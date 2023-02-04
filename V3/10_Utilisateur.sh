@@ -9,6 +9,6 @@ source ./fonctions/utilisateur;
 ############################
 #
 ###################################################################
-echo "# Script de création de l'utilisateur                     #";
+echo "# - Script de création de l'utilisateur                   #";
 UTILISATEUR;
 ###################################################################
