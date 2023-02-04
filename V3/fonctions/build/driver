@@ -13,7 +13,7 @@ mv /tmp/aic94xx-firmware/*.zst $DIR/repo;
 ################
 ast_firmware(){
 rm -rf /tmp/ast-firmware 2>/dev/null;
-runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/ast-firmware.git /tmp/ast-firmware;'
+runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/ast-firmware.git /tmp/ast-firmware 1>/dev/null 2>/dev/null;'
 runuser -l $USERNAME -c 'cd /tmp/ast-firmware && makepkg -s 1>/dev/null 2>/dev/null;'
 mv /tmp/ast-firmware/*.zst $DIR/repo;
 }
