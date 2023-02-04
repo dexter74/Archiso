@@ -7,10 +7,9 @@ git clone https://github.com/dexter74/Archiso.git $HOME/archiso 2>/dev/null;
 cd $HOME/archiso/V3;
 ```
 
-
 #### B. Configurer Archiso
 ```bash
-nano ./settings.conf
+nano ./settings.conf;
 ```
 
 #### C. Génération de l'image Système (Manuel)
@@ -36,7 +35,6 @@ sh ./14_Rename.sh;
 ```bash
 sh test.sh;
 ```
-
 
 #### X. Dépendances
 ```bash
