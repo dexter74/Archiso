@@ -7,5 +7,5 @@ ln -s /usr/lib/systemd/system/NetworkManager-wait-online.service   $DIR/profil/a
 ln -s /usr/lib/systemd/system/NetworkManager.service               $DIR/profil/airootfs/etc/systemd/system/multi-user.target.wants/NetworkManager.service 2>/dev/null;
 ln -s /usr/lib/systemd/system/NetworkManager-dispatcher.service    $DIR/profil/airootfs/etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service 2>/dev/null;
 ln -s /usr/lib/systemd/system/lightdm.service                      $DIR/profil/airootfs/etc/systemd/system/display-manager.service 2>/dev/null;
-ln -s /usr/lib/systemd/system/icecream.service                     $DIR/profil/airootfs/etc/systemd/systemd/system/icecream.service 2>/dev/null;
+ln -s /usr/lib/systemd/system/icecream.service                     $DIR/profil/airootfs/etc/systemd/system/icecream.service 2>/dev/null;
 }
