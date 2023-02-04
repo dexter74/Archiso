@@ -30,3 +30,11 @@ echo "root ALL=(ALL) ALL
 # /etc/sudoers.d/username
 echo "$GUEST ALL=(ALL) NOPASSWD: ALL" > $DIR/profil/airootfs/etc/sudoers.d/$GUEST;
 }
+
+
+autologin(){
+mkdir -p $DIR/profil/airootfs/etc/lightdm;
+cp /etc/lightdm/lightdm.conf $DIR/profil/airootfs/etc/lightdm/lightdm.conf;
+sed -i -e "s/^\#autologin-user\=/autologin-user\=$GUEST/g" $DIR/profil/airootfs/etc/lightdm/lightdm.conf;
+sed -i -e "s/\#autologin-user-timeout\=/autologin-user-timeout\=/g" $DIR/profil/airootfs/etc/lightdm/lightdm.conf;
+}
