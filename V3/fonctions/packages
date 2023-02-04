@@ -2,7 +2,35 @@
 # Package de base #
 ###################
 base(){
+if [[ $(grep -L "^archiso" $DIR/profil/packages.x86_64) ]]; then
+echo "####################
+# Packages Generic #
+####################
+archiso
+git
+gvfs
+gvfs-smb
+inetutils
+networkmanager
+network-manager-applet
+pulseaudio
+pulseaudio-alsa
+pulseaudio-bluetooth
+pulseaudio-qt
+wget
+lightdm
+lightdm-gtk-greeter
+papirus-icon-theme
+pavucontrol
+plank
+xfce4
+xfce4-goodies
+xf86-video-vesa
+xf86-video-vmware
+xorg" >> $DIR/profil/packages.x86_64;
+fi
 }
+
 
 #####################################################################################################################################################################
 # Package de Calamares #
