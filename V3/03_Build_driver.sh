@@ -9,7 +9,7 @@ source ./fonctions/build/driver;
 ############################
 #
 ###################################################################
-echo "# - Démarrage du cript de compilation des Pilotes         #";
+echo "# - Compilation des Pilotes                                #";
 if [[ $BUILD_DRIVER = [yY] ]]; then
 ###################################################################
 echo "#    > Aic94xx-firmware                                   #";
