@@ -12,5 +12,5 @@ cp -r /usr/share/archiso/configs/releng/* $DIR/profil;
 #######################
 GENERATION_DEPOT(){
 mkdir -p $DIR/repo;
-mkdir -p $DIR/repo/log;
+# mkdir -p $DIR/repo/log;
 }
