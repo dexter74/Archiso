@@ -10,14 +10,11 @@ rm -rf $DIR/{iso,work}/* 2>/dev/null;
 ############################################################################
 # Création de l'image ISO #
 ###########################
-mkarchiso \
-  -w $DIR/work \
-  -o $DIR/iso \
-  $DIR/profil \
-  1>/dev/null \
-  2>/dev/null;
+mkarchiso       \
+  -v            \
+  -w $DIR/work  \
+  -o $DIR/iso  \
+  $DIR/profil  \
+  1>/dev/null;
 ############################################################################
 }
-
-
-# -v: Mode Verbose
