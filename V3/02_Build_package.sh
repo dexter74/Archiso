@@ -9,7 +9,7 @@ source ./fonctions/build/package;
 ###########################
 #
 ###################################################################
-echo "# - Démarrage du script de compilation des packages       #";
+echo "# - Compilation des packages                              #";
 #
 #
 if [[ $BUILD_CALAMARES = [yY] ]]; then
