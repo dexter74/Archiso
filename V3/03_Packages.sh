@@ -32,7 +32,6 @@ then
     echo "#   > Icecream                                            #";
     icecream;
   fi
-  
   ####################################################################
   if [[ $QT5WEBKIT = [Yy] ]]; then
     echo "#   > QT5-WebKit                                          #";
@@ -44,7 +43,6 @@ then
     microsoft_edge;
   fi
   ####################################################################
-
   if [[ $YAY = [Yy] ]]; then
     echo "#   > Yay                                                 #";
     yay;
