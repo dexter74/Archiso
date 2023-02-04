@@ -7,26 +7,25 @@ source ./fonctions/build/driver;
 ################################################################################################################################################
 # Lancement de la Fonction #
 ############################
-echo "###########################################################";
-echo "# Démarrage du script de compilation des Pilotes:         #";
+echo "# - Script de compilation des Pilotes                     #";
 if [[ $BUILD_DRIVER = [yY] ]]; then
 ###################################################################
-echo "# > broadcom_wl                                           #";
+echo "#   > broadcom_wl                                         #";
 broadcom_wl;
 ###################################################################
-echo "# > Aic94xx-firmware                                      #";
+echo "#   > Aic94xx-firmware                                    #";
 aic94xx_firmware;
 ###################################################################
-echo "# > Ast-Firmware                                          #";
+echo "#   > Ast-Firmware                                        #";
 ast_firmware;
 ###################################################################
-echo "# > Linux-Firmware-Qlogic                                 #";
+echo "#   > Linux-Firmware-Qlogic                               #";
 linux_firmware_qlogic;
 ###################################################################
-echo "# > upd72020x-fw                                          #";
+echo "#   > upd72020x-fw                                        #";
 upd72020x_fw;
 ###################################################################
-echo "# > WD719x-Firmware                                       #";
+echo "#   > WD719x-Firmware                                     #";
 wd719x_firmware;
 ###################################################################
 fi
