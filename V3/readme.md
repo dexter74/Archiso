@@ -9,7 +9,7 @@ cd $HOME/archiso/V3;
 
 #### B. Génération de l'image Système (Test)
 ```bash
-sh test.sh
+sh test.sh;
 ```
 
 #### D. Génération de l'image Système (Manuel)
