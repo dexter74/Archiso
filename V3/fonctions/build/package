@@ -1,82 +1,62 @@
 #####################################################################################################################
-# Fonction pour les packages à intégrer #
-#########################################
-yay(){
-rm -rf /tmp/yay;
-runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/yay.git /tmp/yay 1>/dev/null 2>/dev/null;'
-runuser -l $USERNAME -c 'cd /tmp/yay && makepkg -s 1>/dev/null 2>/dev/null;'
-mv /tmp/yay/*.zst $DIR/repo;
-}
-
-
-#qt5-webkit(){
-#}
-#icecream(){
-#rm -rf /tmp/icecream 2>/dev/null;
-#}
-#pythonqt(){
-#rm -rf /tmp/{pythonqt} 2>/dev/null;
-#}
-
-
-
+# Calamares (Dependance: icecream, pythonqt, qt5-webkit) #
+##########################################################
 calamares(){
-#####################################################################################################################
-# Purge des dossiers #
-######################
 rm -rf /tmp/calamares 2>/dev/null;
-
-#####################################################################################################################
-# Déclaration des sources #
-###########################
-QT5WEBKIT="https://archive.archlinux.org/packages/q/qt5-webkit/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst"
 CALAMARES="https://raw.githubusercontent.com/dexter74/Archiso/main/V3/PKGBUILD/Calamares"
-ICECREAM="https://aur.archlinux.org/icecream.git"
-PYTHONQT="https://aur.archlinux.org/pythonqt.git"
-
-#####################################################################################################################
-# Téléchargements des packages compilés #
-#########################################
-wget $QT5WEBKIT -O $DIR/repo/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst 2>/dev/null;
-
-#####################################################################################################################
-# Création des dossiers #
-#########################
 runuser -l $USERNAME -c "mkdir /tmp/calamares 2>/dev/null;"
-
-#####################################################################################################################
-# Téléchargements des sources #
-###############################
-runuser -l $USERNAME -c "git clone $ICECREAM   /tmp/icecream  1>/dev/null 2>/dev/null;"
-runuser -l $USERNAME -c "git clone $PYTHONQT   /tmp/pythonqt  1>/dev/null 2>/dev/null;"
-
-#####################################################################################################################
-# Téléchargement des PKGBUILD #
-###############################
 runuser -l $USERNAME -c "curl $CALAMARES > /tmp/calamares/PKGBUILD 2>/dev/null;"
-
-#####################################################################################################################
-# Amélioration compilation #
-############################
-sed -i "s/	make/	make -j$(nproc)/g" /tmp/pythonqt/PKGBUILD;
-
-#####################################################################################################################
-# Compilation des packages #
-############################
-runuser -l $USERNAME -c "cd /tmp/calamares  && makepkg -s 1>/dev/null 2>/dev/null;"
-runuser -l $USERNAME -c "cd /tmp/icecream   && makepkg -s 1>/dev/null 2>/dev/null;"
-runuser -l $USERNAME -c "cd /tmp/pythonqt   && makepkg -s 1>/dev/null 2>/dev/null;"
-
-#####################################################################################################################
-# Déplacement des packages dans le dépôt #
-##########################################
-mv /tmp/{calamares,icecream,pythonqt}/*.zst $DIR/repo;
+runuser -l $USERNAME -c "cd /tmp/calamares && makepkg -s 1>/dev/null 2>/dev/null;"
 }
 
+#####################################################################################################################
+# Icecream #
+############
+icecream(){
+rm -rf /tmp/icecream 2>/dev/null;
+ICECREAM="https://aur.archlinux.org/icecream.git"
+runuser -l $USERNAME -c "git clone $ICECREAM /tmp/icecream 1>/dev/null 2>/dev/null;"
+runuser -l $USERNAME -c "cd /tmp/icecream && makepkg -s 1>/dev/null 2>/dev/null;"
+mv /tmp/icecream/*.zst $DIR/repo;
+}
+
+#####################################################################################################################
+# Microsoft Edge #
+##################
 microsoft_edge(){
 MICROSOFT=https://aur.archlinux.org/microsoft-edge-stable-bin.git
 rm -rf /tmp/microsoft-edge;
 runuser -l $USERNAME -c "git clone $MICROSOFT /tmp/microsoft-edge 1>/dev/null 2>/dev/null;"
 runuser -l $USERNAME -c "cd /tmp/microsoft-edge && makepkg -s 1>/dev/null 2>/dev/null;"
 mv /tmp/microsoft-edge/*.zst $DIR/repo;
+}
+
+#####################################################################################################################
+# PythonQT #
+############
+pythonqt(){
+PYTHONQT="https://aur.archlinux.org/pythonqt.git"
+rm -rf /tmp/{pythonqt} 2>/dev/null;
+runuser -l $USERNAME -c "git clone $PYTHONQT /tmp/pythonqt 1>/dev/null 2>/dev/null;"
+sed -i "s/	make/	make -j$(nproc)/g" /tmp/pythonqt/PKGBUILD;
+runuser -l $USERNAME -c "cd /tmp/pythonqt && makepkg -s 1>/dev/null 2>/dev/null;"
+mv /tmp/pythonqt/*.zst $DIR/repo;
+}
+
+#####################################################################################################################
+# QT5-WebKit #
+##############
+qt5-webkit(){
+QT5WEBKIT="https://archive.archlinux.org/packages/q/qt5-webkit/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst"
+wget $QT5WEBKIT -O $DIR/repo/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst 2>/dev/null;
+}
+
+#####################################################################################################################
+# YAY #
+#######
+yay(){
+rm -rf /tmp/yay;
+runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/yay.git /tmp/yay 1>/dev/null 2>/dev/null;'
+runuser -l $USERNAME -c 'cd /tmp/yay && makepkg -s 1>/dev/null 2>/dev/null;'
+mv /tmp/yay/*.zst $DIR/repo;
 }
