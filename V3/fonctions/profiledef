@@ -2,12 +2,12 @@
 # PROFILEDEF #
 ##############
 PROFILEDEF(){
-sed -i '/shadow/a \\  ["/etc/gshadow"]="0:0:400"'              $DIR/profil/profiledef.sh;
-sed -i '/gshadow/a \\  ["/etc/sudoers"]="0:0:400"'             $DIR/profil/profiledef.sh;
+sed -i '/shadow/a \\  ["/etc/gshadow"]="0:0:600"'              $DIR/profil/profiledef.sh;
+sed -i '/gshadow/a \\  ["/etc/sudoers"]="0:0:440"'             $DIR/profil/profiledef.sh;
 sed -i '/sudoers/a \\  ["/etc/sudoers.d/'$GUEST'"]="0:0:400"'  $DIR/profil/profiledef.sh;
 
 if [ -f "$DIR/profil/airootfs/etc/lightdm/lightdm.conf" ]; then
-sed -i '/$GUEST/a \\  ["/etc/lightdm/lightdm.conf"]="0:0:400"'  $DIR/profil/profiledef.sh;
+sed -i '/sudoers.d/a \\  ["/etc/lightdm/lightdm.conf"]="0:0:644"'              $DIR/profil/profiledef.sh;
 fi
 }
 
