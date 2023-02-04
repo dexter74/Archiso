@@ -1,9 +1,8 @@
 **Maintenance**
 
-| Le script utilisateur est en cours de réecriture pour l'auto-login
+> Le script utilisateur est en cours de réecriture pour l'auto-login
 
-
-
+<br />
 
 #### A. Télécharger les scripts 
 ```bash
