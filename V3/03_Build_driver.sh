@@ -8,7 +8,7 @@ source ./fonctions/build/driver;
 # Lancement de la Fonction #
 ############################
 echo "###########################################################";
-echo "# Démarrage du script de compilation des packages:        #";
+echo "# Démarrage du script de compilation des Pilotes:         #";
 if [[ $BUILD_DRIVER = [yY] ]]; then
 ###################################################################
 echo "# > Aic94xx-firmware                                      #";
