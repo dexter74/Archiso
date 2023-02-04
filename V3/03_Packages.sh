@@ -19,7 +19,7 @@ then
     echo "###########################################################";
     echo "# - Ajout de package dans l'image Archiso                 #";
     sleep 1;
-    echo "#   > Base                                                #";
+    echo "#   > Base (Lightdm + XFCE4)                              #";
     base;
   fi
   ####################################################################
@@ -63,9 +63,6 @@ then
     echo "#   > Pilote WIFI (broadcom-wl)                          #";
     broadcom_wl;
   fi
-    
-  
-  
 ######################################################################
   echo "###########################################################";
   echo "# - Mise à jour du dépôt Local                            #";
