@@ -44,6 +44,6 @@ fi
 if [[ $LIST_PILOTE = [yY] ]]; then
 ###################################################################
 echo "#    > Pilotes ont été ajoutés dans la liste              #";
-package_drthrax;
+package_pilote;
 ###################################################################
 fi
