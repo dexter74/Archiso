@@ -14,7 +14,8 @@ mkarchiso \
   -w $DIR/work \
   -o $DIR/iso \
   $DIR/profil \
-  1>/dev/null 2>/dev/null;
+  1>/dev/null \
+  2>/dev/null;
 ############################################################################
 }
 
