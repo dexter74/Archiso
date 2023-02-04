@@ -18,6 +18,7 @@ then
   if [[ $BASE = [Yy] ]]; then
     echo "###########################################################";
     echo "# - Ajout de package dans l'image Archiso                 #";
+    sleep 1;
     echo "#   > Base                                                #";
     base;
   fi
