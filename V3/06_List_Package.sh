@@ -10,7 +10,7 @@ source ./fonctions/list_package;
 #
 ###################################################################
 echo "###########################################################";
-echo "# - Script d'ajout de la liste des packages               #";
+echo "# - Ajout de la liste des packages dans Archiso           #";
 ###################################################################
 #
 if [[ $LIST_BASE = [yY] ]]; then
