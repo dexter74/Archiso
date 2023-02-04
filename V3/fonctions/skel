@@ -56,7 +56,6 @@ sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/gtk-3.0/bo
 # Auto-login #
 ##############
 echo "[Desktop]
-Language=fr-FR.utf8
 Session=xfce" > x $DIR/profil/airootfs/etc/skel/.dmrc
 }
 
