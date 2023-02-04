@@ -1,7 +1,7 @@
 UPGRADE_PACMAN(){
-pacman -Syu --noconfirm;
+pacman -Syu --noconfirm 1>/dev/null 2>/dev/null;
 }
 
 UPGRADE_YAY(){
-yay -Syu --noconfirm;
+yay -Syu --noconfirm 1>/dev/null 2>/dev/null;
 }
