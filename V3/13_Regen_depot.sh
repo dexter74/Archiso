@@ -9,6 +9,6 @@ source ./fonctions/regen_depot;
 ############################
 #
 ###################################################################
-echo "# - Script de regénération du dépôt                       #";
+echo "# - Regénération de la liste des packages dans le dépôt   #";
 REGEN_DEPOT;
 ###################################################################
