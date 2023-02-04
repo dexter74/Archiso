@@ -11,4 +11,6 @@ source ./fonctions/skel;
 ###################################################################
 echo "# - Création du profil utilisateur par défaut             #";
 SKEL;
+#echo "#  > Autologin                                            #";
+#autologin;
 ###################################################################
