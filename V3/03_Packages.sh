@@ -32,17 +32,19 @@ then
     echo "#   > Icecream                                            #";
     icecream;
   fi
-  ####################################################################
-  if [[ $MICROSOFT_EDGE = [Yy] ]]; then
-    echo "#   > Microsft Edge                                       #";
-    microsoft_edge;
-  fi
+  
   ####################################################################
   if [[ $QT5WEBKIT = [Yy] ]]; then
     echo "#   > QT5-WebKit                                          #";
     qt5webkit;
   fi
   ####################################################################
+  if [[ $MICROSOFT_EDGE = [Yy] ]]; then
+    echo "#   > Microsft Edge                                       #";
+    microsoft_edge;
+  fi
+  ####################################################################
+
   if [[ $YAY = [Yy] ]]; then
     echo "#   > Yay                                                 #";
     yay;
