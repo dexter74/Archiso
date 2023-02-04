@@ -9,6 +9,6 @@ source ./fonctions/langue;
 ############################
 #
 ###################################################################
-echo "# - Script de configuration de la Langue et du Fuseau     #";
+echo "# - Edition de la langue et du Fuseau horaire             #";
 LANGUE;
 ###################################################################
