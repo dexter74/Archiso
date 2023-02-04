@@ -18,7 +18,7 @@ sh ./00_Update_upgrade.sh;
 sh ./01_Clean.sh;
 sh ./02_Generation.sh;
 sh ./03_Packages.sh;
-sh ./04_services.sh;
+sh ./04_Services.sh;
 
 sh ./08_Langue.sh;
 sh ./09_Customize.sh;
