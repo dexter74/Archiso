@@ -9,6 +9,6 @@ source ./fonctions/skel;
 ############################
 #
 ###################################################################
-echo "# -  du script de l'utilisateur type                      #";
+echo "# - Script de copie du profil d'utilisateur type          #";
 SKEL;
 ###################################################################
