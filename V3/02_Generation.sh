@@ -9,7 +9,7 @@ source ./fonctions/generation;
 ############################
 #
 ###################################################################
-echo "# - Démarrage du script de Generation                     #";
+echo "# - Script de Generation d'archiso et du  dépôt           #";
 GENERATION_DEPOT;
 GENERATION_ARCHISO;
 ###################################################################
