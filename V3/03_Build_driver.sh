@@ -18,7 +18,7 @@ aic94xx_firmware;
 echo "#   > Ast-Firmware                                        #";
 ast_firmware;
 ###################################################################
-echo "#   > broadcom_wl                                         #";
+echo "#   > Broadcom_wl                                         #";
 broadcom_wl;
 ###################################################################
 echo "#   > Linux-Firmware-Qlogic                               #";
