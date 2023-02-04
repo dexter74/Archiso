@@ -7,19 +7,41 @@ source ./settings.conf;
 ################################################################################################################################################
 # Lancements des fonctions #
 ############################
-if [[ $PACKAGE = [Yy] ]]; then
-aic94xx_firmware;
-ast_firmware;
-broadcom_wl;
-linux_firmware_qlogic;
-upd72020x_fw;
-wd719x_firmware;
-
-package_base;
-package_yay;
-package_calamares;
-package_microsoft;
-package_pilote;
-
-PACMAN;
+if [[ $PACKAGES = [Yy] ]];
+then
+  #################################################
+  PACMAN;
+  #################################################
+  if [[ $base = [Yy] ]]; then
+  base;
+  fi
+  #################################################
+  if [[ $calamares = [Yy] ]]; then
+  calamares;
+  fi
+  #################################################
+  if [[ $icecream = [Yy] ]]; then
+  icecream;
+  fi
+  #################################################
+  if [[ $microsoft_edge = [Yy] ]]; then
+  fi
+  #################################################
+  if [[ $qt5webkit = [Yy] ]]; then
+  qt5webkit;
+  fi
+  #################################################
+  if [[ $yay = [Yy] ]]; then
+  yay;
+  fi
+  #################################################
+  if [[ $pilote = [Yy] ]]; then
+    aic94xx_firmware;
+    ast_firmware;
+    broadcom_wl;
+    linux_firmware_qlogic;
+    upd72020x_fwl;
+    wd719x_firmware;    
+  fi
+  #################################################
 fi
