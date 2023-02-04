@@ -7,5 +7,5 @@ source ./fonctions/clean;
 ################################################################################################################################################
 # Lancement de la Fonction #
 ############################
-echo "# - Purge du dossier Racine Archiso                       #";
+echo "# - Purge du dossier racine Archiso                       #";
 CLEAN;
