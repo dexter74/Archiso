@@ -4,17 +4,17 @@ clear;
 cd;
 rm -rf $HOME/archiso;
 git clone https://github.com/dexter74/Archiso.git $HOME/archiso 2>/dev/null;
-```
-
-#### B. Génération de l'image Système (Test)
-```bash
-sh test.sh;
-```
-
-#### D. Génération de l'image Système (Manuel)
-```bash
 cd $HOME/archiso/V3;
+```
 
+
+#### B. Configurer Archiso
+```bash
+nano ./settings.conf
+```
+
+#### C. Génération de l'image Système (Manuel)
+```bash
 sh ./00_Update_upgrade.sh;
 sh ./01_Clean.sh;
 sh ./02_Generation.sh;
@@ -31,6 +31,12 @@ sh ./12_Permission.sh;
 sh ./13_Compilation.sh;
 sh ./14_Rename.sh;
 ```
+
+#### B. Génération de l'image Système (Automatique)
+```bash
+sh test.sh;
+```
+
 
 #### X. Dépendances
 ```bash
