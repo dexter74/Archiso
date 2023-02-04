@@ -17,5 +17,5 @@ date=$(date '+%H:%M')
 echo "# - Script pour la compilation de l'Image Système         #";
 echo "#   > Début de la compilation de l'image à $date          #";
 COMPILATION;
-echo "#   > Fin  de la compilation de l'image à $date           #";
+echo "#   > Fin de la compilation de l'image à $date            #";
 ###################################################################
