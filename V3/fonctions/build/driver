@@ -31,7 +31,7 @@ wget https://europe.mirror.pkgbuild.com/community/os/x86_64/broadcom-wl-6.30.223
 linux_firmware_qlogic(){
 rm -rf /tmp/linux-firmware-qlogic 2>/dev/null;
 runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/linux-firmware-git.git /tmp/linux-firmware-qlogic 1>/dev/null 2>/dev/null;'
-runuser -l $USERNAME -c 'cd /tmp/linux-firmware-qlogic && makepkg -s'
+runuser -l $USERNAME -c 'cd /tmp/linux-firmware-qlogic && makepkg -s --skippgpcheck'
 #mv /tmp/linux-firmware-qlogic/*.zst $DIR/repo;
 }
 
