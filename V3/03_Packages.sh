@@ -10,10 +10,11 @@ source ./fonctions/regen_depot;
 # Lancements des fonctions #
 ############################
 if [[ $PACKAGES = [Yy] ]];
-then
-######################################################################
-  echo "# - Edition du fichier Pacman.conf dans Archiso           #";
-  PACMAN;
+then######################################################################
+  if [[ $PACMAN = [Yy] ]]; then
+    echo "# - Edition du fichier Pacman.conf dans Archiso           #";
+    PACMAN;
+  fi
   ####################################################################
   if [[ $BASE = [Yy] ]]; then
     echo "###########################################################";
