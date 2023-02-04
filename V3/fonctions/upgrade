@@ -1,0 +1,7 @@
+UPGRADE_PACMAN(){
+pacman -Syu --noconfirm;
+}
+
+UPGRADE_YAY(){
+yay -Syu --noconfirm;
+}
