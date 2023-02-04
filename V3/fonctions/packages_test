@@ -1,0 +1,19 @@
+ase(){
+if [[ $(grep -L "^archiso" $DIR/profil/packages.x86_64) ]]; then
+echo "amd-ucode
+arch-install-scripts
+archinstall
+base
+broadcom-wl
+ddrescue
+dhclient
+dhcpcd
+diffutils
+dmidecode
+dosfstools
+e2fsprogs
+
+efibootmgr
+" > $DIR/profil/packages.x86_64;
+fi
+}
