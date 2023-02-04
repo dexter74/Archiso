@@ -10,6 +10,26 @@ source ./fonctions/build/driver;
 echo "###########################################################";
 echo "# Démarrage du script de compilation des packages         #";
 if [[ $BUILD_DRIVER = [yY] ]]; then
-echo "# > Pilotes                                               #";
-package_driver_drthrax;
+##################################################################
+echo "# > Aic94xx-firmware                                      #";
+aic94xx_firmware;
+##################################################################
+echo "# > ast-firmware                                          #";
+ast_firmware;
+##################################################################
+echo "# > linux-firmware-qlogic                                 #";
+linux_firmware_qlogic;
+##################################################################
+echo "# > upd72020x-fw                                          #";
+upd72020x_fw;
+##################################################################
+echo "# > wd719x-firmware                                       #";
+wd719x_firmware;
+##################################################################
+
 fi
+
+
+
+#echo "# > broadcom_wl                                           #";
+#broadcom_wl
