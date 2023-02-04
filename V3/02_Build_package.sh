@@ -8,7 +8,7 @@ source ./fonctions/build/package;
 # Lancement des Fonctions #
 ###########################
 echo "###########################################################";
-echo "# Démarrage du script de compilation des packages         #";
+echo "# Démarrage du script de compilation des packages:        #";
 if [[ $BUILD_CALAMARES = [yY] ]]; then
 ###################################################################
 echo "# > IceCream                                              #";
