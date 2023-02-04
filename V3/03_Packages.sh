@@ -13,30 +13,30 @@ then
   #################################################
   PACMAN;
   #################################################
-  if [[ $base = [Yy] ]]; then
+  if [[ $BASE = [Yy] ]]; then
   base;
   fi
   #################################################
-  if [[ $calamares = [Yy] ]]; then
+  if [[ $CALAMARES = [Yy] ]]; then
   calamares;
   fi
   #################################################
-  if [[ $icecream = [Yy] ]]; then
+  if [[ $ICECREAM = [Yy] ]]; then
   icecream;
   fi
   #################################################
-  if [[ $microsoft_edge = [Yy] ]]; then
+  if [[ $MICROSOFT_EDGE = [Yy] ]]; then
   fi
   #################################################
-  if [[ $qt5webkit = [Yy] ]]; then
+  if [[ $QT5WEBKIT = [Yy] ]]; then
   qt5webkit;
   fi
   #################################################
-  if [[ $yay = [Yy] ]]; then
+  if [[ $YAY = [Yy] ]]; then
   yay;
   fi
   #################################################
-  if [[ $pilote = [Yy] ]]; then
+  if [[ $PILOTE = [Yy] ]]; then
     aic94xx_firmware;
     ast_firmware;
     broadcom_wl;
