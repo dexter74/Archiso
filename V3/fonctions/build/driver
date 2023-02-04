@@ -22,20 +22,17 @@ mv /tmp/ast-firmware/*.zst $DIR/repo;
 # Broadcom-wl #
 ###############
 broadcom_wl(){
-wget https://europe.mirror.pkgbuild.com/community/os/x86_64/broadcom-wl-6.30.223.271-446-x86_64.pkg.tar.zst -O $DIR/repo/broadcom-wl.pkg.tar.zst 2>/dev/null;
+VERSION=$(yay -Qi broadcom-wl | grep "Version" | cut -d ":" -f 2 | cut -c 2-30)
+wget https://europe.mirror.pkgbuild.com/community/os/x86_64/broadcom-wl-$VERSION-x86_64.pkg.tar.zst -O $DIR/repo/broadcom-wl.pkg.tar.zst 2>/dev/null;
 }
 
 #####################################################################################################################################################################
 # linux-firmware-qlogic #
 #########################
 linux_firmware_qlogic(){
-rm -rf /tmp/linux-firmware-qlogic 2>/dev/null;
-runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/linux-firmware-git.git /tmp/linux-firmware-qlogic 1>/dev/null 2>/dev/null;'
-runuser -l $USERNAME -c 'cd /tmp/linux-firmware-qlogic && makepkg -s --skippgpcheck'
-#mv /tmp/linux-firmware-qlogic/*.zst $DIR/repo;
+VERSION=$(yay -Qi linux-firmware-qlogic | grep "Version" | cut -d ":" -f 2 | cut -c 2-30)
+wget https://mirror.moson.org/arch/core/os/x86_64/linux-firmware-qlogic-$VERSION-any.pkg.tar.zst -O $DIR/repo/linux-firmware-qlogic.pkg.tar.zst 2>/dev/null;
 }
-
-
 
 #####################################################################################################################################################################
 # upd72020x-fw #
@@ -46,7 +43,6 @@ runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/upd72020x-fw.git /t
 runuser -l $USERNAME -c 'cd /tmp/upd72020x-fw && makepkg -s 1>/dev/null 2>/dev/null;'
 mv /tmp/upd72020x-fw/*.zst $DIR/repo;
 }
-
 
 #####################################################################################################################################################################
 # wd719x-firmware #
