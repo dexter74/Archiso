@@ -23,8 +23,6 @@ pulseaudio-qt
 wget
 lightdm
 lightdm-gtk-greeter
-lightdm-gtk-greeter-settings
-lightdm-webkit2-greeter
 papirus-icon-theme
 pavucontrol
 plank
@@ -36,6 +34,9 @@ xf86-video-vmware
 xorg" >> $DIR/profil/packages.x86_64;
 fi
 }
+
+#lightdm-gtk-greeter-settings
+#lightdm-webkit2-greeter
 
 
 #####################################################################################################################################################################
