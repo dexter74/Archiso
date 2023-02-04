@@ -16,37 +16,37 @@ then
   PACMAN;
   ###################################################################
   if [[ $BASE = [Yy] ]]; then
-  echo "#   > Base"
+  echo "#   > Base                                                #";
   base;
   fi
   ###################################################################
   if [[ $CALAMARES = [Yy] ]]; then
-  echo "#   > Calamares"
+  echo "#   > Calamares                                           #";
   calamares;
   fi
   ###################################################################
   if [[ $ICECREAM = [Yy] ]]; then
-  echo "#   > Icecream"
+  echo "#   > Icecream                                            #";
   icecream;
   fi
   ###################################################################
   if [[ $MICROSOFT_EDGE = [Yy] ]]; then
-  echo "#   > Microsft Edge" 
+  echo "#   > Microsft Edge                                       #";
   microsoft_edge;
   fi
   ###################################################################
   if [[ $QT5WEBKIT = [Yy] ]]; then
-  echo "#   > QT5-WebKit"
+  echo "#   > QT5-WebKit                                          #";
   qt5webkit;
   fi
   ###################################################################
   if [[ $YAY = [Yy] ]]; then
-  echo "#   > Yay"
+  echo "#   > Yay                                                 #";
   yay;
   fi
   ###################################################################
   if [[ $PILOTE = [Yy] ]]; then
-  echo "#   > Pilote"
+  echo "#   > Pilote                                              #";
     aic94xx_firmware;
     ast_firmware;
     broadcom_wl;
@@ -55,6 +55,6 @@ then
     wd719x_firmware;
   fi
   ###################################################################
-  echo "# - Mise à jour du dépôt Local "
+  echo "# - Mise à jour du dépôt Local                            #";
   REGEN_DEPOT;
 fi
