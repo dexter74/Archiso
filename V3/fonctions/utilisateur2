@@ -3,7 +3,9 @@
 #############################
 utilisateur(){
 
-# /etc/group
+################################################################################################################################
+# /etc/group #
+##############
 echo "adm:x:999:daemon
 audio:x:996:
 autologin:x:967:marc
@@ -65,7 +67,9 @@ vboxusers:x:108:
 video:x:985:
 wheel:x:998:$GUEST" > $DIR/profil/airootfs/etc/group;
 
-# /etc/passwd
+################################################################################################################################
+# /etc/passwd #
+###############
 echo "avahi:x:973:973:Avahi mDNS/DNS-SD daemon:/:/usr/bin/nologin
 bin:x:1:1::/:/usr/bin/nologin
 colord:x:969:969:Color management daemon:/var/lib/colord:/usr/bin/nologin
@@ -96,7 +100,9 @@ tss:x:975:975:tss user for tpm2:/:/usr/bin/nologin
 usbmux:x:140:140:usbmux user:/:/usr/bin/nologin
 uuidd:x:68:68::/:/usr/bin/nologin" > $DIR/profil/airootfs/etc/passwd;
 
-# /etc/shadow
+################################################################################################################################
+# /etc/shadow #
+###############
 echo "avahi:!*:19385::::::
 bin:!*:19385::::::
 colord:!*:19385::::::
@@ -129,7 +135,10 @@ usbmux:!*:19385::::::
 uuidd:!*:19385::::::" > $DIR/profil/airootfs/etc/shadow;
 
 
-# /etc/gshadow
+
+################################################################################################################################
+# /etc/gshadow #
+################
 echo "adm:!*::daemon
 audio:!*::
 autologin:!::$GUEST
