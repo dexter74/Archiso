@@ -7,29 +7,29 @@ source ./fonctions/list_package;
 ################################################################################################################################################
 # Lancement des Fonctions #
 ###########################
-echo "#  > Démarrage du script d'ajout de package               #";
+echo "# - Script d'ajout de la liste des packages               #";
 
 if [[ $LIST_BASE = [yY] ]]; then
-echo "# - Les packages de bases ont étés ajoutées               #";
+echo "#    > Base à été ajouté dans la liste                    #";
 package_base;
 fi
 
 if [[ $LIST_YAY = [yY] ]]; then
-echo "# - Le Package YAY a été ajouté                           #";
+echo "#    > YAY à été ajouté dans la liste                     #";
 package_yay;
 fi
 
 if [[ $LIST_CALAMARES = [yY] ]]; then
-echo "# - Le Package Calamares a été ajouté                     #";
+echo "#    > Calamares à été ajouté dans la liste               #";
 package_calamares;
 fi
 
 if [[ $LIST_MICROSOFT_EDGE = [yY] ]]; then
-echo "# - Le Package Microsoft Edge                             #";
+echo "#    > Microsoft Edge à été ajouté dans la liste          #";
 package_microsoft;
 fi
 
 if [[ $LIST_PILOTE = [yY] ]]; then
-echo "# - Le Package Pilote Drthrax a été ajouté                #";
+echo "#    > Pilotes ont été ajoutés dans la liste              #";
 package_drthrax;
 fi
