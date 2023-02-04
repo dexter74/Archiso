@@ -54,11 +54,18 @@ then
     echo "#   > Pilote                                              #";
     aic94xx_firmware;
     ast_firmware;
-    broadcom_wl;
     linux_firmware_qlogic;
     upd72020x_fwl;
     wd719x_firmware;
   fi
+  ####################################################################
+  if [[ $BROADCOM = [Yy] ]]; then
+    echo "#   > Pilote WIFI (broadcom-wl)                          #";
+    broadcom_wl;
+  fi
+    
+  
+  
 ######################################################################
   echo "###########################################################";
   echo "# - Mise à jour du dépôt Local                            #";
