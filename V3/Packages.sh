@@ -2,10 +2,7 @@
 # Chargements des fonctions #
 #############################
 source ./settings.conf;
-source ./fonctions/build/package;
-source ./fonctions/build/driver;
-source ./fonctions/list_package;
-source ./fonctions/pacman;
+
 
 ################################################################################################################################################
 # Lancements des fonctions #
