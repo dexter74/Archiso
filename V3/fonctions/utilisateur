@@ -7,31 +7,24 @@ utilisateur(){
 #echo "$GUEST:x:1000:1000::/home/$GUEST:/usr/bin/zsh" >> $DIR/profil/airootfs/etc/passwd;
 #####################################################################################################################################
 # /etc/group
-echo "root:x:0:root
-adm:x:4:$GUEST
-wheel:x:10:$GUEST
-uucp:x:14:$GUEST
-autologin:x:967:$GUEST" > $DIR/profil/airootfs/etc/group;
+echo "root:x:0:root" > $DIR/profil/airootfs/etc/group;
 
 #####################################################################################################################################
 # /etc/shadow
-echo "root::14871::::::
-$GUEST:$HASH:14871::::::" > $DIR/profil/airootfs/etc/shadow;
+echo "root::14871::::::" > $DIR/profil/airootfs/etc/shadow;
 
 #####################################################################################################################################
 # /etc/gshadow (  )
-echo "root:!*::root
-autologin:!::$GUEST" > $DIR/profil/airootfs/etc/gshadow;
+echo "root:!*::root" > $DIR/profil/airootfs/etc/gshadow;
 
 #####################################################################################################################################
 # /etc/sudoers
-echo "root ALL=(ALL) ALL
-%wheel ALL=(ALL) ALL" > $DIR/profil/airootfs/etc/sudoers;
+echo "root ALL=(ALL) ALL" > $DIR/profil/airootfs/etc/sudoers;
 
 #####################################################################################################################################
 # /etc/sudoers.d/$GUEST
-mkdir -p $DIR/profil/airootfs/etc/sudoers.d/
-echo "$GUEST ALL=(ALL) NOPASSWD: ALL" > $DIR/profil/airootfs/etc/sudoers.d/$GUEST;
+# mkdir -p $DIR/profil/airootfs/etc/sudoers.d/
+# echo "$GUEST ALL=(ALL) NOPASSWD: ALL" > $DIR/profil/airootfs/etc/sudoers.d/$GUEST;
 #####################################################################################################################################
 }
 
