@@ -12,21 +12,21 @@ echo "# Démarrage du script de compilation des Pilotes:         #";
 if [[ $BUILD_DRIVER = [yY] ]]; then
 ###################################################################
 echo "# > broadcom_wl                                           #";
-broadcom_wl > $DIR/repo/log/broadcom_wl.log;
+broadcom_wl;
 ###################################################################
 echo "# > Aic94xx-firmware                                      #";
-aic94xx_firmware > $DIR/repo/log/aic94xx_firmware.log;
+aic94xx_firmware;
 ###################################################################
 echo "# > Ast-Firmware                                          #";
-ast_firmware > $DIR/repo/log/Ast-firmware.log;
+ast_firmware;
 ###################################################################
 echo "# > Linux-Firmware-Qlogic                                 #";
-linux_firmware_qlogic > $DIR/repo/log/Linux-Firmware-Qlogic.log;
+linux_firmware_qlogic;
 ###################################################################
 echo "# > upd72020x-fw                                          #";
-upd72020x_fw > $DIR/repo/log/upd72020x-fw.log;
+upd72020x_fw;
 ###################################################################
 echo "# > WD719x-Firmware                                       #";
-wd719x_firmware > $DIR/repo/log/wd719x-firmware.log;
+wd719x_firmware;
 ###################################################################
 fi
