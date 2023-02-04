@@ -6,12 +6,12 @@ utilisateur(){
 #echo "$GUEST:x:1000:1000::/home/$GUEST:/usr/bin/zsh" >> $DIR/profil/airootfs/etc/passwd;
 
 # /etc/group
-#echo "root:x:0:root
-#adm:x:4:$GUEST
-#wheel:x:10:$GUEST
-#uucp:x:14:$GUEST
-#autologin:x:967:marc
-#$GUEST:x:1000:" > $DIR/profil/airootfs/etc/group;
+echo "root:x:0:root
+adm:x:4:$GUEST
+wheel:x:10:$GUEST
+uucp:x:14:$GUEST
+autologin:x:967:$GUEST
+$GUEST:x:1000:" > $DIR/profil/airootfs/etc/group;
 
 # /etc/shadow
 #echo "root::14871::::::
