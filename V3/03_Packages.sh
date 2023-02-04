@@ -42,6 +42,11 @@ then
     echo "#   > Microsft Edge                                       #";
     microsoft_edge;
   fi
+   ####################################################################
+  if [[ $PYTHONQT = [Yy] ]]; then
+    echo "#   > Pythonqt                                            #";
+    Pythonqt;
+  fi  
   ####################################################################
   if [[ $YAY = [Yy] ]]; then
     echo "#   > Yay                                                 #";
@@ -56,14 +61,6 @@ then
     upd72020x_fwl;
     wd719x_firmware;
   fi
-   ####################################################################
-  if [[ $PYTHONQT = [Yy] ]]; then
-    echo "#   > Pythonqt                                            #";
-    Pythonqt;
-  fi 
-  
-  
-  
   ####################################################################
   if [[ $BROADCOM = [Yy] ]]; then
     echo "#   > Pilote WIFI (broadcom-wl)                          #";
