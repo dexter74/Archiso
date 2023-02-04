@@ -18,4 +18,5 @@ echo "# - Compilation de l'Image Système                        #";
 echo "#   > Début de la compilation de l'image à $date          #";
 COMPILATION;
 echo "#   > Fin de la compilation de l'image à $date            #";
+echo "###########################################################"
 ###################################################################
