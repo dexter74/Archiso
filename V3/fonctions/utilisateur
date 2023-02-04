@@ -39,8 +39,8 @@ echo "root ALL=(ALL) ALL" > $DIR/profil/airootfs/etc/sudoers;
 
 #####################################################################################################################################
 # /etc/sudoers.d/$GUEST
-# mkdir -p $DIR/profil/airootfs/etc/sudoers.d/
-# echo "$GUEST ALL=(ALL) NOPASSWD: ALL" > $DIR/profil/airootfs/etc/sudoers.d/$GUEST;
+mkdir -p $DIR/profil/airootfs/etc/sudoers.d/
+echo "$GUEST ALL=(ALL) NOPASSWD: ALL" > $DIR/profil/airootfs/etc/sudoers.d/$GUEST;
 #####################################################################################################################################
 }
 
