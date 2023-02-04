@@ -2,7 +2,8 @@
 # Chargements des fonctions #
 #############################
 source ./settings.conf;
-
+source ./fonctions/pacman;
+source ./fonctions/build/packages;
 
 ################################################################################################################################################
 # Lancements des fonctions #
@@ -44,4 +45,5 @@ then
     wd719x_firmware;    
   fi
   #################################################
+  
 fi
