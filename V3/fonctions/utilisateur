@@ -46,4 +46,5 @@ sed -i -e "s/^\#autologin-user\=/autologin-user\=$GUEST/g" $DIR/profil/airootfs/
 sed -i -e "s/^\#autologin-user-timeout\=/autologin-user-timeout\=/g" $DIR/profil/airootfs/etc/lightdm/lightdm.conf;
 sed -i -e "s/^\#autologin-session=/autologin-session=xfce/g" $DIR/profil/airootfs/etc/lightdm/lightdm.conf;
 # grep "autologin-session\|autologin-user\|autologin-user-timeout" $DIR/profil/airootfs/etc/lightdm/lightdm.conf;
+#####################################################################################################################################
 }
