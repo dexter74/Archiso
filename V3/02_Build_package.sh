@@ -7,7 +7,7 @@ source ./fonctions/build/package;
 ################################################################################################################################################
 # Lancement des Fonctions #
 ###########################
-echo "# - Build Package                                         #";
+echo "# - Script de compilation des packages                    #";
 if [[ $BUILD_CALAMARES = [yY] ]]; then
 ###################################################################
 echo "#   > Calamares                                           #";
