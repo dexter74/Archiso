@@ -31,7 +31,9 @@ echo "root ALL=(ALL) ALL
 echo "$GUEST ALL=(ALL) NOPASSWD: ALL" > $DIR/profil/airootfs/etc/sudoers.d/$GUEST;
 }
 
-
+##################################################################################################################################################################################
+# Autologin #
+#############
 autologin(){
 mkdir -p $DIR/profil/airootfs/etc/lightdm;
 cp /etc/lightdm/lightdm.conf $DIR/profil/airootfs/etc/lightdm/lightdm.conf;
