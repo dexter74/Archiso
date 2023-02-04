@@ -1,47 +1,55 @@
 #####################################################################################################################################################################
-# Fonction pour l'ajout de pilote matériel #
-############################################
-package_driver_drthrax(){
-#####################################################################################################################################################################
 # aic94xx-firmware #
 ####################
+aic94xx_firmware(){
 rm -rf /tmp/aic94xx-firmware;
 runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/aic94xx-firmware.git /tmp/aic94xx-firmware 1>/dev/null 2>/dev/null;'
 runuser -l $USERNAME -c 'cd /tmp/aic94xx-firmware && makepkg -s 1>/dev/null 2>/dev/null;'
 mv /tmp/aic94xx-firmware/*.zst $DIR/repo;
+}
 
 #####################################################################################################################################################################
 # ast-firmware #
 ################
+ast_firmware(){
 rm -rf /tmp/ast-firmware;
 runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/ast-firmware.git /tmp/ast-firmware 1>/dev/null 2>/dev/null;'
 runuser -l $USERNAME -c 'cd /tmp/ast-firmware && makepkg -s 1>/dev/null 2>/dev/null;'
 mv /tmp/ast-firmware/*.zst $DIR/repo;
+}
 
 #####################################################################################################################################################################
 # Broadcom-wl #
 ###############
-#wget https://europe.mirror.pkgbuild.com/community/os/x86_64/broadcom-wl-6.30.223.271-446-x86_64.pkg.tar.zst -O $DIR/repo/broadcom-wl.pkg.tar.zst 2>/dev/null;
+broadcom_wl(){
+wget https://europe.mirror.pkgbuild.com/community/os/x86_64/broadcom-wl-6.30.223.271-446-x86_64.pkg.tar.zst -O $DIR/repo/broadcom-wl.pkg.tar.zst 2>/dev/null;
+}
 
 #####################################################################################################################################################################
 # linux-firmware-qlogic #
 #########################
+linux_firmware_qlogic(){
 rm -rf /tmp/linux-firmware-qlogic;
 runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/linux-firmware-git.git /tmp/linux-firmware-qlogic 1>/dev/null 2>/dev/null;'
 runuser -l $USERNAME -c 'cd /tmp/linux-firmware-qlogic && makepkg -s 1>/dev/null 2>/dev/null;'
 mv /tmp/linux-firmware-qlogic/*.zst $DIR/repo;
+}
 
 #####################################################################################################################################################################
 # upd72020x-fw #
 ################
+upd72020x_fw(){}
 rm -rf /tmp/upd72020x-fw;
 runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/upd72020x-fw.git /tmp/upd72020x-fw 1>/dev/null 2>/dev/null;'
 runuser -l $USERNAME -c 'cd /tmp/upd72020x-fw && makepkg -s 1>/dev/null 2>/dev/null;'
 mv /tmp/upd72020x-fw/*.zst $DIR/repo;
+}
+
 
 #####################################################################################################################################################################
 # wd719x-firmware #
 ###################
+wd719x_firmware(){}
 rm -rf /tmp/wd719x-firmware;
 runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/wd719x-firmware.git /tmp/wd719x-firmware 1>/dev/null 2>/dev/null;'
 runuser -l $USERNAME -c 'cd /tmp/wd719x-firmware && makepkg -s 1>/dev/null 2>/dev/null;'
