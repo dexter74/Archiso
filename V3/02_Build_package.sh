@@ -17,6 +17,7 @@ fi
 
 if [[ $BUILD_CALAMARES = [yY] ]]; then
   echo "# - Compilation du package Calamares                      #";
+  echo "# > Dépendances: icecream, qt5-webkit, pythonqt           #";  
   calamares;
 fi
 
