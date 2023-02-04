@@ -22,15 +22,14 @@ echo "root:!*::root
 autologin:!::$GUEST
 $GUEST:!*::" > $DIR/profil/airootfs/etc/gshadow;
 
-# /etc/sudoers.d
-#mkdir -p $DIR/profil/airootfs/etc/sudoers.d/
+
+# /etc/sudoers.d/$GUEST
+mkdir -p $DIR/profil/airootfs/etc/sudoers.d/
+echo "$GUEST ALL=(ALL) NOPASSWD: ALL" > $DIR/profil/airootfs/etc/sudoers.d/$GUEST;
 
 # /etc/sudoers
 echo "root ALL=(ALL) ALL
 %wheel ALL=(ALL) ALL" > $DIR/profil/airootfs/etc/sudoers;
-
-# /etc/sudoers.d/username
-# echo "$GUEST ALL=(ALL) NOPASSWD: ALL" > $DIR/profil/airootfs/etc/sudoers.d/$GUEST;
 }
 
 ##################################################################################################################################################################################
