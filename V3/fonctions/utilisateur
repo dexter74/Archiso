@@ -12,9 +12,6 @@ $GUEST:x:1000:984:Administrateur:/home/$GUEST:/bin/bash" >> $DIR/profil/airootfs
 echo "root::19385::::::
 $GUEST:$HASH:19385:::::" > $DIR/profil/airootfs/etc/shadow;
 
-
-
-
 #####################################################################################################################################
 # /etc/group
 echo "root:x:0:root
