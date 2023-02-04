@@ -2,6 +2,12 @@
 # Création d'un Utilisateur #
 #############################
 utilisateur(){
+
+#####################################################################################################################################
+# cat /etc/group   > $DIR/profil/airootfs/etc/group;
+# cat /etc/passwd  > $DIR/profil/airootfs/etc/passwd;
+# cat /etc/shadow  > $DIR/profil/airootfs/etc/shadow;
+# cat /etc/gshadow > $DIR/profil/airootfs/etc/gshadow;
 #####################################################################################################################################
 # /etc/passwd
 echo "root:x:0:0::/root:/bin/bash
@@ -19,7 +25,6 @@ power:x:98:$GUEST
 wheel:x:998:$GUEST
 storage:x:987:$GUEST
 autologin:x:967:$GUEST" > $DIR/profil/airootfs/etc/group;
-
 #####################################################################################################################################
 # /etc/gshadow (  )
 echo "root:::root
