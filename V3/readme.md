@@ -1,6 +1,6 @@
 **Maintenance**
 
-> Le script utilisateur est en cours de réecriture pour l'auto-login
+> La fonction utilisateur est en cours de réecriture pour l'auto-login
 
 <br />
 
