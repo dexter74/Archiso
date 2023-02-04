@@ -3,7 +3,11 @@
 ########
 base(){
 if [[ $(grep -L "^archiso" $DIR/profil/packages.x86_64) ]]; then
-echo "archiso
+echo "
+########
+# Base #
+########
+archiso
 git
 gvfs
 gvfs-smb
@@ -39,9 +43,12 @@ runuser -l $USERNAME -c "mkdir /tmp/calamares 2>/dev/null;"
 runuser -l $USERNAME -c "curl $CALAMARES > /tmp/calamares/PKGBUILD 2>/dev/null;"
 runuser -l $USERNAME -c "cd /tmp/calamares && makepkg -s 1>/dev/null 2>/dev/null;"
 mv /tmp/calamares/*.zst $DIR/repo;
-
 if [[ $(grep -L "^ack" $DIR/profil/packages.x86_64) ]]; then   
-echo "ack
+echo "
+#############
+# Calamares #
+#############
+ack
 appstream-qt
 autoconf
 automake
@@ -57,7 +64,6 @@ gcc-libs-multilib
 gcc-multilib
 git
 icu
-icecream
 kcoreaddons
 kiconthemes
 kio
@@ -76,7 +82,6 @@ python3
 python-pip
 python-qt.py
 python-yaml
-pythonqt
 qt
 qt5-declarative
 qt5-location
@@ -99,13 +104,14 @@ rm -rf /tmp/icecream 2>/dev/null;
 runuser -l $USERNAME -c "git clone $ICECREAM /tmp/icecream 1>/dev/null 2>/dev/null;"
 runuser -l $USERNAME -c "cd /tmp/icecream && makepkg -s 1>/dev/null 2>/dev/null;"
 mv /tmp/icecream/*.zst $DIR/repo;
-
 if [[ $(grep -L "^icecream" $DIR/profil/packages.x86_64) ]]; then
-echo "icecream" >>  $DIR/profil/packages.x86_64;
+echo "
+############
+# IceCream #
+############
+icecream" >>  $DIR/profil/packages.x86_64;
 fi
 }
-
-
 
 #####################################################################################################################################################################
 # Microsoft Edge #
@@ -116,11 +122,13 @@ rm -rf /tmp/microsoft-edge;
 runuser -l $USERNAME -c "git clone $MICROSOFT /tmp/microsoft-edge 1>/dev/null 2>/dev/null;"
 runuser -l $USERNAME -c "cd /tmp/microsoft-edge && makepkg -s 1>/dev/null 2>/dev/null;"
 mv /tmp/microsoft-edge/*.zst $DIR/repo;
-
 if [[ $(grep -L "^microsoft" $DIR/profil/packages.x86_64) ]]; then
-echo "microsoft-edge-stable-bin" >> $DIR/profil/packages.x86_64;
+echo "
+##################
+# Microsoft Edge #
+##################
+microsoft-edge-stable-bin" >> $DIR/profil/packages.x86_64;
 fi
-
 }
 
 
@@ -134,7 +142,6 @@ runuser -l $USERNAME -c "git clone $PYTHONQT /tmp/pythonqt 1>/dev/null 2>/dev/nu
 sed -i "s/	make/	make -j$(nproc)/g" /tmp/pythonqt/PKGBUILD;
 runuser -l $USERNAME -c "cd /tmp/pythonqt && makepkg -s 1>/dev/null 2>/dev/null;"
 mv /tmp/pythonqt/*.zst $DIR/repo;
-
 if [[ $(grep -L "^pythonqt" $DIR/profil/packages.x86_64) ]]; then
 echo "pythonqt" >>  $DIR/profil/packages.x86_64;
 fi
@@ -157,7 +164,11 @@ runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/yay.git /tmp/yay 1>
 runuser -l $USERNAME -c 'cd /tmp/yay && makepkg -s 1>/dev/null 2>/dev/null;'
 mv /tmp/yay/*.zst $DIR/repo;
 if [[ $(grep -L "^yay" $DIR/profil/packages.x86_64) ]]; then   
-echo "yay" >> $DIR/profil/packages.x86_64;
+echo "
+#######
+# Yay #
+#######
+yay" >> $DIR/profil/packages.x86_64;
 fi
 }
 
@@ -170,7 +181,11 @@ runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/aic94xx-firmware.gi
 runuser -l $USERNAME -c 'cd /tmp/aic94xx-firmware && makepkg -s 1>/dev/null 2>/dev/null;'
 mv /tmp/aic94xx-firmware/*.zst $DIR/repo;
 if [[ $(grep -L "^aic94xx-firmware" $DIR/profil/packages.x86_64) ]]; then
-echo "aic94xx-firmware" >>  $DIR/profil/packages.x86_64;
+echo "
+############
+# Firmware #
+############
+aic94xx-firmware" >>  $DIR/profil/packages.x86_64;
 fi
 }
 
