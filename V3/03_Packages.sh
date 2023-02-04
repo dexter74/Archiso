@@ -37,16 +37,16 @@ then
     echo "#   > QT5-WebKit                                          #";
     qt5webkit;
   fi
+   ####################################################################
+  if [[ $PYTHONQT = [Yy] ]]; then
+    echo "#   > Pythonqt                                            #";
+    pythonqt;
+  fi
   ####################################################################
   if [[ $MICROSOFT_EDGE = [Yy] ]]; then
     echo "#   > Microsft Edge                                       #";
     microsoft_edge;
   fi
-   ####################################################################
-  if [[ $PYTHONQT = [Yy] ]]; then
-    echo "#   > Pythonqt                                            #";
-    pythonqt;
-  fi  
   ####################################################################
   if [[ $YAY = [Yy] ]]; then
     echo "#   > Yay                                                 #";
