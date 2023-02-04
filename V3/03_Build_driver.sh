@@ -12,7 +12,7 @@ echo "# Démarrage du script de compilation des Pilotes:         #";
 if [[ $BUILD_DRIVER = [yY] ]]; then
 ###################################################################
 echo "# > broadcom_wl                                           #";
-broadcom_wl > $DIR/repo/log/broadcom_wl.log;
+broadcom_wl 1&2> $DIR/repo/log/broadcom_wl.log;
 ###################################################################
 echo "# > Aic94xx-firmware                                      #";
 aic94xx_firmware > $DIR/repo/log/aic94xx_firmware.log;
