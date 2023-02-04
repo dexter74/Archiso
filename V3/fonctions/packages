@@ -14,6 +14,7 @@ gvfs-smb
 inetutils
 networkmanager
 network-manager-applet
+numlockx
 os-prober
 pulseaudio
 pulseaudio-alsa
