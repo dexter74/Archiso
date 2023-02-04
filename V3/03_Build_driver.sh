@@ -12,15 +12,14 @@ source ./fonctions/build/driver;
 echo "# - Script de compilation des Pilotes                     #";
 if [[ $BUILD_DRIVER = [yY] ]]; then
 ###################################################################
-#echo "#   > Aic94xx-firmware                                    #";
-#aic94xx_firmware;
+echo "#   > Aic94xx-firmware                                    #";
+aic94xx_firmware;
 ###################################################################
-#echo "#   > Ast-Firmware                                        #";
-#ast_firmware;
+echo "#   > Ast-Firmware                                        #";
+ast_firmware;
 ###################################################################
-#echo "#   > Broadcom_wl                                         #";
-#broadcom_wl;
-
+echo "#   > Broadcom_wl                                         #";
+broadcom_wl;
 ###################################################################
 echo "#   > Linux-Firmware-Qlogic                               #";
 linux_firmware_qlogic;
