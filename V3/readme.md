@@ -4,7 +4,6 @@ clear;
 cd;
 rm -rf $HOME/archiso;
 git clone https://github.com/dexter74/Archiso.git $HOME/archiso 2>/dev/null;
-cd $HOME/archiso/V3;
 ```
 
 #### B. Génération de l'image Système (Test)
@@ -14,6 +13,8 @@ sh test.sh;
 
 #### D. Génération de l'image Système (Manuel)
 ```bash
+cd $HOME/archiso/V3;
+
 sh ./00_Update_upgrade.sh;
 sh ./01_Clean.sh;
 sh ./02_Generation.sh;
