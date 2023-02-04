@@ -56,6 +56,14 @@ then
     upd72020x_fwl;
     wd719x_firmware;
   fi
+   ####################################################################
+  if [[ $PYTHONQT = [Yy] ]]; then
+    echo "#   > Pythonqt                                            #";
+    Pythonqt;
+  fi 
+  
+  
+  
   ####################################################################
   if [[ $BROADCOM = [Yy] ]]; then
     echo "#   > Pilote WIFI (broadcom-wl)                          #";
