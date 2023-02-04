@@ -9,6 +9,6 @@ source ./fonctions/skel;
 ############################
 #
 ###################################################################
-echo "# - Script de copie du profil d'utilisateur type          #";
+echo "# - Création du profil utilisateur par défaut             #";
 SKEL;
 ###################################################################
