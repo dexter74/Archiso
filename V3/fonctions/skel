@@ -50,15 +50,15 @@ sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/gtk-3.0/bo
 # /usr/share/{icons,themes} #
 #############################
 # sudo cp -r /usr/share/{icons,themes} $DIR/profil/airootfs/usr/share/;
-
+}
 
 ########################################################################################################################################################
 # Auto-login #
 ##############
-#echo "[Desktop]
-#Session=xfce" > x $DIR/profil/airootfs/etc/skel/.dmrc
+autologin(){
+echo "[Desktop]
+Session=xfce" > x $DIR/profil/airootfs/etc/skel/.dmrc
 }
-
 
 
 # Autostart  : /home/USERNAME/.config/autostart/
