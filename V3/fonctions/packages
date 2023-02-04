@@ -89,7 +89,6 @@ qt5-location
 qt5-tools
 qt5-translations
 qt5-webengine
-
 qt5-xmlpatterns
 yaml-cpp
 calamares" >> $DIR/profil/packages.x86_64;
@@ -146,7 +145,11 @@ sed -i "s/	make/	make -j$(nproc)/g" /tmp/pythonqt/PKGBUILD;
 runuser -l $USERNAME -c "cd /tmp/pythonqt && makepkg -s 1>/dev/null 2>/dev/null;"
 mv /tmp/pythonqt/*.zst $DIR/repo;
 if [[ $(grep -L "^pythonqt" $DIR/profil/packages.x86_64) ]]; then
-echo "pythonqt" >>  $DIR/profil/packages.x86_64;
+echo "
+############
+# Pythonqt #
+############
+pythonqt" >>  $DIR/profil/packages.x86_64;
 fi
 }
 
@@ -158,7 +161,11 @@ qt5webkit(){
 QT5WEBKIT="https://archive.archlinux.org/packages/q/qt5-webkit/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst"
 wget $QT5WEBKIT -O $DIR/repo/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst 2>/dev/null;
 if [[ $(grep -L "^qt5-webkit" $DIR/profil/packages.x86_64) ]]; then
-echo "qt5-webkit" >>  $DIR/profil/packages.x86_64;
+echo "
+##############
+# qt5-Webkit #
+##############
+qt5-webkit" >>  $DIR/profil/packages.x86_64;
 fi
 }
 
