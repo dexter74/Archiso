@@ -11,11 +11,14 @@ echo "###########################################################";
 echo "# Démarrage du script de compilation de package           #";
 
 if [[ $BUILD_CALAMARES = [yY] ]]; then
-  echo "# - Compilation du package Calamares                      #";
-  echo "# > Dépendances: icecream, qt5-webkit, pythonqt           #";
+  echo "# - Compilation des packages                              #";
+  echo "# > IceCream                                              #";
   icecream;
+  echo "# > Qt5-WebKit                                            #";
   qt5webkit;
+  echo "# > PythonQT                                              #";
   pythonqt
+  echo "# > Calamares                                             #";
   calamares;
 fi
 
