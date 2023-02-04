@@ -44,12 +44,12 @@ sh ./08_Langue.sh;
 sh ./09_Customize.sh;
 sh ./10_Utilisateur.sh;
 sh ./11_Profildef.sh;
-sh ./12_Skel.sh
-sh ./13_Regen_depot.sh
-sh ./14_Clean_OS.sh
-sh ./15_Permission.sh
-sh ./16_Compilation.sh
-sh ./17_Rename.sh
+sh ./12_Skel.sh;
+sh ./13_Regen_depot.sh;
+sh ./14_Clean_OS.sh;
+sh ./15_Permission.sh;
+sh ./16_Compilation.sh;
+sh ./17_Rename.sh;
 ```
 
 #### X. Dépendances
