@@ -12,7 +12,6 @@ source ./fonctions/compilation;
 echo "###########################################################"
 echo "# - Compilation de l'Image Système                        #";
 echo "#   > Début de la compilation de l'image à $(date '+%H:%M')          #";
-echo "###########################################################"
 ##############################################################################
 echo
 echo
