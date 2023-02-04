@@ -17,11 +17,9 @@ sh test.sh;
 sh ./00_Update_upgrade.sh;
 sh ./01_Clean.sh;
 sh ./02_Generation.sh;
-sh ./03_Build_package.sh;
-sh ./04_Build_driver.sh;
-sh ./05_Pacman.sh;
-sh ./06_List_Package.sh;
-sh ./07_Services.sh;
+sh ./03_Packages.sh;
+sh ./04_services.sh;
+
 sh ./08_Langue.sh;
 sh ./09_Customize.sh;
 sh ./10_Utilisateur.sh;
