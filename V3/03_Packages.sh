@@ -12,7 +12,7 @@ source ./fonctions/regen_depot;
 
 if [[ $PACKAGES = [Yy] ]];
 then
-echo "TEST"
+echo "# - Edition de Pacman.conf                 #";
   #################################################
   PACMAN;
   #################################################
