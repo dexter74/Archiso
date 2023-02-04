@@ -92,6 +92,12 @@ rm -rf /tmp/yay;
 runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/yay.git /tmp/yay 1>/dev/null 2>/dev/null;'
 runuser -l $USERNAME -c 'cd /tmp/yay && makepkg -s 1>/dev/null 2>/dev/null;'
 mv /tmp/yay/*.zst $DIR/repo;
+
+if [[ $(grep -L "^yay" $DIR/profil/packages.x86_64) ]]; then   
+echo "###############
+# Package Yay #
+###############
+yay" >> $DIR/profil/packages.x86_64;
 }
 
 
