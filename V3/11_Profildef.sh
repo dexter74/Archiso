@@ -9,6 +9,6 @@ source ./fonctions/profiledef;
 ############################
 #
 ###################################################################
-echo "# Script Profildef (Permission)                           #";
+echo "# - Script Profildef (Permission)                         #";
 PROFILEDEF;
 ###################################################################
