@@ -15,8 +15,8 @@ if [[ $BUILD_DRIVER = [yY] ]]; then
 echo "#   > Aic94xx-firmware                                    #";
 aic94xx_firmware;
 ###################################################################
-#echo "#   > Ast-Firmware                                        #";
-#ast_firmware;
+echo "#   > Ast-Firmware                                        #";
+ast_firmware;
 ###################################################################
 #echo "#   > broadcom_wl                                         #";
 #broadcom_wl;
