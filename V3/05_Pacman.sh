@@ -9,7 +9,7 @@ source ./fonctions/pacman;
 ############################
 #
 ###################################################################
-echo "#  > Démarrage du script de l'édition de pacman           #";
+echo "# - Script d'édition du fichier pacman.conf               #";
 ###################################################################
 #
 if [[ $PACMAN = [Yy] ]]; then
