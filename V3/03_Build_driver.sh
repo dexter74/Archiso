@@ -21,8 +21,8 @@ ast_firmware;
 echo "#   > broadcom_wl                                         #";
 broadcom_wl;
 ###################################################################
-#echo "#   > Linux-Firmware-Qlogic                               #";
-#linux_firmware_qlogic;
+echo "#   > Linux-Firmware-Qlogic                               #";
+linux_firmware_qlogic;
 ###################################################################
 #echo "#   > upd72020x-fw                                        #";
 #upd72020x_fw;
