@@ -46,7 +46,7 @@ mv /tmp/pythonqt/*.zst $DIR/repo;
 #####################################################################################################################
 # QT5-WebKit #
 ##############
-qt5-webkit(){
+qt5webkit(){
 QT5WEBKIT="https://archive.archlinux.org/packages/q/qt5-webkit/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst"
 wget $QT5WEBKIT -O $DIR/repo/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst 2>/dev/null;
 }
