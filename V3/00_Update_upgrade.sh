@@ -9,7 +9,8 @@ clear;
 source ./settings.conf;
 source ./fonctions/upgrade;
 
-
-echo "# - Mettre à jour les packages sur la machine local       #";
+echo "###########################################################";
+echo "# Démarrage des scripts:                                  #";
+echo "# - Mise à jour des packages sur la machine local         #";
 UPGRADE_PACMAN;
 UPGRADE_YAY;
