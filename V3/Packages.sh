@@ -4,8 +4,8 @@
 source ./settings.conf;
 source ./fonctions/build/package;
 source ./fonctions/build/driver;
-source ./fonctions/pacman;
 source ./fonctions/list_package;
+source ./fonctions/pacman;
 
 ################################################################################################################################################
 # Lancements des fonctions #
