@@ -8,7 +8,7 @@
 pkgname=calamares
 pkgver=3.2.61
 pkgrel=1
-pkgdesc='Installateur Calamares by Drthrax74'
+pkgdesc='Installateur Calamares'
 arch=('x86_64')
 
 ############################################################################################################################################################
