@@ -11,7 +11,7 @@ source ./fonctions/utilisateur;
 ###################################################################
 echo "###########################################################";
 echo "# - Création de l'utilisateur                             #";
-utilisateur;
+utilisateur2;
 ###################################################################
 echo "#   > Autologin (lightdm)                                 #";
 autologin;
