@@ -4,6 +4,7 @@
 source ./settings.conf;
 source ./fonctions/pacman;
 source ./fonctions/packages;
+source ./fonctions/regen_depot;
 
 ################################################################################################################################################
 # Lancements des fonctions #
@@ -45,4 +46,5 @@ then
     wd719x_firmware;
   fi
   #################################################
+  REGEN_DEPOT;
 fi
