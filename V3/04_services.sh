@@ -6,5 +6,6 @@ source ./fonctions/services
 
 ################################################################################################################################################
 if [[ $PACKAGES [Yy] ]]; then
-  SERVICES
+  echo "# - Edition des services                                    #";
+  SERVICES;
 then
