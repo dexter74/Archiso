@@ -1,0 +1,193 @@
+##################################################################################################################################################################################
+# Création d'un Utilisateur #
+#############################
+utilisateur(){
+
+# /etc/group
+echo "adm:x:999:daemon
+audio:x:996:
+autologin:x:967:marc
+avahi:x:973:
+bin:x:1:daemon
+colord:x:969:
+daemon:x:2:bin
+dbus:x:81:
+dhcpcd:x:974:
+disk:x:995:
+floppy:x:94:
+ftp:x:11:
+games:x:50:
+geoclue:x:971:
+git:x:972:
+http:x:33:
+icecream:x:968:
+input:x:994:
+kmem:x:993:
+kvm:x:992:
+lightdm:x:970:
+lock:x:54:
+log:x:19:
+lp:x:991:
+mail:x:12:
+mem:x:8:
+named:x:40:
+network:x:90:
+nobody:x:65534:
+ntp:x:87:
+optical:x:990:
+polkitd:x:102:
+power:x:98:marc
+proc:x:26:polkitd
+render:x:989:
+rfkill:x:982:
+root:x:0:root
+rtkit:x:133:
+scanner:x:96:
+sgx:x:988:
+smmsp:x:25:
+storage:x:987:$GUEST
+systemd-coredump:x:981:
+systemd-journal-remote:x:978:
+systemd-journal:x:983:
+systemd-network:x:980:
+systemd-oom:x:979:
+systemd-resolve:x:977:
+systemd-timesync:x:976:
+sys:x:3:bin
+tss:x:975:
+tty:x:5:
+usbmux:x:140:
+users:x:984:
+utmp:x:997:
+uucp:x:986:
+uuidd:x:68:
+vboxusers:x:108:
+video:x:985:
+wheel:x:998:$GUEST" > $DIR/profil/airootfs/etc/group;
+
+# /etc/passwd
+echo "avahi:x:973:973:Avahi mDNS/DNS-SD daemon:/:/usr/bin/nologin
+bin:x:1:1::/:/usr/bin/nologin
+colord:x:969:969:Color management daemon:/var/lib/colord:/usr/bin/nologin
+daemon:x:2:2::/:/usr/bin/nologin
+dbus:x:81:81:System Message Bus:/:/usr/bin/nologin
+dhcpcd:x:974:974:dhcpcd privilege separation:/:/usr/bin/nologin
+ftp:x:14:11::/srv/ftp:/usr/bin/nologin
+geoclue:x:971:971:Geoinformation service:/var/lib/geoclue:/usr/bin/nologin
+git:x:972:972:git daemon user:/:/usr/bin/git-shell
+http:x:33:33::/srv/http:/usr/bin/nologin
+icecream:x:968:968:Icecream Daemon:/var/cache/icecream:/bin/false
+lightdm:x:970:970:Light Display Manager:/var/lib/lightdm:/usr/bin/nologin
+mail:x:8:12::/var/spool/mail:/usr/bin/nologin
+$GUEST:x:1000:984:admin:/home/$GUEST:/bin/bash
+named:x:40:40:BIND DNS Server:/:/usr/bin/nologin
+nobody:x:65534:65534:Kernel Overflow User:/:/usr/bin/nologin
+ntp:x:87:87:Network Time Protocol:/var/lib/ntp:/bin/false
+polkitd:x:102:102:PolicyKit daemon:/:/usr/bin/nologin
+root:x:0:0::/root:/bin/bash
+rtkit:x:133:133:RealtimeKit:/proc:/usr/bin/nologin
+systemd-coredump:x:981:981:systemd Core Dumper:/:/usr/bin/nologin
+systemd-journal-remote:x:978:978:systemd Journal Remote:/:/usr/bin/nologin
+systemd-network:x:980:980:systemd Network Management:/:/usr/bin/nologin
+systemd-oom:x:979:979:systemd Userspace OOM Killer:/:/usr/bin/nologin
+systemd-resolve:x:977:977:systemd Resolver:/:/usr/bin/nologin
+systemd-timesync:x:976:976:systemd Time Synchronization:/:/usr/bin/nologin
+tss:x:975:975:tss user for tpm2:/:/usr/bin/nologin
+usbmux:x:140:140:usbmux user:/:/usr/bin/nologin
+uuidd:x:68:68::/:/usr/bin/nologin" > $DIR/profil/airootfs/etc/passwd;
+
+# /etc/shadow
+echo "avahi:!*:19385::::::
+bin:!*:19385::::::
+colord:!*:19385::::::
+daemon:!*:19385::::::
+dbus:!*:19385::::::
+dhcpcd:!*:19385::::::
+ftp:!*:19385::::::
+geoclue:!*:19385::::::
+git:!*:19385::::::
+http:!*:19385::::::
+icecream:!:19387::::::
+lightdm:!*:19385::::::
+mail:!*:19385::::::
+$GUEST:$HASH:19385:0:99999:7:::
+#$GUEST:$HASH:14871::::::
+named:!*:19385::::::
+nobody:!*:19385::::::
+ntp:!*:19385::::::
+polkitd:!*:19385::::::
+root:$6$rOpU..lc24f8Jn7N$7qutfNUSWEQK.hJL6rjlu74Wt3hH47vA1bWK9zXd7ZfmPXSyR1OU6uD6AiEiLPbBqHOKMPh1C/6jYxyWUJtuq0:19385::::::
+rtkit:!*:19385::::::
+systemd-coredump:!*:19385::::::
+systemd-journal-remote:!*:19385::::::
+systemd-network:!*:19385::::::
+systemd-oom:!*:19385::::::
+systemd-resolve:!*:19385::::::
+systemd-timesync:!*:19385::::::
+tss:!*:19385::::::
+usbmux:!*:19385::::::
+uuidd:!*:19385::::::" > $DIR/profil/airootfs/etc/shadow;
+
+
+# /etc/gshadow
+echo "adm:!*::daemon
+audio:!*::
+autologin:!::$GUEST
+avahi:!*::
+bin:!*::daemon
+colord:!*::
+daemon:!*::bin
+dbus:!*::
+dhcpcd:!*::
+disk:!*::
+floppy:!*::
+ftp:!*::
+games:!*::
+geoclue:!*::
+git:!*::
+http:!*::
+icecream:!::
+input:!*::
+kmem:!*::
+kvm:!*::
+lightdm:!*::
+lock:!*::
+log:!*::
+lp:!*::
+mail:!*::
+mem:!*::
+named:!*::
+network:!*::
+nobody:!*::
+ntp:!*::
+optical:!*::
+polkitd:!*::
+power:!*::$GUEST
+proc:!*::polkitd
+render:!*::
+rfkill:!*::
+root:::root
+rtkit:!*::
+scanner:!*::
+sgx:!*::
+smmsp:!*::
+storage:!*::$GUEST
+sys:!*::bin
+systemd-coredump:!*::
+systemd-journal:!*::
+systemd-journal-remote:!*::
+systemd-network:!*::
+systemd-oom:!*::
+systemd-resolve:!*::
+systemd-timesync:!*::
+tss:!*::
+tty:!*::
+usbmux:!*::
+users:!*::
+utmp:!*::
+uucp:!*::
+uuidd:!*::
+vboxusers:!*::
+video:!*::
+wheel:!*::$GUEST" > $DIR/profil/airootfs/etc/gshadow;
+}
