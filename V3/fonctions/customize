@@ -12,7 +12,6 @@ echo "~/.automated_script.sh" > $DIR/profil/airootfs/root/.zlogin;
 # Personnalisation de l'image Système #
 #######################################
 PERSONNALISATION_OS(){
-
 ######################################################################
 # /etc/os-release #
 ###################
@@ -26,6 +25,7 @@ DOCUMENTATION_URL="https://wiki.archlinux.org/"
 SUPPORT_URL="https://bbs.archlinux.org/"
 BUG_REPORT_URL="https://bugs.archlinux.org/"
 PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
-LOGO=archlinux-logo
-' > $DIR/airootfs/etc/os-release
+LOGO=archlinux-logo' > $DIR/airootfs/etc/os-release
+
+echo "" >  $DIR/airootfs/etc/motd;
 }
