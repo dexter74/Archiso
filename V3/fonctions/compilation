@@ -2,20 +2,6 @@
 # Compilation de l'image ISO #
 ##############################
 COMPILATION(){
-############################################################################
-# Nettoyage du dossier iso et work #
-####################################
-rm -rf $DIR/{iso,work}/* 2>/dev/null;
-
-############################################################################
-# Création de l'image ISO #
-###########################
-mkarchiso       \
-  -v            \
-  -w $DIR/work  \
-  -o $DIR/iso   \
-  $DIR/profil   \
-  1>/dev/null;
-  #2>/dev/null;
-############################################################################
+  rm -rf $DIR/{iso,work}/* 2>/dev/null;
+  mkarchiso -v -w $DIR/work -o $DIR/iso $DIR/profil 1>/dev/null;
 }
