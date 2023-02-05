@@ -9,6 +9,6 @@ source ./fonctions/langue;
 ############################
 #
 #####################################################################;
-echo "# - [04] Edition de la langue et du Fuseau horaire           #";
+echo "# - [05] Edition de la langue et du Fuseau horaire           #";
 LANGUE;
 #####################################################################
