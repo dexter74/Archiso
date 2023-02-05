@@ -22,7 +22,6 @@ rm $DIR/profil/airootfs/etc/modprobe.d/broadcom-wl.conf;
 PERSONNALISATION_OS(){
 echo "LiveCD_Archlinux"  > $DIR/airootfs/etc/hostname;
 echo ""                  > $DIR/airootfs/etc/motd;
-
 echo 'NAME="Arch Linux"
 PRETTY_NAME="Arch Linux"
 ID=arch
