@@ -7,6 +7,9 @@ ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime;" > $DIR/profil/airootfs/
 echo "~/.automated_script.sh" > $DIR/profil/airootfs/root/.zlogin;
 }
 
+modprobe_broadcom_wl(){
+rm $DIR/profil/airootfs/etc/modprobe.d/broadcom-wl.conf;
+}
 
 ###################################################################################################################
 # Personnalisation de l'image Système #
