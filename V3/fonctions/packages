@@ -214,48 +214,50 @@ fi
 #####################################################################################################################################################################
 # Qt5-WebKit (Dep. calamares) #
 ###############################
-qt5webkit(){
-QT5WEBKIT="https://archive.archlinux.org/packages/q/qt5-webkit/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst"
-wget $QT5WEBKIT -O $DIR/repo/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst 2>/dev/null;
-if [[ $(grep -L "^qt5-webkit" $DIR/profil/packages.x86_64) ]]; then
-echo "
+#qt5webkit(){
+#QT5WEBKIT="https://archive.archlinux.org/packages/q/qt5-webkit/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst"
+#wget $QT5WEBKIT -O $DIR/repo/qt5-webkit-5.212.0alpha4-18-x86_64.pkg.tar.zst 2>/dev/null;
+#if [[ $(grep -L "^qt5-webkit" $DIR/profil/packages.x86_64) ]]; then
+#echo "
 ##############
 # qt5-Webkit #
 ##############
-qt5-webkit" >>  $DIR/profil/packages.x86_64;
-fi
-}
+#qt5-webkit" >>  $DIR/profil/packages.x86_64;
+#fi
+#}
 
 
 #####################################################################################################################################################################
 # Yay #
 #######
-yay(){
-rm -rf /tmp/yay;
-runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/yay.git /tmp/yay 1>/dev/null 2>/dev/null;'
-runuser -l $USERNAME -c 'cd /tmp/yay && makepkg -s 1>/dev/null 2>/dev/null;'
-mv /tmp/yay/*.zst $DIR/repo;
-if [[ $(grep -L "^yay" $DIR/profil/packages.x86_64) ]]; then   
-echo "
+#yay(){
+#rm -rf /tmp/yay;
+#runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/yay.git /tmp/yay 1>/dev/null 2>/dev/null;'
+#runuser -l $USERNAME -c 'cd /tmp/yay && makepkg -s 1>/dev/null 2>/dev/null;'
+#mv /tmp/yay/*.zst $DIR/repo;
+#if [[ $(grep -L "^yay" $DIR/profil/packages.x86_64) ]]; then   
+
+#echo "
 #######
 # Yay #
 #######
-yay" >> $DIR/profil/packages.x86_64;
-fi
-}
+#yay" >> $DIR/profil/packages.x86_64;
+#fi
+#}
 
 #####################################################################################################################################################################
 # XFCE4-Panel-Profiles #
 ########################
-xfce4_panel_profiles(){
-rm -rf /tmp/xfce4-panel-profiles;
-runuser -l $USERNAME -c 'git clone git clone https://aur.archlinux.org/xfce4-panel-profiles.git /tmp/xfce4-panel-profiles 1>/dev/null 2>/dev/null;'
-runuser -l $USERNAME -c 'cd  /tmp/xfce4-panel-profiles && makepkg -s 1>/dev/null 2>/dev/null;'
-mv /tmp/xfce4-panel-profiles/*.zst  $DIR/repo;
-if [[ $(grep -L "^xfce4-panel-profiles" $DIR/profil/packages.x86_64) ]]; then   
-echo "xfce4-panel-profiles"" >> $DIR/profil/packages.x86_64;
-fi
-}
+#xfce4_panel_profiles(){
+#rm -rf /tmp/xfce4-panel-profiles;
+#runuser -l $USERNAME -c 'git clone git clone https://aur.archlinux.org/xfce4-panel-profiles.git /tmp/xfce4-panel-profiles 1>/dev/null 2>/dev/null;'
+#runuser -l $USERNAME -c 'cd  /tmp/xfce4-panel-profiles && makepkg -s 1>/dev/null 2>/dev/null;'
+#mv /tmp/xfce4-panel-profiles/*.zst  $DIR/repo;
+
+#if [[ $(grep -L "^xfce4-panel-profiles" $DIR/profil/packages.x86_64) ]]; then   
+#echo "xfce4-panel-profiles"" >> $DIR/profil/packages.x86_64;
+#fi
+#}
 
 
 
