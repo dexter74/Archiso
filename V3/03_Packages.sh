@@ -11,11 +11,11 @@ source ./fonctions/packages;
 #
 #####################################################################
 if [[ $PACKAGES = [Yy] ]]; then
-    echo "#########################################################";
-    echo "# - Gestion des Packages                                #";
-    echo "#   > Edition de Pacman.conf                            #";
+    echo "##############################################################";
+    echo "# - [03] Gestion des Packages                                #";
+    echo "#   > Edition de Pacman.conf                                 #";
     PACMAN_CONF;
-    echo "#   > Package de base (Lightdm + XFCE4)                 #";
+    echo "#   > Package de base (Lightdm + XFCE4)                      #";
     base;
   ###################################################################
   if [[ $INSTALLATEUR = [Yy] ]]; then
