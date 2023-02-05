@@ -117,7 +117,7 @@ bison
 boost
 cmake
 extra-cmake-modules
-fakeroot
+#fakeroot
 flex
 gcc
 gcc-libs-multilib
