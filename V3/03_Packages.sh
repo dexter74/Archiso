@@ -6,6 +6,12 @@ source ./fonctions/pacman;
 source ./fonctions/packages;
 
 ################################################################################################################################################
+# Déclarer les variables d'environnements #
+###########################################
+linux_firmware_qlogic=$(yay -Qi linux-firmware-qlogic | grep "Version" | cut -d ":" -f 2 | cut -c 2-30)
+broadcom_wl=$(yay -Qi broadcom-wl | grep "Version" | cut -d ":" -f 2 | cut -c 2-30)
+
+################################################################################################################################################
 # Lancements des fonctions #
 ############################
 #
