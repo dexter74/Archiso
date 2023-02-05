@@ -1,7 +1,5 @@
-**Observation**
-> - broadcom-wl: $DIR/profil/airootfs/etc/modprobe.d/broadcom-wl.conf <= A supprimer d'après le contenu du fichier
->
-> - Warning: ckbcomp not found.
+**Bug en cours de résolution:**
+> 03_Packages.sh | 06_Customize.sh | 09_Skel.sh
 
 <br />
 
