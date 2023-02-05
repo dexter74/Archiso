@@ -14,6 +14,16 @@ source ./fonctions/regen_depot;
 if [[ $PACKAGES = [Yy] ]]; then
   PACMAN;
   base;
+  
+  if [[ $INSTALLATEUR = [Yy] ]]; then
+    calamares;
+    icecream;
+    pythonqt;
+    qt5webkit;
+    PACMAN_DEPOT;
+  fi
+  
+  
 fi
 
 
