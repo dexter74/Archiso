@@ -10,12 +10,13 @@ source ./fonctions/regen_depot;
 # Lancements des fonctions #
 ############################
 #
-####################################################################
+###################################################################
 if [[ $PACKAGES = [Yy] ]]; then
-echo "# - Gestion des Packages                                   #";
+echo "# - Gestion des Packages                                  #";
+echo "#   > Edition de Pacman.conf                              #";
   PACMAN;
+echo "#   > Package de base inclus                              #";
   base;
-
   if [[ $INSTALLATEUR = [Yy] ]]; then
     calamares;
     icecream;
