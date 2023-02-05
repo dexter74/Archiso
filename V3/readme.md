@@ -1,6 +1,6 @@
-**Maintenance**
-
+**Observation**
 > La fonction Package, Utilisateur est en cours d'édition .
+> 
 > broadcom-wl: $DIR/profil/airootfs/etc/modprobe.d/broadcom-wl.conf <= A supprimer d'après le contenu du fichier
 
 <br />
