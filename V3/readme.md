@@ -11,11 +11,7 @@ rm -rf $HOME/archiso;
 git clone https://github.com/dexter74/Archiso.git $HOME/archiso 2>/dev/null;
 rm -r ./archiso/{*.md,.git,V1,V2};
 cd $HOME/archiso/V3;
-sh ./15_USB.sh;
 ```
-
-
-
 
 
 #### B. Configurer Archiso
