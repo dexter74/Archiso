@@ -1,21 +1,21 @@
-#####################################################################################################################################################################
+#################################################################################################################################################################################################
 # Broadcom-wl #
 ###############
 broadcom_wl(){
-wget "https://europe.mirror.pkgbuild.com/community/os/x86_64/broadcom-wl-${broadcom_wl}-x86_64.pkg.tar.zst" -O "$DIR/repo/broadcom-wl.pkg.tar.zst";
+wget "https://europe.mirror.pkgbuild.com/community/os/x86_64/broadcom-wl-${broadcom_wl}-x86_64.pkg.tar.zst" -O "$DIR/repo/broadcom-wl.pkg.tar.zst" 1>/dev/null 2>/dev/null;
 }
 
-#####################################################################################################################################################################
+#################################################################################################################################################################################################
 # linux-firmware-qlogic #
 #########################
 linux_firmware_qlogic(){
-wget "https://mirror.moson.org/arch/core/os/x86_64/linux-firmware-qlogic-${linux_firmware_qlogic}-any.pkg.tar.zst" -O "$DIR/repo/linux-firmware-qlogic.pkg.tar.zst" 2>/dev/null;
+wget "https://mirror.moson.org/arch/core/os/x86_64/linux-firmware-qlogic-${linux_firmware_qlogic}-any.pkg.tar.zst" -O "$DIR/repo/linux-firmware-qlogic.pkg.tar.zst" 1>/dev/null 2>/dev/null;
 if [[ $(grep -L "^linux-firmware-qlogic" $DIR/profil/packages.x86_64) ]]; then
 echo "linux-firmware-qlogic" >>  $DIR/profil/packages.x86_64;
 fi
 }
 
-#####################################################################################################################################################################
+#################################################################################################################################################################################################
 # Base #
 ########
 base(){
