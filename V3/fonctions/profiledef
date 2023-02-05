@@ -2,11 +2,11 @@
 # PROFILEDEF #
 ##############
 PROFILEDEF(){
-sed -i -e 's/\["/etc/shadow"\]="0:0:400"/\["/etc/shadow"\]="0:0:600"/g' $DIR/profil/profiledef.sh;
-sed -i '/shadow/a \\  ["/etc/gshadow"]="0:0:600"'                       $DIR/profil/profiledef.sh;
-sed -i '/gshadow/a \\  ["/etc/sudoers"]="0:0:440"'                      $DIR/profil/profiledef.sh;
-sed -i '/sudoers/a \\  ["/etc/sudoers.d/]="0:0:750"'                    $DIR/profil/profiledef.sh;
-sed -i '/sudoers.da \\  ["/etc/sudoers.d/'$GUEST'"]="0:0:644"'          $DIR/profil/profiledef.sh;
+sed -i 's/\["\/etc\/shadow"\]="0:0:400"/\["\/etc\/shadow"\]="0:0:600"/g' $DIR/profil/profiledef.sh;
+sed -i '/shadow/a \\  ["/etc/gshadow"]="0:0:600"'                        $DIR/profil/profiledef.sh;
+sed -i '/gshadow/a \\  ["/etc/sudoers"]="0:0:440"'                       $DIR/profil/profiledef.sh;
+sed -i '/sudoers/a \\  ["/etc/sudoers.d]="0:0:750"'                      $DIR/profil/profiledef.sh;
+sed -i '/sudoers.da \\  ["/etc/sudoers.d/'$GUEST'"]="0:0:644"'           $DIR/profil/profiledef.sh;
 
 
 
