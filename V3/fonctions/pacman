@@ -6,10 +6,12 @@ PACMAN(){
 sed -i "/\[multilib\]/,/Include/"'s/^#//' $DIR/profil/pacman.conf;
 sed -i -e "s/\ParallelDownloads = 5/ParallelDownloads = 10/g" $DIR/profil/pacman.conf;
 sed -i -e "s/\#CacheDir/CacheDir/g" $DIR/profil/pacman.conf;
-
+}
 ###################################################################################################################
 # Ajout du Dépôt Local (Anti-doublon) #
 #######################################
+
+PACMAN_DEPOT(){
 if [[ $(grep -L "\[Local\]" $DIR/profil/pacman.conf) ]]; then   
 echo "
 [Local]
