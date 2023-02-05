@@ -1,5 +1,7 @@
 **Observation**
-> broadcom-wl: $DIR/profil/airootfs/etc/modprobe.d/broadcom-wl.conf <= A supprimer d'après le contenu du fichier
+> - broadcom-wl: $DIR/profil/airootfs/etc/modprobe.d/broadcom-wl.conf <= A supprimer d'après le contenu du fichier
+>
+> - Warning: ckbcomp not found.
 
 <br />
 
