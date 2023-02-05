@@ -2,7 +2,7 @@
 # Chargements des fonctions #
 #############################
 source ./settings.conf;
-source ./fonctions/utilisateur2;
+source ./fonctions/utilisateur;
 
 ################################################################################################################################################
 # Lancement de la Fonction #
