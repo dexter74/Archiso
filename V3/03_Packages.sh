@@ -12,6 +12,7 @@ source ./fonctions/regen_depot;
 #
 #####################################################################
 if [[ $PACKAGES = [Yy] ]]; then
+echo "# - Gestion des Packages                                     #";
   PACMAN;
   base;
 
