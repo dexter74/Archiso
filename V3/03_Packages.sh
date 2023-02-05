@@ -40,13 +40,13 @@ if [[ $PACKAGES = [Yy] ]]; then
   #####################################################################
   if [[ $PILOTE = [Yy] ]]; then
     echo "#   > Package Pilotes                                     #";
-    #aic94xx_firmware;
-    #ast_firmware;
+    aic94xx_firmware;
+    ast_firmware;
     broadcom_wl;
     linux_firmware_qlogic;
-    #upd72020x_fw;
-    #wd719x_firmware;
-    #PACMAN_DEPOT;
+    upd72020x_fw;
+    wd719x_firmware;
+    PACMAN_DEPOT;
   fi
 fi
 #######################################################################
