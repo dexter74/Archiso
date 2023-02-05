@@ -1,4 +1,4 @@
 CLEAN(){
-rm -rf $DIR 2>/dev/null;
-rm -rf /tmp/*; 
+  rm -rf $DIR 2>/dev/null;
+  rm -rf /tmp/*; 
 }
