@@ -3,7 +3,7 @@
 ###############
 broadcom_wl(){
 VERSION=$(yay -Qi broadcom-wl | grep "Version" | cut -d ":" -f 2 | cut -c 2-30)
-wget --no-check-certificate "https://europe.mirror.pkgbuild.com/community/os/x86_64/broadcom-wl-${VERSION}-x86_64.pkg.tar.zst" -O "$DIR/repo/broadcom-wl.pkg.tar.zst";
+curl "https://europe.mirror.pkgbuild.com/community/os/x86_64/broadcom-wl-${VERSION}-x86_64.pkg.tar.zst" --output "$DIR/repo/broadcom-wl.pkg.tar.zst";
 }
 
 #####################################################################################################################################################################
