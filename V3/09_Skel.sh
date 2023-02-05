@@ -21,6 +21,6 @@ SKEL_icon;
 echo "#        >  Copie des Thèmes                                 #";
 SKEL_theme;
 ######################################################################
-echo "#        >  Autologin (\$HOME/.dmrc)                         #";
+echo "#        >  Autologin (\$HOME/.dmrc)                        #";
 autologin;
 ######################################################################
