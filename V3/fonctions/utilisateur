@@ -16,7 +16,7 @@ utilisateur(){
 echo "$GUEST:x:1000:1000::/home/$GUEST:/usr/bin/zsh" >> $DIR/profil/airootfs/etc/passwd;
 
 # /etc/group
-echo "root:x:0:root
+echo "root:x:0:root,$GUEST
 adm:x:4:$GUEST
 wheel:x:10:$GUEST
 uucp:x:14:$GUEST
