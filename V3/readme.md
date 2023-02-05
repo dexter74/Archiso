@@ -8,6 +8,7 @@
 clear;
 cd;
 rm -rf $HOME/archiso;
+rm -r ./archiso/{V1,V2};
 git clone https://github.com/dexter74/Archiso.git $HOME/archiso 2>/dev/null;
 cd $HOME/archiso/V3;
 ```
