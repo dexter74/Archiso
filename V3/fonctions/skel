@@ -7,7 +7,7 @@ SKEL(){
 #############
 rm -rf $DIR/profil/airootfs/etc/skel/ 2>/dev/null;
 mkdir -p $DIR/profil/airootfs/etc/skel/;
-
+#
 ########################################################################################################################################################
 # Copie Profil #
 ################
@@ -15,7 +15,7 @@ sudo  cp -r /home/$USERNAME/. $DIR/profil/airootfs/etc/skel/;
 rm -rf $DIR/profil/airootfs/etc/skel/{Documents/*,Téléchargements/*};
 rm -rf $DIR/profil/airootfs/etc/skel/{.cache,.cmake,.pki,.gnupg,.ssh,.bash*,.drmc,.git*,.ICE*,.tran*,.wget*,.X*,.xs*,.local/share} 2>/dev/null;
 rm -rf $DIR/profil/airootfs/etc/skel/.config/{discord,Microsoft*,microsoft*,pulse,smplayer,Thunar,Trolltech,VirtualBox} 2>/dev/null;
-
+#
 ########################################################################################################################################################
 # Icône Bureau #
 ################
@@ -30,7 +30,7 @@ Path=
 Terminal=false
 StartupNotify=true' > $DIR/profil/airootfs/etc/skel/Bureau/Calamares.desktop;
 chmod +x $DIR/profil/airootfs/etc/skel/Bureau/*.desktop;
-
+#
 ########################################################################################################################################################
 # Remplacement du Terme #
 #########################
@@ -40,17 +40,26 @@ sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/xfce4/desk
 sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/xfce4/desktop/icons.screen0-3424x1388.rc;
 sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/xfce4/xfce4-screenshooter;
 sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/gtk-3.0/bookmarks;
-
+#
 ########################################################################################################################################################
 # /usr/share #
 ##############
 #mkdir -p $DIR/profil/airootfs/usr/share/;
-
+#
 ########################################################################################################################################################
 # /usr/share/{icons,themes} #
 #############################
 # sudo cp -r /usr/share/{icons,themes} $DIR/profil/airootfs/usr/share/;
+#
+# Autostart  : /home/USERNAME/.config/autostart/
+# Background : /home/USERNAME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
 }
+
+
+
+
+
+
 
 ########################################################################################################################################################
 # Auto-login #
@@ -59,7 +68,3 @@ autologin(){
 echo "[Desktop]
 Session=xfce" > x $DIR/profil/airootfs/etc/skel/.dmrc
 }
-
-
-# Autostart  : /home/USERNAME/.config/autostart/
-# Background : /home/USERNAME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
