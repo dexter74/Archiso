@@ -13,6 +13,8 @@ echo "###########################################################";
 echo "# - Création de l'utilisateur                             #";
 utilisateur;
 ###################################################################
-echo "#   > Autologin (lightdm)                                 #";
-autologin;
+if [[ $BASE = [yY] ]]; then
+  echo "#   > Autologin (lightdm)                                 #";
+  autologin;
+fi
 ###################################################################
