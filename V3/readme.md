@@ -1,6 +1,6 @@
 **Maintenance**
 
-> La fonction utilisateur est en cours de réecriture pour l'auto-login
+> La fonction Package, Utilisateur est en cours d'édition .
 
 <br />
 
