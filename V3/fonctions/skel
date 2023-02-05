@@ -40,28 +40,7 @@ sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/xfce4/desk
 sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/xfce4/desktop/icons.screen0-3424x1388.rc;
 sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/xfce4/xfce4-screenshooter;
 sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/gtk-3.0/bookmarks;
-#
-########################################################################################################################################################
-# /usr/share #
-##############
-mkdir -p $DIR/profil/airootfs/usr/share/backgrounds/custom;
-mkdir -p $DIR/profil/airootfs/usr/share/{icons,themes};
-
-########################################################################################################################################################
-# Bacgrounds & Icons & theme  #
-###############################
-cp $DIR/profil/airootfs/etc/skel/Images/Background/* $DIR/profil/airootfs/usr/share/backgrounds/custom;
-cp -r /usr/share/icons/{eP*,Pap*} $DIR/profil/airootfs/usr/share/icons/;
-cp -r /usr/share/themes/Dracula   $DIR/profil/airootfs/usr/share/themes/;
-
-# Autostart  : /home/USERNAME/.config/autostart/
-# Background : /home/USERNAME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
 }
-
-
-
-
-
 
 
 ########################################################################################################################################################
@@ -71,3 +50,34 @@ autologin(){
 echo "[Desktop]
 Session=xfce" > x $DIR/profil/airootfs/etc/skel/.dmrc
 }
+
+
+########################################################################################################################################################
+# Background #
+##############
+SKEL_background(){
+mkdir -p $DIR/profil/airootfs/usr/share/backgrounds/custom;
+cp $DIR/profil/airootfs/etc/skel/Images/Background/* $DIR/profil/airootfs/usr/share/backgrounds/custom;
+}
+
+
+########################################################################################################################################################
+# Icône #
+#########
+SKEL_icon(){
+mkdir -p $DIR/profil/airootfs/usr/share/icons;
+cp -r /usr/share/icons/{eP*,Pap*} $DIR/profil/airootfs/usr/share/icons/;
+}
+
+
+########################################################################################################################################################
+# Thème #
+#########
+SKEL_theme(){
+mkdir -p $DIR/profil/airootfs/usr/share/themes;
+cp -r /usr/share/themes/Dracula   $DIR/profil/airootfs/usr/share/themes/;
+}
+
+
+# Autostart  : /home/USERNAME/.config/autostart/
+# Background : /home/USERNAME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
