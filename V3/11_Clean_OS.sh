@@ -9,7 +9,7 @@ source ./fonctions/clean_os;
 ############################
 #
 #####################################################################
-echo "# - [11] Nettoyage des données dans les dossiers work et iso #";
+echo "# - [11] Nettoyage des données dans les dossiers work et iso#";
 CLEAN_ISO;
 CLEAN_WORK;
 #####################################################################
