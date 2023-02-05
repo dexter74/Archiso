@@ -18,7 +18,12 @@ cd $HOME/archiso/V3;
 nano ./settings.conf;
 ```
 
-#### C. Génération de l'image Système (Manuel)
+#### C. Génération de l'image Système (Automatique)
+```bash
+sh test.sh;
+```
+
+#### D. Génération de l'image Système (Manuel)
 ```bash
 sh ./00_Update_upgrade.sh;
 sh ./01_Clean.sh;
@@ -35,11 +40,6 @@ sh ./11_Clean_OS.sh;
 sh ./12_Permission.sh;
 sh ./13_Compilation.sh;
 sh ./14_Rename.sh;
-```
-
-#### B. Génération de l'image Système (Automatique)
-```bash
-sh test.sh;
 ```
 
 #### X. Dépendances
