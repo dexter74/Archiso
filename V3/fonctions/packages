@@ -327,15 +327,15 @@ fi
 #####################################################################################################################################################################
 # wd719x-firmware #
 ###################
-wd719x_firmware(){
-rm -rf /tmp/wd719x-firmware 2>/dev/null;
-runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/wd719x-firmware.git /tmp/wd719x-firmware 1>/dev/null 2>/dev/null;'
-runuser -l $USERNAME -c 'cd /tmp/wd719x-firmware && makepkg -s 1>/dev/null 2>/dev/null;'
-mv /tmp/wd719x-firmware/*.zst $DIR/repo;
-if [[ $(grep -L "^wd719x-firmware" $DIR/profil/packages.x86_64) ]]; then
-echo "wd719x-firmware" >>  $DIR/profil/packages.x86_64;
-fi
-}
+#wd719x_firmware(){
+#rm -rf /tmp/wd719x-firmware 2>/dev/null;
+#runuser -l $USERNAME -c 'git clone https://aur.archlinux.org/wd719x-firmware.git /tmp/wd719x-firmware 1>/dev/null 2>/dev/null;'
+#runuser -l $USERNAME -c 'cd /tmp/wd719x-firmware && makepkg -s 1>/dev/null 2>/dev/null;'
+#mv /tmp/wd719x-firmware/*.zst $DIR/repo;
+#if [[ $(grep -L "^wd719x-firmware" $DIR/profil/packages.x86_64) ]]; then
+#echo "wd719x-firmware" >>  $DIR/profil/packages.x86_64;
+#fi
+#}
 
 
 #####################################################################################################################################################################
