@@ -24,10 +24,13 @@ if [[ $PACKAGES = [Yy] ]]; then
   fi
   
   if [ $BUREAUTIQUE = [Yy] ]]; then
-    microsoft_edge;
-    PACMAN_DEPOT;
+    RC=0;
+    #microsoft_edge;
   fi
-  
+
+
+
+
 fi
 
 
