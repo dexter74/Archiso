@@ -13,8 +13,8 @@ echo "# - [09] Création du profil utilisateur par défaut           #";
 SKEL;
 
 #######################################################################
-echo "#        >  Copie des Fonds d'écran                          #";
-SKEL_background;
+#echo "#        >  Copie des Fonds d'écran                          #";
+#SKEL_background;
 #######################################################################
 #echo "#        >  Copie des Icônes                                 #";
 #SKEL_icon;
