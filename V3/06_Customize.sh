@@ -11,8 +11,12 @@ source ./fonctions/customize;
 ######################################################################
 echo "# - [06] Customize                                           #";
 CUSTOMIZE;
+
+
 ######################################################################
-#echo "#        > Activation de Broadcom-wl                        #";
-#modprobe_broadcom_wl;
+# Experimental #
+################
+echo "#        > Activation de Broadcom-wl                        #";
+modprobe_broadcom_wl;
 ######################################################################
 
