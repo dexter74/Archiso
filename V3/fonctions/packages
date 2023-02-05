@@ -1,4 +1,28 @@
 #####################################################################################################################################################################
+# Broadcom-wl #
+###############
+broadcom_wl(){
+BROADCOM=https://europe.mirror.pkgbuild.com/community/os/x86_64/broadcom-wl-$(yay -Qi broadcom-wl | grep "Version" | cut -d ":" -f 2 | cut -c 2-30)-x86_64.pkg.tar.zst 
+wget $BROADCOM -O $DIR/repo/broadcom-wl.pkg.tar.zst 2>/dev/null;
+}
+
+#####################################################################################################################################################################
+# linux-firmware-qlogic #
+#########################
+linux_firmware_qlogic(){
+VERSION=$(yay -Qi linux-firmware-qlogic | grep "Version" | cut -d ":" -f 2 | cut -c 2-30)
+wget https://mirror.moson.org/arch/core/os/x86_64/linux-firmware-qlogic-$VERSION-any.pkg.tar.zst -O $DIR/repo/linux-firmware-qlogic.pkg.tar.zst 2>/dev/null;
+if [[ $(grep -L "^linux-firmware-qlogic" $DIR/profil/packages.x86_64) ]]; then
+echo "linux-firmware-qlogic" >>  $DIR/profil/packages.x86_64;
+fi
+}
+
+
+
+
+
+
+#####################################################################################################################################################################
 # Base #
 ########
 base(){
@@ -215,29 +239,6 @@ runuser -l $USERNAME -c 'cd /tmp/ast-firmware && makepkg -s 1>/dev/null 2>/dev/n
 mv /tmp/ast-firmware/*.zst $DIR/repo;
 if [[ $(grep -L "^ast-firmware" $DIR/profil/packages.x86_64) ]]; then
 echo "ast-firmware" >>  $DIR/profil/packages.x86_64;
-fi
-}
-
-#####################################################################################################################################################################
-# Broadcom-wl #
-###############
-broadcom_wl(){
-VERSION=$(yay -Qi broadcom-wl | grep "Version" | cut -d ":" -f 2 | cut -c 2-30)
-wget https://europe.mirror.pkgbuild.com/community/os/x86_64/broadcom-wl-$VERSION-x86_64.pkg.tar.zst -O $DIR/repo/broadcom-wl.pkg.tar.zst 2>/dev/null;
-
-if [[ $(grep -L "^broadcom-wl" $DIR/profil/packages.x86_64) ]]; then
-echo "broadcom-wl" >>  $DIR/profil/packages.x86_64;
-fi
-}
-
-#####################################################################################################################################################################
-# linux-firmware-qlogic #
-#########################
-linux_firmware_qlogic(){
-VERSION=$(yay -Qi linux-firmware-qlogic | grep "Version" | cut -d ":" -f 2 | cut -c 2-30)
-wget https://mirror.moson.org/arch/core/os/x86_64/linux-firmware-qlogic-$VERSION-any.pkg.tar.zst -O $DIR/repo/linux-firmware-qlogic.pkg.tar.zst 2>/dev/null;
-if [[ $(grep -L "^linux-firmware-qlogic" $DIR/profil/packages.x86_64) ]]; then
-echo "linux-firmware-qlogic" >>  $DIR/profil/packages.x86_64;
 fi
 }
 
