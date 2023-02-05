@@ -1,0 +1,7 @@
+################################################################################################################################################################
+# Déplacer l'image dans la clé USB Ventoy #
+###########################################
+USB_VENTOY(){
+ rm $VENTOY/Archlinux-custom.iso 2>/dev/null
+ mv $DIR/iso/Archlinux-custom.iso $VENTOY/archlinux-custom.iso 2>/dev/null;
+}
