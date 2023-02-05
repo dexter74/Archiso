@@ -22,5 +22,4 @@ if [[ $PACKAGES = [yY] ]]; then
   echo "#        > Activation de l'autologin                         #";
   autologin;
 fi
-
 ########################################################################
