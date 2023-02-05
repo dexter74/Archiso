@@ -3,7 +3,7 @@
 ###############
 broadcom_wl(){
 VERSION=$(yay -Qi broadcom-wl | grep "Version" | cut -d ":" -f 2 | cut -c 2-30)
-curl "https://europe.mirror.pkgbuild.com/community/os/x86_64/broadcom-wl-${VERSION}-x86_64.pkg.tar.zst" --output "$DIR/repo/broadcom-wl.pkg.tar.zst";
+wget "https://europe.mirror.pkgbuild.com/community/os/x86_64/broadcom-wl-${VERSION}-x86_64.pkg.tar.zst" -O "$DIR/repo/broadcom-wl.pkg.tar.zst";
 }
 
 #####################################################################################################################################################################
@@ -11,7 +11,7 @@ curl "https://europe.mirror.pkgbuild.com/community/os/x86_64/broadcom-wl-${VERSI
 #########################
 linux_firmware_qlogic(){
 VERSION=$(yay -Qi linux-firmware-qlogic | grep "Version" | cut -d ":" -f 2 | cut -c 2-30)
-curl "https://mirror.moson.org/arch/core/os/x86_64/linux-firmware-qlogic-$VERSION-any.pkg.tar.zst" --output "$DIR/repo/linux-firmware-qlogic.pkg.tar.zst" 2>/dev/null;
+wget "https://mirror.moson.org/arch/core/os/x86_64/linux-firmware-qlogic-$VERSION-any.pkg.tar.zst" -O "$DIR/repo/linux-firmware-qlogic.pkg.tar.zst" 2>/dev/null;
 if [[ $(grep -L "^linux-firmware-qlogic" $DIR/profil/packages.x86_64) ]]; then
 echo "linux-firmware-qlogic" >>  $DIR/profil/packages.x86_64;
 fi
