@@ -255,9 +255,11 @@ rm -rf /tmp/xfce4-panel-profiles;
 runuser -l $USERNAME -c 'git clone git clone https://aur.archlinux.org/xfce4-panel-profiles.git /tmp/xfce4-panel-profiles 1>/dev/null 2>/dev/null;'
 runuser -l $USERNAME -c 'cd  /tmp/xfce4-panel-profiles && makepkg -s 1>/dev/null 2>/dev/null;'
 mv /tmp/xfce4-panel-profiles/*.zst  $DIR/repo;
-#if [[ $(grep -L "^xfce4-panel-profiles" $DIR/profil/packages.x86_64) ]]; then   
-#echo "xfce4-panel-profiles"" >> $DIR/profil/packages.x86_64;
-#fi
+
+
+if [[ $(grep -L "^xfce4-panel-profiles" $DIR/profil/packages.x86_64) ]]; then   
+echo "xfce4-panel-profiles" >> $DIR/profil/packages.x86_64;
+fi
 }
 
 
