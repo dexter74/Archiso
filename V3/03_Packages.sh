@@ -40,7 +40,7 @@ then
   fi
 
   if [[ $PILOTE = [Yy] ]]; then
-    echo "#   > Package OUTILS                                      #";
+    echo "#   > Package PILOTE                                      #";
     #aic94xx_firmware;
     #ast_firmware;
     #broadcom_wl;
