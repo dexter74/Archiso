@@ -13,8 +13,8 @@ rm -rf $DIR/{iso,work}/* 2>/dev/null;
 mkarchiso       \
   -v            \
   -w $DIR/work  \
-  -o $DIR/iso  \
-  $DIR/profil  \
-  1>/dev/null;
+  -o $DIR/iso   \
+  $DIR/profil;
+ # 1>/dev/null 2>/dev/null;
 ############################################################################
 }
