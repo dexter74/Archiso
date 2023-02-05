@@ -12,14 +12,14 @@ source ./fonctions/skel;
 echo "# - Création du profil utilisateur par défaut             #";
 SKEL;
 ####################################################################
-echo "#  >  Copie des Fonds d'écran                             #";
-SKEL_background;
+#echo "#  >  Copie des Fonds d'écran                             #";
+#SKEL_background;
 ####################################################################
-echo "#  >  Copie des Icônes                                    #";
-SKEL_icon;
+#echo "#  >  Copie des Icônes                                    #";
+#SKEL_icon;
 ####################################################################
-echo "#  >  Copie des Thèmes                                    #";
-SKEL_theme;
+#echo "#  >  Copie des Thèmes                                    #";
+#SKEL_theme;
 ####################################################################
 #echo "#  >  Autologin (\$HOME/.dmrc)                            #";
 #autologin;
