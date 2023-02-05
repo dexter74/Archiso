@@ -9,15 +9,15 @@ source ./fonctions/packages;
 # Lancements des fonctions #
 ############################
 #
-#####################################################################
+##########################################################################
 if [[ $PACKAGES = [Yy] ]]; then
     echo "##############################################################";
     echo "# - [03] Gestion des Packages                                #";
-    echo "#   > Edition de Pacman.conf                                 #";
+    echo "#       > Edition de Pacman.conf                             #";
     PACMAN_CONF;
-    echo "#   > Package de base (Lightdm + XFCE4)                      #";
+    echo "#       > Package de base (Lightdm + XFCE4)                  #";
     base;
-  ###################################################################
+  ########################################################################
   if [[ $INSTALLATEUR = [Yy] ]]; then
     echo "#       > Package Installateur                               #";
     calamares;
@@ -26,21 +26,21 @@ if [[ $PACKAGES = [Yy] ]]; then
     qt5webkit;
     PACMAN_DEPOT;
   fi
-  ###################################################################
+  ########################################################################
   if [[ $BUREAUTIQUE = [Yy] ]]; then
-    echo "#   > Package Bureautique                               #";
+    echo "#       > Package Bureautique                               #";
     microsoft_edge;
     PACMAN_DEPOT;
   fi
-  ###################################################################
+  ########################################################################
   if [[ $OUTILS = [Yy] ]]; then
-    echo "#   > Package Outils                                    #";
+    echo "#       > Package Outils                                     #";
     yay;
     PACMAN_DEPOT;
   fi
-  ###################################################################
+  ########################################################################
   if [[ $PILOTE = [Yy] ]]; then
-    echo "#   > Package Pilotes                                   #";
+    echo "#       > Package Pilotes                                    #";
     aic94xx_firmware;
     ast_firmware;
     #broadcom_wl;
@@ -50,4 +50,4 @@ if [[ $PACKAGES = [Yy] ]]; then
     PACMAN_DEPOT;
   fi
 fi
-#####################################################################
+##########################################################################
