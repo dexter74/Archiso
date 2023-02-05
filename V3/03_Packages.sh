@@ -19,15 +19,14 @@ if [[ $PACKAGES = [Yy] ]]; then
     base;
   ########################################################################
   if [[ $INSTALLATEUR = [Yy] ]]; then
-    echo "#        > Package Calamares                                 #";
+    echo "#        > Calamares                                         #";
     calamares;
-    echo "#        >> [Dep] IceCream                                   #";
+    echo "#        > IceCream                                          #";
     icecream;
-    echo "#        >> [Dep] Python-QT                                  #";
+    echo "#        > Python-QT                                         #";
     pythonqt;
-    echo "#        >> [Dep] QT5-Webkit                                 #";
+    echo "#        > QT5-Webkit                                        #";
     qt5webkit;
-    
     PACMAN_DEPOT;
   fi
   ########################################################################
