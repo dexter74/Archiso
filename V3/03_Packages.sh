@@ -21,11 +21,11 @@ if [[ $PACKAGES = [Yy] ]]; then
   if [[ $INSTALLATEUR = [Yy] ]]; then
     echo "#        > Package Calamares                                 #";
     calamares;
-    echo "#        >> [Dep] Calamares - IceCream                       #";
+    echo "#        >> [Dep] IceCream                                   #";
     icecream;
-    echo "#        >> [Dep] Calamares - Python-QT                      #";
+    echo "#        >> [Dep] Python-QT                                  #";
     pythonqt;
-    echo "#        >> [Dep] Calamares - QT5-Webkit                     #";
+    echo "#        >> [Dep] QT5-Webkit                                 #";
     qt5webkit;
     
     PACMAN_DEPOT;
