@@ -10,9 +10,9 @@ source ./fonctions/regen_depot;
 # Lancements des fonctions #
 ############################
 #
-#####################################################################
+####################################################################
 if [[ $PACKAGES = [Yy] ]]; then
-echo "# - Gestion des Packages                                     #";
+echo "# - Gestion des Packages                                   #";
   PACMAN;
   base;
 
