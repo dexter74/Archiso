@@ -16,7 +16,7 @@ CUSTOMIZE;
 ######################################################################
 # Experimental #
 ################
-echo "#        > Activation de Broadcom-wl                        #";
+echo "#        > Activation de Broadcom-wl                         #";
 modprobe_broadcom_wl;
 ######################################################################
 
