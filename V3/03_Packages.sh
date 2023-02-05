@@ -11,13 +11,16 @@ source ./fonctions/regen_depot;
 ############################
 #
 ###################################################################
-if [[ $PACKAGES = [Yy] ]]; then
-echo "# - Gestion des Packages                                  #";
-echo "#   > Edition de Pacman.conf                              #";
+if [[ $PACKAGES = [Yy] ]]; 
+then
+  echo "# - Gestion des Packages                                  #";
+  echo "#   > Edition de Pacman.conf                              #";
   PACMAN;
-echo "#   > Package de base inclus                              #";
+  echo "#   > Package de base                                     #";
   base;
+
   if [[ $INSTALLATEUR = [Yy] ]]; then
+    echo "#   > Package Installateur                                #";
     calamares;
     icecream;
     pythonqt;
@@ -26,15 +29,18 @@ echo "#   > Package de base inclus                              #";
   fi
 
   if [[ $BUREAUTIQUE = [Yy] ]]; then
+    echo "#   > Package Bureautique                                 #";
     microsoft_edge;
   fi
 
   if [[ $OUTILS = [Yy] ]]; then
+    echo "#   > Package OUTILS                                      #";
     yay;
     PACMAN_DEPOT;
   fi
 
   if [[ $PILOTE = [Yy] ]]; then
+    echo "#   > Package OUTILS                                      #";
     aic94xx_firmware;
     ast_firmware;
     broadcom_wl;
