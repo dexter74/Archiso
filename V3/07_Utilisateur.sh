@@ -19,7 +19,7 @@ utilisateur;
 # Groupe Autologin #
 ####################
 if [[ $PACKAGES = [yY] ]]; then
-  echo "#        > Autologin (lightdm)                               #";
+  echo "#        > Activation de l'autologin                         #";
   autologin;
 fi
 
