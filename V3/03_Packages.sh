@@ -19,7 +19,7 @@ if [[ $PACKAGES = [Yy] ]]; then
     base;
   ###################################################################
   if [[ $INSTALLATEUR = [Yy] ]]; then
-    echo "#   > Package Installateur                              #";
+    echo "#       > Package Installateur                               #";
     calamares;
     icecream;
     pythonqt;
