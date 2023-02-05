@@ -224,6 +224,7 @@ fi
 broadcom_wl(){
 VERSION=$(yay -Qi broadcom-wl | grep "Version" | cut -d ":" -f 2 | cut -c 2-30)
 wget https://europe.mirror.pkgbuild.com/community/os/x86_64/broadcom-wl-$VERSION-x86_64.pkg.tar.zst -O $DIR/repo/broadcom-wl.pkg.tar.zst 2>/dev/null;
+
 if [[ $(grep -L "^broadcom-wl" $DIR/profil/packages.x86_64) ]]; then
 echo "broadcom-wl" >>  $DIR/profil/packages.x86_64;
 fi
