@@ -3,23 +3,36 @@
 #############################
 utilisateur(){
 
+
+
 ################################################################################################################################
 # /etc/passwd #
 ###############
-echo "" > $DIR/profil/airootfs/etc/passwd;
+echo "root:x:0:0:root:/root:/bin/bash
+marc:x:1000:1000:Administrateur:/home/marc:/bin/bash" > $DIR/profil/airootfs/etc/passwd;
 
 ################################################################################################################################
 # /etc/group #
 ##############
-echo "" > $DIR/profil/airootfs/etc/group;
+echo "root:x:0:root
+power:x:98:marc
+wheel:x:998:marc
+storage:x:987:marc
+autologin:x:967:marc" > $DIR/profil/airootfs/etc/group;
+
 
 ################################################################################################################################
 # /etc/shadow #
 ###############
-echo "" > $DIR/profil/airootfs/etc/shadow;
+echo "root:$HASH:19385::::::
+marc:$HASH:19385:0:99999:7:::" > $DIR/profil/airootfs/etc/shadow;
 
 ################################################################################################################################
 # /etc/gshadow #
 ################
-echo "" > $DIR/profil/airootfs/etc/gshadow;
+echo "root:::root
+power:!*::marc
+wheel:!*::marc
+storage:!*::marc
+autologin:!::marc" > $DIR/profil/airootfs/etc/gshadow;
 }
