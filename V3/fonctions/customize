@@ -2,35 +2,36 @@
 # Script personnalisé #
 #######################
 CUSTOMIZE(){
-  echo "locale-gen;
-  ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime;" > $DIR/profil/airootfs/root/customize_airootfs.sh;
-  echo "~/.automated_script.sh" > $DIR/profil/airootfs/root/.zlogin;
+echo "locale-gen;
+ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime;" > $DIR/profil/airootfs/root/customize_airootfs.sh;
+echo "~/.automated_script.sh" > $DIR/profil/airootfs/root/.zlogin;
 }
+
 
 ###################################################################################################################
 # Autoriser le module Broadcom-wl #
 ###################################
-modprobe_broadcom_wl(){
-  rm $DIR/profil/airootfs/etc/modprobe.d/broadcom-wl.conf;
+modprobe_broadcom_wl(){ 
+rm $DIR/profil/airootfs/etc/modprobe.d/broadcom-wl.conf;
 }
+
 
 ###################################################################################################################
 # Personnalisation de l'image Système #
 #######################################
 PERSONNALISATION_OS(){
-  echo 'NAME="Arch Linux"
-  PRETTY_NAME="Arch Linux"
-  ID=arch
-  BUILD_ID=rolling
-  ANSI_COLOR="38;2;23;147;209"
-  HOME_URL="https://archlinux.org/"
-  DOCUMENTATION_URL="https://wiki.archlinux.org/"
-  SUPPORT_URL="https://bbs.archlinux.org/"
-  BUG_REPORT_URL="https://bugs.archlinux.org/"
-  PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
-  LOGO=archlinux-logo' > $DIR/airootfs/etc/os-release
-  
-  echo "" > $DIR/airootfs/etc/motd;
-  echo "LiveCD_Archlinux" > $DIR/airootfs/etc/hostname;
+echo "LiveCD_Archlinux"  > $DIR/airootfs/etc/hostname;
+echo ""                  > $DIR/airootfs/etc/motd;
 
+echo 'NAME="Arch Linux"
+PRETTY_NAME="Arch Linux"
+ID=arch
+BUILD_ID=rolling
+ANSI_COLOR="38;2;23;147;209"
+HOME_URL="https://archlinux.org/"
+DOCUMENTATION_URL="https://wiki.archlinux.org/"
+SUPPORT_URL="https://bbs.archlinux.org/"
+BUG_REPORT_URL="https://bugs.archlinux.org/"
+PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
+LOGO=archlinux-logo'     > $DIR/airootfs/etc/os-release
 }
