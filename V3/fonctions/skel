@@ -44,13 +44,15 @@ sed -i -e "s/$USERNAME/$GUEST/" $DIR/profil/airootfs/etc/skel/.config/gtk-3.0/bo
 ########################################################################################################################################################
 # /usr/share #
 ##############
-#mkdir -p $DIR/profil/airootfs/usr/share/;
-#
+mkdir -p $DIR/profil/airootfs/usr/share/;
+mkdir -p $DIR/profil/airootfs/usr/share/backgrounds;
+
+
 ########################################################################################################################################################
-# /usr/share/{icons,themes} #
-#############################
-# sudo cp -r /usr/share/{icons,themes} $DIR/profil/airootfs/usr/share/;
-#
+# Bacgrounds #
+##############
+cp $DIR/profil/airootfs/etc/skel/Images/Background/* $DIR/profil/airootfs/usr/share/backgrounds/;
+
 # Autostart  : /home/USERNAME/.config/autostart/
 # Background : /home/USERNAME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
 }
