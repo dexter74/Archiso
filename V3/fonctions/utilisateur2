@@ -50,10 +50,16 @@ echo "$GUEST ALL=(ALL) NOPASSWD: ALL" > $DIR/profil/airootfs/etc/sudoers.d/$GUES
 #############
 autologin(){
 mkdir -p $DIR/profil/airootfs/etc/lightdm;
-cp /etc/lightdm/lightdm.conf $DIR/profil/airootfs/etc/lightdm/lightdm.conf;
-sed -i -e "s/^\#autologin-user\=/autologin-user\=$GUEST/g" $DIR/profil/airootfs/etc/lightdm/lightdm.conf;
+cp /etc/lightdm/lightdm.conf                                         $DIR/profil/airootfs/etc/lightdm/lightdm.conf;
+
+# Décommenter ligne:
+sed -i -e "s/^\#autologin-user\=/autologin-user\=$GUEST/g"           $DIR/profil/airootfs/etc/lightdm/lightdm.conf;
 sed -i -e "s/^\#autologin-user-timeout\=/autologin-user-timeout\=/g" $DIR/profil/airootfs/etc/lightdm/lightdm.conf;
-sed -i -e "s/^\#autologin-session=/autologin-session=xfce/g" $DIR/profil/airootfs/etc/lightdm/lightdm.conf;
+sed -i -e "s/^\#autologin-session=/autologin-session=xfce/g"         $DIR/profil/airootfs/etc/lightdm/lightdm.conf;
+
+# Commenter ligne:
+sed -i -e "s/greeter-session/\#greeter-session/g"                    $DIR/profil/airootfs/etc/lightdm/lightdm.conf;
+
 # grep "autologin-session\|autologin-user\|autologin-user-timeout" $DIR/profil/airootfs/etc/lightdm/lightdm.conf;
 #####################################################################################################################################
 }
