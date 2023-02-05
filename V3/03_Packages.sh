@@ -15,7 +15,7 @@ if [[ $PACKAGES = [Yy] ]]; then
     echo "# - Gestion des Packages                                  #";
     echo "#   > Edition de Pacman.conf                              #";
     PACMAN;
-    echo "#   > Package de base                                     #";
+    echo "#   > Package de base (Lightdm + XFCE4)                   #";
     base;
   #####################################################################
   if [[ $INSTALLATEUR = [Yy] ]]; then
