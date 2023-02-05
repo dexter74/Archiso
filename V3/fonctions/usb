@@ -5,3 +5,18 @@ USB_VENTOY(){
  rm $VENTOY/Archlinux-custom.iso
  mv $DIR/iso/Archlinux-custom.iso $VENTOY/archlinux-custom.iso;
 }
+
+
+TEST_(){
+if [ ! -f $DIR/iso/Archlinux-custom.iso]; then
+  RC=0
+else
+  RC=1
+fi
+
+
+# mv $VENTOY/archlinux-custom.iso;
+}
+
+
+
