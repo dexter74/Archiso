@@ -9,7 +9,7 @@ source ./fonctions/generation;
 ############################
 #
 ########################################################################
-echo "# [02] - Generation des dossiers Archiso et du dépôt local     #";
+echo "# - [02] Generation des dossiers Archiso et du dépôt local     #";
 GENERATION_DEPOT;
 GENERATION_ARCHISO;
 ########################################################################
