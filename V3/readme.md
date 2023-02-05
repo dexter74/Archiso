@@ -1,6 +1,7 @@
+**Bug**
+> Le fichier Local.DB semble s'effacer, plantant la compilation .
+
 **Observation**
-> La fonction Package, Utilisateur est en cours d'édition .
-> 
 > broadcom-wl: $DIR/profil/airootfs/etc/modprobe.d/broadcom-wl.conf <= A supprimer d'après le contenu du fichier
 
 <br />
