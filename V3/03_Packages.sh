@@ -28,7 +28,7 @@ if [[ $PACKAGES = [Yy] ]]; then
   fi
   ########################################################################
   if [[ $BUREAUTIQUE = [Yy] ]]; then
-    echo "#        > Package Bureautique                              #";
+    echo "#        > Package Bureautique                               #";
     microsoft_edge;
     PACMAN_DEPOT;
   fi
