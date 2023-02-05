@@ -14,5 +14,5 @@ sh ./09_Skel.sh;
 sh ./10_Regen_depot.sh;
 sh ./11_Clean_OS.sh;
 sh ./12_Permission.sh;
-sh ./13_Compilation.sh;
-sh ./14_Rename.sh;
+#sh ./13_Compilation.sh;
+#sh ./14_Rename.sh;
