@@ -18,7 +18,7 @@ utilisateur;
 ########################################################################
 # Groupe Autologin #
 ####################
-if [[ $PACKAGE = [yY] ]]; then
+if [[ $PACKAGES = [yY] ]]; then
   echo "#        > Autologin (lightdm)                               #";
   autologin;
 fi
