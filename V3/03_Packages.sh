@@ -13,7 +13,7 @@ source ./fonctions/packages;
 if [[ $PACKAGES = [Yy] ]]; then
     echo "# - Gestion des Packages                                  #";
     echo "#   > Edition de Pacman.conf                              #";
-    PACMAN;
+    PACMAN_CONF;
     echo "#   > Package de base (Lightdm + XFCE4)                   #";
     base;
   #####################################################################
