@@ -10,37 +10,36 @@ source ./fonctions/regen_depot;
 # Lancements des fonctions #
 ############################
 #
-###################################################################
-if [[ $PACKAGES = [Yy] ]]; 
-then
-  echo "# - Gestion des Packages                                  #";
-  echo "#   > Edition de Pacman.conf                              #";
-  PACMAN;
-  echo "#   > Package de base                                     #";
-  base;
-
+#######################################################################
+if [[ $PACKAGES = [Yy] ]]; then
+    echo "# - Gestion des Packages                                  #";
+    echo "#   > Edition de Pacman.conf                              #";
+    PACMAN;
+    echo "#   > Package de base                                     #";
+    base;
+  #####################################################################
   if [[ $INSTALLATEUR = [Yy] ]]; then
     echo "#   > Package Installateur                                #";
-    #calamares;
-    #icecream;
-    #pythonqt;
-    #qt5webkit;
-    #PACMAN_DEPOT;
+    calamares;
+    icecream;
+    pythonqt;
+    qt5webkit;
+    PACMAN_DEPOT;
   fi
-
+  #####################################################################
   if [[ $BUREAUTIQUE = [Yy] ]]; then
     echo "#   > Package Bureautique                                 #";
-    #microsoft_edge;
+    microsoft_edge;
   fi
-
+  #####################################################################
   if [[ $OUTILS = [Yy] ]]; then
-    echo "#   > Package OUTILS                                      #";
-    #yay;
-    #PACMAN_DEPOT;
+    echo "#   > Package Outils                                      #";
+    yay;
+    PACMAN_DEPOT;
   fi
-
+  #####################################################################
   if [[ $PILOTE = [Yy] ]]; then
-    echo "#   > Package PILOTE                                      #";
+    echo "#   > Package Pilotes                                     #";
     #aic94xx_firmware;
     #ast_firmware;
     #broadcom_wl;
@@ -49,5 +48,5 @@ then
     #wd719x_firmware;
     #PACMAN_DEPOT;
   fi
-
 fi
+#######################################################################
