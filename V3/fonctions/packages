@@ -65,7 +65,7 @@ rm -rf /tmp/calamares 2>/dev/null;
 CALAMARES="https://raw.githubusercontent.com/dexter74/Archiso/main/V3/PKGBUILD/Calamares"
 runuser -l $USERNAME -c "mkdir /tmp/calamares 2>/dev/null;"
 runuser -l $USERNAME -c "curl $CALAMARES > /tmp/calamares/PKGBUILD 2>/dev/null;"
-runuser -l $USERNAME -c "cd /tmp/calamares && makepkg -s 1>/dev/null 2>/dev/null;"
+runuser -l $USERNAME -c "cd /tmp/calamares && makepkg -s 1>/dev/null;"
 mv /tmp/calamares/*.zst $DIR/repo;
 if [[ $(grep -L "^ack" $DIR/profil/packages.x86_64) ]]; then   
 echo "
