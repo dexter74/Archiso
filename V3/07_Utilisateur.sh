@@ -2,7 +2,7 @@
 # Chargements des fonctions #
 #############################
 source ./settings.conf;
-source ./fonctions/utilisateur;
+source ./fonctions/utilisateur2;
 
 ################################################################################################################################################
 # Lancement de la Fonction #
@@ -10,8 +10,8 @@ source ./fonctions/utilisateur;
 #
 ###################################################################
 echo "###########################################################";
-echo "# - Création de l'utilisateur (Utilisateur2)              #";
-utilisateur2;
+echo "# - Création de l'utilisateur                             #";
+utilisateur;
 ###################################################################
 #echo "#   > Autologin (lightdm)                                 #";
 #autologin;
