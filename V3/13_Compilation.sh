@@ -12,7 +12,9 @@ source ./fonctions/compilation;
 echo "##############################################################";
 echo "# - [13] Construction de l'image Système Archiso (ISO)       #";
 echo "#        > Début du processus à $(date '+%H:%M')                        #";
+echo
 COMPILATION;
+echo
 echo "#        > Fin du processus à $(date '+%H:%M')                          #";
 echo "##############################################################";
 #################################################################################
