@@ -4,7 +4,6 @@
 source ./settings.conf;
 source ./fonctions/pacman;
 source ./fonctions/packages;
-source ./fonctions/regen_depot;
 
 ################################################################################################################################################
 # Lancements des fonctions #
@@ -25,21 +24,18 @@ if [[ $PACKAGES = [Yy] ]]; then
     pythonqt;
     qt5webkit;
     PACMAN_DEPOT;
-    REGEN_DEPOT;
   fi
   #####################################################################
   if [[ $BUREAUTIQUE = [Yy] ]]; then
     echo "#   > Package Bureautique                                 #";
     microsoft_edge;
     PACMAN_DEPOT;
-    REGEN_DEPOT;
   fi
   #####################################################################
   if [[ $OUTILS = [Yy] ]]; then
     echo "#   > Package Outils                                      #";
     yay;
     PACMAN_DEPOT;
-    REGEN_DEPOT;
   fi
   #####################################################################
   if [[ $PILOTE = [Yy] ]]; then
@@ -51,7 +47,6 @@ if [[ $PACKAGES = [Yy] ]]; then
     upd72020x_fw;
     wd719x_firmware;
     PACMAN_DEPOT;
-    REGEN_DEPOT;
   fi
 fi
 #######################################################################
