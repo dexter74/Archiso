@@ -16,4 +16,5 @@ sh ./11_Clean_OS.sh;
 sh ./12_Permission.sh;
 sh ./13_Compilation.sh;
 sh ./14_Rename.sh;
-sh ./15_USB.sh;
+
+# sh ./15_USB.sh;
