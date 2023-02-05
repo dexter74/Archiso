@@ -11,6 +11,7 @@ source ./fonctions/packages;
 #
 #######################################################################
 if [[ $PACKAGES = [Yy] ]]; then
+    echo "###########################################################";
     echo "# - Gestion des Packages                                  #";
     echo "#   > Edition de Pacman.conf                              #";
     PACMAN_CONF;
