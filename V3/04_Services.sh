@@ -10,6 +10,7 @@ source ./fonctions/services;
 #
 #######################################################################
 if [[ $PACKAGES = [Yy] ]]; then
+  echo "###########################################################";
   echo "# - Edition des services                                  #";
   SERVICES;
 fi
