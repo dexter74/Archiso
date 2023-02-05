@@ -30,6 +30,7 @@ if [[ $PACKAGES = [Yy] ]]; then
   if [[ $BUREAUTIQUE = [Yy] ]]; then
     echo "#   > Package Bureautique                                 #";
     microsoft_edge;
+    PACMAN_DEPOT;
   fi
   #####################################################################
   if [[ $OUTILS = [Yy] ]]; then
@@ -40,13 +41,13 @@ if [[ $PACKAGES = [Yy] ]]; then
   #####################################################################
   if [[ $PILOTE = [Yy] ]]; then
     echo "#   > Package Pilotes                                     #";
-    #aic94xx_firmware;
-    #ast_firmware;
-    #broadcom_wl;
-    #linux_firmware_qlogic;
-    #upd72020x_fw;
-    #wd719x_firmware;
-    #PACMAN_DEPOT;
+    aic94xx_firmware;
+    ast_firmware;
+    broadcom_wl;
+    linux_firmware_qlogic;
+    upd72020x_fw;
+    wd719x_firmware;
+    PACMAN_DEPOT;
   fi
 fi
 #######################################################################
