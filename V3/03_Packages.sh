@@ -9,71 +9,43 @@ source ./fonctions/regen_depot;
 ################################################################################################################################################
 # Lancements des fonctions #
 ############################
-
-######################################################################
-# Edition des paramètres de Pacman #
-####################################
-PACMAN;
-######################################################################
-if [[ $PACKAGES = [Yy] ]]; then
-######################################################################
-  if [[ $DEPOT = [Yy] ]]; then
+#
+#####################################################################
+if [[ $PACKAGES = [Yy] ]];
+then
+  PACMAN;
+  base;
+  if [[ $INSTALLATEUR = [Yy] ]]; then
+    calamares;
+    icecream;
+    pythonqt;
+    qt5webkit;
     PACMAN_DEPOT;
   fi
-  ####################################################################
-  if [[ $BASE = [Yy] ]]; then
-    echo "###########################################################";
-    echo "# - Ajout de package dans l'image Archiso                 #";
-    sleep 1;
-    echo "#   > Base (Lightdm + XFCE4)                              #";
-    base;
-  fi
-  ####################################################################
-  if [[ $CALAMARES = [Yy] ]]; then
-    echo "#   > Calamares                                           #";
-    calamares;
-  fi
-  ####################################################################
-  if [[ $ICECREAM = [Yy] ]]; then
-    echo "#   > Icecream                                            #";
-    icecream;
-  fi
-  ####################################################################
-  if [[ $QT5WEBKIT = [Yy] ]]; then
-    echo "#   > QT5-WebKit                                          #";
-    qt5webkit;
-  fi
-   ####################################################################
-  if [[ $PYTHONQT = [Yy] ]]; then
-    echo "#   > Pythonqt                                            #";
-    pythonqt;
-  fi
-  ####################################################################
-  if [[ $MICROSOFT_EDGE = [Yy] ]]; then
-    echo "#   > Microsft Edge                                       #";
+  
+  if [ $BUREAUTIQUE = [Yy] ]]; then
     microsoft_edge;
+    PACMAN_DEPOT;
   fi
-  ####################################################################
-  if [[ $YAY = [Yy] ]]; then
-    echo "#   > Yay                                                 #";
+  
+  if [ $OUTILS = [Yy] ]]; then
     yay;
+    PACMAN_DEPOT;
   fi
-  ####################################################################
-  if [[ $PILOTE = [Yy] ]]; then
-    echo "#   > Pilote                                              #";
+  
+  if [ $PILOTE = [Yy] ]]; then
     aic94xx_firmware;
     ast_firmware;
-    linux_firmware_qlogic;
-    upd72020x_fwl;
-    wd719x_firmware;
-  fi
-  ####################################################################
-  if [[ $BROADCOM = [Yy] ]]; then
-    echo "#   > Pilote WIFI (broadcom-wl)                          #";
     broadcom_wl;
+    linux_firmware_qlogic;
+    upd72020x_fw;
+    wd719x_firmware;
+    PACMAN_DEPOT;
   fi
-######################################################################
-  echo "###########################################################";
-  echo "# - Mise à jour du dépôt Local                            #";
-  REGEN_DEPOT;
+  
+  
+
 fi
+
+
+  
