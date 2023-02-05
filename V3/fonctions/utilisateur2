@@ -7,29 +7,40 @@ utilisateur(){
 # /etc/passwd #
 ###############
 echo "root:x:0:0:root:/root:/bin/bash
-marc:x:1000:1000:Administrateur:/home/marc:/bin/bash" > $DIR/profil/airootfs/etc/passwd;
+$GUEST:x:1000:1000:Administrateur:/home/$GUEST:/bin/bash" > $DIR/profil/airootfs/etc/passwd;
 
 ################################################################################################################################
 # /etc/group #
 ##############
 echo "root:x:0:root
-power:x:98:marc
-wheel:x:998:marc
-storage:x:987:marc
-autologin:x:967:marc" > $DIR/profil/airootfs/etc/group;
+power:x:98:$GUEST
+wheel:x:998:$GUEST
+storage:x:987:$GUEST
+autologin:x:967:$GUEST" > $DIR/profil/airootfs/etc/group;
 
 ################################################################################################################################
 # /etc/shadow #
 ###############
 echo "root:$HASH:19385::::::
-marc:$HASH:19385:0:99999:7:::" > $DIR/profil/airootfs/etc/shadow;
+$GUEST:$HASH:19385:0:99999:7:::" > $DIR/profil/airootfs/etc/shadow;
 
 ################################################################################################################################
 # /etc/gshadow #
 ################
 echo "root:::root
-power:!*::marc
-wheel:!*::marc
-storage:!*::marc
-autologin:!::marc" > $DIR/profil/airootfs/etc/gshadow;
+power:!*::$GUEST
+wheel:!*::$GUEST
+storage:!*::$GUEST
+autologin:!::$GUEST" > $DIR/profil/airootfs/etc/gshadow;
+
+# /etc/sudoers.d
+mkdir -p $DIR/profil/airootfs/etc/sudoers.d/
+
+# /etc/sudoers
+echo "root ALL=(ALL) ALL
+%wheel ALL=(ALL) ALL" > $DIR/profil/airootfs/etc/sudoers;
+
+# /etc/sudoers.d/$GUEST
+echo "$GUEST ALL=(ALL) NOPASSWD: ALL" > $DIR/profil/airootfs/etc/sudoers.d/$GUEST;
+
 }
