@@ -13,12 +13,7 @@ Calamares permet de réaliser une installation via une interface.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 #### B. Télécharger les sources GIT [Dépendance](https://github.com/dexter74/Archiso/blob/main/V3/XX.Dependance.MD)
 ```bash
-clear;
-cd;
-rm -rf $HOME/archiso;
-git clone git@github.com:dexter74/Archiso.git $HOME/archiso 2>/dev/null;
-cd $HOME/archiso/V3;
-sh test.sh;
+clear; cd; rm -rf $HOME/archiso; git clone git@github.com:dexter74/Archiso.git $HOME/archiso 2>/dev/null; cd $HOME/archiso/V3; sh test.sh;
 ```
 
 ```
