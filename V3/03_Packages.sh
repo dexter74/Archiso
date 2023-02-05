@@ -46,7 +46,9 @@ if [[ $PACKAGES = [Yy] ]]; then
     echo "#        > Package Pilotes                                   #";
     aic94xx_firmware;
     ast_firmware;
-    #broadcom_wl;
+    
+    broadcom_wl;
+    
     linux_firmware_qlogic;
     upd72020x_fw;
     wd719x_firmware;
