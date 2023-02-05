@@ -39,6 +39,7 @@ if [[ $PACKAGES = [Yy] ]]; then
   if [[ $OUTILS = [Yy] ]]; then
     echo "#        > Package Outils                                    #";
     yay;
+    xfce4_panel_profiles;
     PACMAN_DEPOT;
   fi
   ########################################################################
