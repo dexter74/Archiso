@@ -1,5 +1,5 @@
 **Bug**
-> Le fichier Local.DB semble s'effacer, plantant la compilation .
+> Le fichier Local.db est absent, ce qui fait planter la compilation.
 
 **Observation**
 > broadcom-wl: $DIR/profil/airootfs/etc/modprobe.d/broadcom-wl.conf <= A supprimer d'après le contenu du fichier
