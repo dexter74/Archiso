@@ -1,5 +1,5 @@
-**Bug**
-> 03_Packages.sh | 06_Customize.sh | 09_Skel.sh : Problème de package
+**Calamares:** [Services](https://github.com/dexter74/calamares-custom/blob/calamares/src/modules/services-systemd/services-systemd.conf)
+
 
 <br />
 
