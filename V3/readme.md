@@ -1,5 +1,5 @@
-**Bug en cours de résolution:**
-> 03_Packages.sh | 06_Customize.sh | 09_Skel.sh
+**Bug**
+> 03_Packages.sh | 06_Customize.sh | 09_Skel.sh : Problème de package
 
 <br />
 
