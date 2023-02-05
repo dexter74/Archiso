@@ -12,7 +12,8 @@ sed -i '/sudoers.d/a \\  ["/etc/sudoers.d/'$GUEST'"]="0:0:644"'          $DIR/pr
 
 # /etc/lightdm/lightdm.conf
 if [ -f "$DIR/profil/airootfs/etc/lightdm/lightdm.conf" ]; then
-sed -i '/"\/etc\/sudoers.d\/'$GUEST'"/a \\  ["/etc/lightdm/lightdm.conf"]="0:0:400"'         $DIR/profil/profiledef.sh;
+sed -i '/"\/etc\/sudoers.d\/'$GUEST'"/a \\  ["/etc/lightdm"]="0:0:655"'  $DIR/profil/profiledef.sh;
+sed -i '/lightdm/a \\  ["/etc/lightdm/lightdm.conf"]="0:0:644"'          $DIR/profil/profiledef.sh;
 fi
 }
 
