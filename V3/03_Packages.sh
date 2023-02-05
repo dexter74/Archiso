@@ -20,42 +20,42 @@ if [[ $PACKAGES = [Yy] ]]; then
   ########################################################################
   if [[ $INSTALLATEUR = [Yy] ]]; then
     echo "#        > Calamares                                         #";
-    calamares;
+    #calamares;
     echo "#        > IceCream                                          #";
-    icecream;
+    #icecream;
     echo "#        > Python-QT                                         #";
-    pythonqt;
+    #pythonqt;
     echo "#        > QT5-Webkit                                        #";
-    qt5webkit;
-    PACMAN_DEPOT;
+    #qt5webkit;
+    #PACMAN_DEPOT;
   fi
   ########################################################################
   if [[ $BUREAUTIQUE = [Yy] ]]; then
     echo "#        > Package Bureautique                               #";
-    microsoft_edge;
-    PACMAN_DEPOT;
+    #microsoft_edge;
+    #PACMAN_DEPOT;
   fi
   ########################################################################
   if [[ $OUTILS = [Yy] ]]; then
     echo "#        > Package Outils                                    #";
-    yay;
-    xfce4_panel_profiles;
-    PACMAN_DEPOT;
+    #yay;
+    #xfce4_panel_profiles;
+    #PACMAN_DEPOT;
   fi
   ########################################################################
   if [[ $PILOTE = [Yy] ]]; then
     echo "#        > Package Pilotes                                   #";
-    aic94xx_firmware;
-    ast_firmware;
-    linux_firmware_qlogic;
-    upd72020x_fw;
-    wd719x_firmware;
+    #aic94xx_firmware;
+    #ast_firmware;
+    #linux_firmware_qlogic;
+    #upd72020x_fw;
+    #wd719x_firmware;
     ######################################################################
     # Experimental #
     ################
-    broadcom_wl;
+    #broadcom_wl;
     ######################################################################
-    PACMAN_DEPOT;
+    #PACMAN_DEPOT;
   fi
 else
     echo "# - [03] Gestion des Packages (OFF)                          #";
