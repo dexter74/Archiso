@@ -6,8 +6,8 @@
 #### A. Télécharger les scripts 
 ```bash
 clear;
-cd;
-rm -rf $HOME/archiso;
+cd $HOME;
+rm -rf $HOME/archiso 2>/dev/null;
 git clone https://github.com/dexter74/Archiso.git $HOME/archiso 2>/dev/null;
 rm -r ./archiso/{*.md,.git,V1,V2};
 cd $HOME/archiso/V3;
@@ -16,16 +16,19 @@ cd $HOME/archiso/V3;
 
 #### B. Configurer Archiso
 ```bash
+clear;
 nano ./settings.conf;
 ```
 
 #### C. Génération de l'image Système (Automatique)
 ```bash
+clear;
 sh test.sh;
 ```
 
 #### D. Génération de l'image Système (Manuel)
 ```bash
+clear;
 sh ./00_Update_upgrade.sh;
 sh ./01_Clean.sh;
 sh ./02_Generation.sh;
@@ -45,6 +48,7 @@ sh ./14_Rename.sh;
 
 #### X. Dépendances
 ```bash
+clear;
 sudo pacman -Sy --noconfirm ack appstream-qt boost cmake extra-cmake-modules kcoreaddons kiconthemes kio kparts kservice kpmcore plasma-framework;
 sudo pacman -Sy --noconfirm python-pip python-qt.py python-yaml qt5-declarative qt5-location qt5-tools qt5-xmlpatterns qt5-webengine yaml-cpp;
      yay    -Sy --noconfirm icecream pythonqt qt;
